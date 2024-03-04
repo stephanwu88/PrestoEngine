@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Engine.WpfControl.RegionIO"
+             x:Name="_region"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Background="Transparent" 
+             d:DesignHeight="35" d:DesignWidth="80" >
+    <StackPanel>
+        <TextBox x:Name="InputTextBox" HorizontalContentAlignment="Center" FontSize="20" 
+                 BorderBrush="{Binding BorderViewColor,ElementName=_region}" 
+                 BorderThickness="{Binding BorderViewThickness,ElementName=_region}"
+                 Background="{Binding EditViewColor,ElementName=_region}"
+                 Text="{Binding InputValue,ElementName=_region}"
+                 LostFocus="TextBox_LostFocus" TextChanged="InputTextBox_TextChanged" KeyDown="InputTextBox_KeyDown"/>
+        <TextBox x:Name="OutputTextBox"  HorizontalContentAlignment="Center" IsReadOnly="True" FontSize="20" 
+                 BorderBrush="{Binding BorderViewColor,ElementName=_region}"
+                 BorderThickness="{Binding BorderViewThickness,ElementName=_region}"
+                 Background="{Binding DefaultViewColor,ElementName=_region}"
+                 GotFocus="OutputTextBox_GotFocus"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Engine.Automation.Properties">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Engine;component/Engine.WpfTheme/Theme/DefaultTheme.xaml"/>
+        <ResourceDictionary Source="pack://application:,,,/Engine.Automation;component/Assets/Theme/DefaultTheme.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

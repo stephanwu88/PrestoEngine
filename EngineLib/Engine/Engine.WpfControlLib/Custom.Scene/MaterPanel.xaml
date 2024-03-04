@@ -1,0 +1,553 @@
+﻿<!-- 场景化应用控件字典 -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Engine.WpfBase">
+    <!--#region 转换器资源引用-->
+    <local:VisibleConvert x:Key="VisibleConvert"/>
+    <local:StringToVisible x:Key="StringToVisible"/>
+    <!--#endregion-->
+
+    <!--#region ItemsControl模板-->
+    
+    <!--<ItemsControl x:Key="ModelItemsControl" ItemsSource="{Binding SampleList}">
+        <ItemsControl.Template>
+            <ControlTemplate TargetType="ItemsControl">
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                    <WrapPanel>
+                        <ItemsPresenter />
+                    </WrapPanel>
+                </ScrollViewer>
+            </ControlTemplate>
+        </ItemsControl.Template>
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <CheckBox Style="{StaticResource S.CheckPanel.RowMaterial}" MaxWidth="300" MaxHeight="200" Margin="8 8"/>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>-->
+
+    <Style x:Key="S.ItemsControl.WrapPanel" TargetType="ItemsControl">
+        <Setter Property="local:Cattach.HorizontalAlignment" Value="Center"/>
+        <Setter Property="local:Cattach.VerticalAlignment" Value="Top"/>
+        <!--<Setter Property="local:Cattach.Orientation" Value="Horizontal"/>-->
+        <!--<Setter Property="local:Cattach.DataTemplate" Value=""/>-->
+        <!--容器模板-->
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="{Binding Path=(local:Cattach.Orientation),RelativeSource={RelativeSource AncestorType=ItemsControl}}"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--控件模板-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <WrapPanel HorizontalAlignment="{TemplateBinding local:Cattach.HorizontalAlignment}"
+                                   VerticalAlignment="{TemplateBinding local:Cattach.VerticalAlignment}">
+                            <ItemsPresenter />
+                        </WrapPanel>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--内容/数据模板-->
+        <Setter Property="ItemTemplate" Value="{Binding Path=(local:Cattach.DataTemplate),RelativeSource={RelativeSource Self}}"/>
+    </Style>
+
+    <Style x:Key="S.ItemsControl.StackPanel" TargetType="ItemsControl">
+        <Setter Property="local:Cattach.HorizontalAlignment" Value="Center"/>
+        <Setter Property="local:Cattach.VerticalAlignment" Value="Top"/>
+        <!--<Setter Property="local:Cattach.Orientation" Value="Horizontal"/>-->
+        <!--<Setter Property="local:Cattach.DataTemplate" Value=""/>-->
+        <!--容器模板-->
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="{Binding Path=(local:Cattach.Orientation),RelativeSource={RelativeSource AncestorType=ItemsControl}}"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--控件模板-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ItemsControl">
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                        <StackPanel HorizontalAlignment="{TemplateBinding local:Cattach.HorizontalAlignment}"
+                                    VerticalAlignment="{TemplateBinding local:Cattach.VerticalAlignment}">
+                            <ItemsPresenter />
+                        </StackPanel>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <!--内容/数据模板-->
+        <Setter Property="ItemTemplate" Value="{Binding Path=(local:Cattach.DataTemplate),RelativeSource={RelativeSource Self}}"/>
+    </Style>
+
+    <!--#endregion-->
+
+    <!--原料委托信息选择面板 -->
+    <Style x:Key="S.CheckPanel.RowMaterial" TargetType="CheckBox">
+        <!--备选颜色#F3FAFF #4C81F7 #4EC9EE #FCB633 #FF93A4 #7D7EF8-->
+        <Setter Property="Background" Value="#F3FAFF"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1" ScaleY="1" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="local:Cattach.CornerRadius" Value="10"/>
+        <Setter Property="local:Cattach.MouseOverOpacity" Value="0.96"/>
+        <Setter Property="local:Cattach.Detail" Value="今天"/>
+        <Setter Property="local:Cattach.MarkerFontSize" Value="12"/>
+        <Setter Property="local:Cattach.MarkerBackground" Value="Red"/>
+        <Setter Property="local:Cattach.MarkerMargin" Value="0 -3 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBox">
+                    <Grid Width="200" Height="100">
+                        <Border x:Name="border" Effect="{DynamicResource ResourceKey=S.Effect.Gray}" Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="{TemplateBinding local:Cattach.CornerRadius}"/>
+                        <Border>
+                            <Grid>
+                                <!--行显示面板-->
+                                <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10 10">
+                                    <!--试样编码 ex:DS20230614001-->
+                                    <TextBlock Text="{TemplateBinding local:Cattach.SampleID}" ToolTip="{Binding Text,RelativeSource={RelativeSource Self}}" 
+                                            TextTrimming="CharacterEllipsis"
+                                            FontSize="16" FontWeight="Bold" Foreground="Blue"/>
+                                    <!--物料代码 ex: CMCC-1-->
+                                    <TextBlock Margin="0 2" Text="{TemplateBinding local:Cattach.SampleCode}"/>
+                                    <!--物料名称 ex: 焦煤1 -->
+                                    <TextBlock Margin="0 2" Text="{TemplateBinding local:Cattach.SampleName}" FontWeight="Bold" FontSize="15"/>
+                                    <!--物料名称 ex: 委托时间 2023/5/28 9:15:54-->
+                                    <TextBlock Margin="0 2" Text="{TemplateBinding local:Cattach.DelegateTime}"/>
+                                </StackPanel>
+                                <!--选中标记-->
+                                <Border x:Name="checker" Visibility="{Binding IsChecked,RelativeSource={RelativeSource TemplatedParent},Converter={StaticResource VisibleConvert}}" 
+                                                         CornerRadius="6" Width="25" Height="25" Margin="0 -3 0 0" Background="Orange" 
+                                                         HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                                    <TextBlock Text="&#xe6fe;" FontFamily="{DynamicResource IconFont}" FontSize="18" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                                <!--右上角标记 根据日期(今天) -->
+                                <Border x:Name="marker" CornerRadius="6" Width="30" Height="18" Margin="{TemplateBinding local:Cattach.MarkerMargin}" 
+                                        Visibility="{Binding Path=(local:Cattach.DelegateTime),RelativeSource={RelativeSource TemplatedParent},
+                                                    Converter={StaticResource StringToVisible}, ConverterParameter='DateTime[Today]'}"
+                                        Background="{TemplateBinding local:Cattach.MarkerBackground}" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                    <TextBlock Text="{Binding Path=(local:Cattach.Detail),RelativeSource={RelativeSource TemplatedParent}}" 
+                                            Foreground="White" FontSize="{TemplateBinding local:Cattach.MarkerFontSize}" 
+                                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="{Binding Path=(local:Cattach.MouseOverOpacity),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1.04" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1.04" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--原料信息投料操作面板 粒度+1-1 成分+1-1 -->
+    <Style x:Key="S.RadioPanel.RawMaterFeed" TargetType="RadioButton">
+        <!--备选颜色#F3FAFF #4C81F7 #4EC9EE #FCB633 #FF93A4 #7D7EF8-->
+        <Setter Property="Background" Value="#F3FAFF"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1" ScaleY="1" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="local:Cattach.CornerRadius" Value="10"/>
+        <Setter Property="local:Cattach.MouseOverOpacity" Value="0.96"/>
+        <Setter Property="local:Cattach.SelectBackground" Value="#F3FAF0"/>
+        <Setter Property="local:Cattach.MarkerFontSize" Value="12"/>
+        <Setter Property="local:Cattach.MarkerBackground" Value="Red"/>
+        <Setter Property="local:Cattach.GradeSampleCopies" Value="0"/>
+        <Setter Property="local:Cattach.CompositionSampleCopies" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Grid Width="250" Height="160">
+                        <Border x:Name="_backborder" Effect="{DynamicResource ResourceKey=S.Effect.Gray}" CornerRadius="10"
+                                Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"/>
+                        <Border>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <!--信息面板-->
+                                <Grid>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" Margin="10 10">
+                                        <!--样品编码 ex:DS20230614001-->
+                                        <TextBlock Text="{TemplateBinding local:Cattach.SampleID}" TextTrimming="CharacterEllipsis" 
+                                                   ToolTip="{Binding Text,RelativeSource={RelativeSource Self}}" 
+                                                   FontSize="16" FontWeight="Bold" Foreground="Blue"/>
+                                        <!--物料代码 ex: CC1M-C -->
+                                        <TextBlock Margin="0 2" Text="{TemplateBinding local:Cattach.SampleCode}"/>
+                                        <!--物料名称 ex:焦煤1-->
+                                        <TextBlock Margin="0 2" Text="{TemplateBinding local:Cattach.SampleName}" FontSize="15"/>
+                                        <!--委托时间 ex:2023/5/28 9:15:54-->
+                                        <TextBlock Margin="0 2" Text="{TemplateBinding local:Cattach.DelegateTime}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 34 15 0 ">
+                                        <TextBlock Margin="0 2" TextAlignment="Justify" Width="85" FontSize="15">
+                                            <TextBlock Text="成分:"/>
+                                            <TextBlock Text="{Binding Path=(local:Cattach.CompositionSampleCopies),RelativeSource={RelativeSource TemplatedParent}}" 
+                                                       Width="25" TextTrimming="CharacterEllipsis"
+                                                       HorizontalAlignment="Center" TextAlignment="Center"
+                                                       FontSize="20" FontWeight="Bold" Foreground="Blue"/>
+                                            <TextBlock Text="桶"/>
+                                        </TextBlock>
+                                        <TextBlock Margin="0 2" TextAlignment="Justify" Width="85" FontSize="15">
+                                            <TextBlock Text="粒度:"/>
+                                            <TextBlock Text="{Binding Path=(local:Cattach.GradeSampleCopies),RelativeSource={RelativeSource TemplatedParent}}" 
+                                                       Width="25" TextTrimming="CharacterEllipsis"
+                                                       HorizontalAlignment="Center" TextAlignment="Center"
+                                                       FontSize="20" FontWeight="Bold" Foreground="Blue"/>
+                                            <TextBlock Text="桶"/>
+                                        </TextBlock>
+                                    </StackPanel>
+                                    <!--右上角移除按钮-->
+                                    <Button x:Name="OpClose" Style="{DynamicResource S.Button.FIconText}"  
+                                            Command="{Binding DataContext.CommandRemoveOrderedSample,RelativeSource={RelativeSource AncestorType=Window}}"
+                                            CommandParameter="{Binding DataContext,RelativeSource={RelativeSource TemplatedParent}}"
+                                            Foreground="Red" 
+                                            Margin="7" FontSize="25"
+                                            local:Cattach.FIcon="&#xe705;" Content=""
+                                            local:Cattach.ShowMarker="False" 
+                                            local:Cattach.FIconSize="24"
+                                            local:Cattach.MouseOverOpacity="0.4"
+                                            HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                                </Grid>
+                                <!--底部操作按钮-->
+                                <Grid Grid.Row="1" Margin="0 0 0 10">
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" >
+                                        <Button Content="成分&#10; +1" Style="{DynamicResource ResourceKey=S.Button.Circle}" 
+                                                Margin="10 0"  FontSize="12" FontWeight="Bold"
+                                                Command="{Binding DataContext.CommandCompositonCopiesAdd,RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding DataContext,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        <Button Content="成分&#10;  -1" Style="{DynamicResource ResourceKey=S.Button.Circle}" 
+                                                Margin="10 0"  FontSize="12" FontWeight="Bold"
+                                                Command="{Binding DataContext.CommandCompositonCopiesSub,RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding DataContext,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        <Button Content="粒度&#10; +1" Style="{DynamicResource ResourceKey=S.Button.Circle}" 
+                                                Margin="10 0"  FontSize="12" FontWeight="Bold"
+                                                Command="{Binding DataContext.CommandGradeCopiesAdd,RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding DataContext,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                        <Button Content="粒度&#10;  -1" Style="{DynamicResource ResourceKey=S.Button.Circle}" 
+                                                Margin="10 0" FontSize="12" FontWeight="Bold"
+                                                Command="{Binding DataContext.CommandGradeCopiesSub,RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding DataContext,RelativeSource={RelativeSource TemplatedParent}}"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1.04" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(RadioButton.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1.04" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(RadioButton.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{Binding Path=(local:Cattach.SelectBackground),RelativeSource={RelativeSource Self}}"/>
+                        </Trigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Path=(local:Cattach.GradeSampleCopies),RelativeSource={RelativeSource Self}}" Value="0"/>
+                                <Condition Binding="{Binding Path=(local:Cattach.CompositionSampleCopies),RelativeSource={RelativeSource Self}}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="BorderBrush" Value="Red"/>
+                            <Setter Property="BorderThickness" Value="1"/>
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--皮带信息面板-->
+    <!--#region 初始化数据-->
+    <!--h:Cattach.SamplingState="组批卸料"
+        h:Cattach.BeltCode="XT205" h:Cattach.BeltComment="焦化翻车机-西排筒仓"
+        h:Cattach.SamplingCode="1" h:Cattach.PrepCode="12" 
+        h:Cattach.ShipSeq="3QR23061961" h:Cattach.ShipName="国裕15" h:Cattach.TrainSeq="49102"
+        h:Cattach.CreateTime="2023/6/21 8:44:55"
+        h:Cattach.CurrentFlux="1114" 
+        h:Cattach.SampleCode="CMCC1-1M" h:Cattach.SampleName="焦煤1" -->
+    <!--#endregion-->
+    <Style x:Key="S.RadioPanel.BeltMessage" TargetType="RadioButton">
+        <Setter Property="Background" Value="#F3FAFF"/>
+        <!--<Setter Property="Foreground" Value="Black"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>-->
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1" ScaleY="1" />
+            </Setter.Value>
+        </Setter>
+        <!--<Setter Property="local:Cattach.SamplingState" Value="组批卸料"/>
+        <Setter Property="local:Cattach.BeltCode" Value="XT106"/>
+        <Setter Property="local:Cattach.BeltComment" Value="焦化翻车机-西排筒仓"/>
+        <Setter Property="local:Cattach.SamplingCode" Value="N9BA2306200479"/>
+        <Setter Property="local:Cattach.PrepCode" Value="230511M083549"/>
+        <Setter Property="local:Cattach.ShipSeq" Value="3QR23061961"/>
+        <Setter Property="local:Cattach.ShipName" Value="国裕15"/>
+        <Setter Property="local:Cattach.TrainSeq" Value="49102"/>
+        <Setter Property="local:Cattach.CreateTime" Value="2023/6/21 8:44:55"/>
+        <Setter Property="local:Cattach.CurrentFlux" Value="1114"/>
+        <Setter Property="local:Cattach.SampleCode" Value="CMCC1-1M"/>
+        <Setter Property="local:Cattach.SampleName" Value="焦煤1"/>-->
+        <Setter Property="local:Cattach.CommentWidth" Value="70"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <Grid HorizontalAlignment="Left" VerticalAlignment="Top" Height="175">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <!--委托信息面板-->
+                        <Grid Margin="5,5,0,0" HorizontalAlignment="Left" Height="170" Width="240"  VerticalAlignment="Top" ClipToBounds="True">
+                            <!--背景效果-->
+                            <Border Margin="3" Effect="{DynamicResource ResourceKey=S.Effect.Gray}"  CornerRadius="4" Background="#DCE5F4"/>
+                            <Border Width="10" Height="25" CornerRadius="5" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Red" Margin="-5 8 0 0"/>
+                            <!--标题行 XT106 焦化翻车机-西排筒仓-->
+                            <Border BorderThickness="1" CornerRadius="4" VerticalAlignment="Top" HorizontalAlignment="Center" Height="25" Margin="0,8,0,0">
+                                <Border.BorderBrush>
+                                    <VisualBrush>
+                                        <VisualBrush.Visual>
+                                            <Rectangle StrokeDashArray="4 2" StrokeThickness="1" 
+                                   Stroke="Red" 
+                                   Width="{Binding Path=ActualWidth,RelativeSource={RelativeSource AncestorType={x:Type Border}}}"
+                                   Height="{Binding Path=ActualHeight,RelativeSource={RelativeSource AncestorType={x:Type Border}}}"/>
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </Border.BorderBrush>
+                                <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14">
+                                    <!--ex: XT106-->
+                                    <Run Text="{TemplateBinding local:Cattach.BeltCode}" Foreground="Brown" FontWeight="Bold" FontSize="16"/>
+                                    <!--ex: 焦化翻车机-西排筒仓-->
+                                    <Run Text="{TemplateBinding local:Cattach.BeltComment}"/>
+                                </TextBlock>
+                            </Border>
+                            <!--信息子项-->
+                            <StackPanel x:Name="_MesPanel" Margin="10 35 10 10" Visibility="Collapsed" VerticalAlignment="Center">
+                                <!--<ContentPresenter/>-->
+                                <TextBlock Foreground="Blue" Visibility="{Binding Path=(local:Cattach.SamplingCode),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Top" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="取样码:" Width="{Binding Path=(local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.SamplingCode}"/>
+                                </TextBlock>
+                                <TextBlock Foreground="Blue" Visibility="{Binding Path=(local:Cattach.PrepCode),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="制样码:" Width="{Binding Path=(local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.PrepCode}"/>
+                                </TextBlock>
+                                <TextBlock Foreground="Blue" Visibility="{Binding Path=(local:Cattach.ShipSeq),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="航次号:" Width="{Binding Path=(local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.ShipSeq}"/>
+                                </TextBlock>
+                                <TextBlock Foreground="Blue" Visibility="{Binding Path=(local:Cattach.ShipName),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="船名:" Width="{Binding Path=(local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.ShipName}"/>
+                                </TextBlock>
+                                <TextBlock Foreground="Blue" Visibility="{Binding Path=(local:Cattach.TrainSeq),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="车次号:" Width="{Binding Path=(local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.TrainSeq}"/>
+                                </TextBlock>
+                                <TextBlock Foreground="Blue"  Visibility="{Binding Path=(local:Cattach.BeltState),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="皮带状态:" Width="{Binding (local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.BeltState}"/>
+                                </TextBlock>
+                                <TextBlock Foreground="Blue"  Visibility="{Binding Path=(local:Cattach.CreateTime),RelativeSource={RelativeSource AncestorType=RadioButton},
+                                           Converter={StaticResource StringToVisible}, ConverterParameter='Len[>0]'}" 
+                                           FontSize="14" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="10 0 0 0">
+                                    <TextBlock Text="任务创建:" Width="{Binding (local:Cattach.CommentWidth),RelativeSource={RelativeSource AncestorType=RadioButton}}"/>
+                                    <TextBlock Text="{TemplateBinding local:Cattach.CreateTime}"/>
+                                </TextBlock>
+                            </StackPanel>
+                            <StackPanel x:Name="_BeltNotRunPanel" Margin="10 35 10 10" Visibility="Collapsed" VerticalAlignment="Center">
+                                <TextBlock Text="皮带未运行" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Red"/>
+                            </StackPanel>
+                            <StackPanel x:Name="_NoBatchPanel" Margin="10 35 10 10" Visibility="Collapsed" VerticalAlignment="Center">
+                                <TextBlock Text="未匹配到组批信息" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Red"/>
+                            </StackPanel>
+                            <StackPanel x:Name="_UnMatchPanel"  Margin="10 35 10 10" Visibility="Collapsed" VerticalAlignment="Center">
+                                <TextBlock Text="请人工协助确认" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" Foreground="Red"/>
+                                <!--选择组批信息-->
+                                <Button Content="多条组批信息, 请人工决策" Style="{DynamicResource ResourceKey=S.Button.Round}" 
+                                                Margin="10 10"  FontSize="12" HorizontalAlignment="Center" Width="180" Height="35"
+                                                Command="{Binding DataContext.CommandSelectBatchMessage,RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding DataContext,RelativeSource={RelativeSource TemplatedParent}}"/>
+                            </StackPanel>
+                        </Grid>
+
+                        <!--皮带信息面板-->
+                        <Grid Grid.Column="1" Margin="5" Width="100" HorizontalAlignment="Left" VerticalAlignment="Top" Background="Transparent" >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <!--瞬时流量数据板-->
+                            <Border BorderBrush="#633DFF" Background="#DCE5F4" BorderThickness="4" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                            Height="80" Width="80" CornerRadius="40" ClipToBounds="True" Grid.Row="0">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <TextBlock x:Name="_txtCurrentFlux" Text="{TemplateBinding local:Cattach.CurrentFlux}" ToolTip="{Binding Text,RelativeSource={RelativeSource Self}}" TextTrimming="CharacterEllipsis" FontSize="25" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                                    <TextBlock FontSize="12" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                        <Run Text="l/m" />
+                                        <TextBlock Text="3" FontSize="8" Margin="-3 -5 0 0"/>
+                                    </TextBlock>
+                                </StackPanel>
+                            </Border>
+                            <!--瞬时流量标签-->
+                            <TextBlock Text="瞬时流量" Foreground="Blue" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Top" TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"  Grid.Row="1"/>
+                            <!--采样头名称-->
+                            <Border CornerRadius="5" Background="Purple" Grid.Row="2" Margin="0 5" >
+                                <TextBlock Text="{Binding Path=(local:Cattach.BeltCode),RelativeSource={RelativeSource AncestorType=RadioButton}, StringFormat='{}{0}采样头'}" Foreground="White" FontSize="14" Padding="0 2" HorizontalAlignment="Center" VerticalAlignment="Top" 
+                                           TextWrapping="NoWrap" TextTrimming="CharacterEllipsis"/>
+                            </Border>
+                            <!--物料信息 名称代码-->
+                            <Border Background="Purple" CornerRadius="5" Grid.Row="3">
+                                <TextBlock Foreground="White" HorizontalAlignment="Center">
+                                    <TextBlock x:Name="_txtSampleCode" Text="{TemplateBinding local:Cattach.SampleCode}" HorizontalAlignment="Center"/>
+                                    <LineBreak/>
+                                    <TextBlock x:Name="_txtSampleName" Text="{TemplateBinding local:Cattach.SampleName}" HorizontalAlignment="Center"/>
+                                </TextBlock>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1.04" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(RadioButton.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1.04" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(RadioButton.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(CheckBox.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Path=(local:Cattach.SamplingState),RelativeSource={RelativeSource Self}}" Value="">
+                            <Setter TargetName="_MesPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_BeltNotRunPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_NoBatchPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_UnMatchPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_txtCurrentFlux" Property="Text" Value="---"/>
+                            <Setter TargetName="_txtSampleCode" Property="Text" Value="---"/>
+                            <Setter TargetName="_txtSampleName" Property="Text" Value="---"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=(local:Cattach.SamplingState),RelativeSource={RelativeSource Self}}" Value="组批卸料">
+                            <Setter TargetName="_MesPanel" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="_BeltNotRunPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_NoBatchPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_UnMatchPanel" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=(local:Cattach.SamplingState),RelativeSource={RelativeSource Self}}" Value="皮带未运行">
+                            <Setter TargetName="_MesPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_BeltNotRunPanel" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="_NoBatchPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_UnMatchPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_txtCurrentFlux" Property="Text" Value="---"/>
+                            <Setter TargetName="_txtSampleCode" Property="Text" Value="---"/>
+                            <Setter TargetName="_txtSampleName" Property="Text" Value="---"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=(local:Cattach.SamplingState),RelativeSource={RelativeSource Self}}" Value="未组批">
+                            <Setter TargetName="_MesPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_BeltNotRunPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_NoBatchPanel" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="_UnMatchPanel" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=(local:Cattach.SamplingState),RelativeSource={RelativeSource Self}}" Value="多条组批信息">
+                            <Setter TargetName="_MesPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_BeltNotRunPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_NoBatchPanel" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="_UnMatchPanel" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

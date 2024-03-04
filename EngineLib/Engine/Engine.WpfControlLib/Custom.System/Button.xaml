@@ -1,0 +1,629 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:h="clr-namespace:Engine.WpfBase">
+
+    <h:StringToVisible x:Key="StringToVisible"/>
+
+    <!--窗口按钮样式-->
+    <system:String x:Key="IconTextMinimize">&#xe697;</system:String>
+    <system:String x:Key="IconTextClose">&#xe66c;</system:String>
+    <Style x:Key="S.Button.WindowCommand" TargetType="{x:Type Button}">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="5,0"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="WindowChrome.IsHitTestVisibleInChrome" Value="True"/>
+        <Setter Property="Template" Value="{DynamicResource S.Template.WindowCommand}"/>
+    </Style>
+    <ControlTemplate x:Key="S.Template.WindowCommand" TargetType="{x:Type Button}">
+        <Border x:Name="border" CornerRadius="3" Width="25" Height="25"
+                RenderOptions.EdgeMode="Aliased" UseLayoutRounding="True"
+                SnapsToDevicePixels="True"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}" 
+                BorderThickness="{TemplateBinding BorderThickness}">
+            <Grid>
+                <TextBlock x:Name="txt"  Text="{TemplateBinding Content}" 
+                           FontFamily="{DynamicResource IconFont}"
+                           RenderOptions.EdgeMode="Aliased" UseLayoutRounding="True"
+                           SnapsToDevicePixels="True"
+                           HorizontalAlignment="Center" VerticalAlignment="Center" 
+                           FontSize="{TemplateBinding FontSize}"/>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <!--默认鼠标浮动显示 最大化/还原 绿-->
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" TargetName="border" Value="#67DB7A"/>
+                <Setter Property="Foreground" TargetName="txt" Value="White" />
+            </Trigger>
+            <!--最小化按钮鼠标浮动效果 黄-->
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="Content" Value="{StaticResource IconTextMinimize}" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" TargetName="border" Value="#FFD279" />
+                <Setter Property="Foreground" TargetName="txt" Value="White" />
+            </MultiTrigger>
+            <!--关闭按钮鼠标浮动效果 红-->
+            <MultiTrigger>
+                <MultiTrigger.Conditions>
+                    <Condition Property="IsMouseOver" Value="True" />
+                    <Condition Property="Content" Value="{StaticResource IconTextClose}" />
+                </MultiTrigger.Conditions>
+                <Setter Property="Background" TargetName="border" Value="Red" />
+                <Setter Property="Foreground" TargetName="txt" Value="White" />
+            </MultiTrigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Background" TargetName="border" Value="#4D000000"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!--文字按钮-->
+    <Style x:Key="S.Button.Text" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="#4C81F7"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0 0 0 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="h:Cattach.MarkerThickness" Value="0 0 0 1"/>
+        <Setter Property="h:Cattach.MarkerMargin" Value="0 0"/>
+        <Setter Property="h:Cattach.MarkerBorderBrush" Value="Red"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <TextBlock x:Name="txt" Text="{TemplateBinding Content}" 
+                                Foreground="{TemplateBinding Foreground}"
+                                FontSize="{TemplateBinding FontSize}"
+                                VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <Border x:Name="marker" Margin="{TemplateBinding h:Cattach.MarkerMargin}" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding h:Cattach.MarkerThickness}">
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="txt" Property="Opacity" Value="0.8"/>
+                            <Setter TargetName="marker" Property="BorderThickness" Value="{Binding Path=(h:Cattach.MarkerThickness),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="marker" Property="BorderBrush" Value="{Binding Path=(h:Cattach.MarkerBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--图标+文字按钮 默认上下布局-->
+    <Style x:Key="S.Button.FIconText" TargetType="Button">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Foreground" Value="#4C81F7"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <!--<Setter Property="h:Cattach.FIcon" Value=""/>-->
+        <Setter Property="h:Cattach.FIconSize" Value="30"/>
+        <Setter Property="h:Cattach.FIconMargin" Value="0 0 0 0"/>
+        <Setter Property="h:Cattach.CornerRadius" Value="5"/>
+        <Setter Property="h:Cattach.Orientation" Value="Vertical"/>
+        <Setter Property="h:Cattach.ContentMargin" Value="0 0 0 0"/>
+        <Setter Property="h:Cattach.ContentPadding" Value="0 0 0 0"/>
+        <Setter Property="h:Cattach.MarkerMargin" Value="0 -6 0 0"/>
+        <Setter Property="h:Cattach.MarkerWidth" Value="10"/>
+        <Setter Property="h:Cattach.MarkerHeight" Value="10"/>
+        <Setter Property="h:Cattach.MarkerCornerRadius" Value="5"/>
+        <Setter Property="h:Cattach.MarkerBackground" Value="Red"/>
+        <Setter Property="h:Cattach.ShowMarker" Value="True"/>
+        <!--<Setter Property="h:Cattach.Detail" Value=""/>-->
+        <Setter Property="h:Cattach.MouseOverOpacity" Value="0.7"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <StackPanel x:Name="border" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                    Orientation="{TemplateBinding h:Cattach.Orientation}">
+                            <TextBlock x:Name="icon" Text="{TemplateBinding h:Cattach.FIcon}" 
+                                       Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       FontFamily="{DynamicResource IconFont}"
+                                       FontSize="{TemplateBinding h:Cattach.FIconSize}"
+                                       Margin="{TemplateBinding h:Cattach.FIconMargin}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            <TextBlock x:Name="txt" Text="{TemplateBinding Content}" 
+                                       Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                       Margin="{TemplateBinding h:Cattach.ContentMargin}"
+                                       Padding="{TemplateBinding h:Cattach.ContentPadding}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                        <Border x:Name="marker"
+                                Visibility="{TemplateBinding h:Cattach.Detail,Converter={StaticResource StringToVisible},ConverterParameter='Len[>0]'}"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                Margin="{TemplateBinding h:Cattach.MarkerMargin}"
+                                Background="{TemplateBinding h:Cattach.MarkerBackground}"
+                                CornerRadius="{TemplateBinding h:Cattach.MarkerCornerRadius}"
+                                MinWidth="{TemplateBinding h:Cattach.MarkerWidth}"
+                                MaxWidth="{TemplateBinding Width}"
+                                Height="{TemplateBinding h:Cattach.MarkerHeight}"
+                                MaxHeight="{TemplateBinding Height}">
+                            <TextBlock Text="{TemplateBinding h:Cattach.Detail}" Foreground="White"
+                                       FontSize="12" TextTrimming="CharacterEllipsis"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="h:Cattach.ShowMarker" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="marker" Property="Visibility" Value="Visible"/>
+                        </MultiTrigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="{Binding Path=(h:Cattach.MouseOverOpacity),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <!--<DataTrigger Binding="{Binding Content,RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                            <Setter TargetName="txt" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Content,RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                            <Setter TargetName="txt" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--图标+文字按钮 默认水平布局-->
+    <Style x:Key="S.Button.FIconText.Horizontal" TargetType="Button" BasedOn="{StaticResource S.Button.FIconText}">
+        <Setter Property="h:Cattach.Orientation" Value="Horizontal"/>
+        <Setter Property="h:Cattach.ContentPadding" Value="5 0 0 0"/>
+        <Setter Property="h:Cattach.FIconSize" Value="21"/>
+    </Style>
+
+    <!--图标+文字按钮(带边框) 默认上下布局-->
+    <Style x:Key="S.Button.BorderedFIconText" TargetType="Button">
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#4C81F7"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <!--<Setter Property="h:Cattach.FIcon" Value=""/>-->
+        <Setter Property="h:Cattach.FIconSize" Value="30"/>
+        <Setter Property="h:Cattach.CornerRadius" Value="5"/>
+        <Setter Property="h:Cattach.Orientation" Value="Vertical"/>
+        <Setter Property="h:Cattach.ContentPadding" Value="0 0 0 0"/>
+        <Setter Property="h:Cattach.MarkerMargin" Value="0 -6 -6 0"/>
+        <Setter Property="h:Cattach.MarkerWidth" Value="20"/>
+        <Setter Property="h:Cattach.MarkerHeight" Value="20"/>
+        <Setter Property="h:Cattach.MarkerCornerRadius" Value="10"/>
+        <Setter Property="h:Cattach.MarkerBackground" Value="Red"/>
+        <Setter Property="h:Cattach.Detail" Value=""/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Grid x:Name="border">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border Background="{TemplateBinding Background}"
+                                    CornerRadius="{TemplateBinding h:Cattach.CornerRadius}"
+                                    Width="{TemplateBinding Width}"
+                                    BorderBrush="{TemplateBinding BorderBrush}" 
+                                    BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                                <TextBlock x:Name="icon" Text="{TemplateBinding h:Cattach.FIcon}" 
+                                       Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       FontFamily="{DynamicResource IconFont}"
+                                       FontSize="{TemplateBinding h:Cattach.FIconSize}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </Border>
+                            <TextBlock x:Name="txt" Text="{TemplateBinding Content}" Grid.Row="1"
+                                       Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                       TextTrimming="CharacterEllipsis" ToolTip="{TemplateBinding Content}"
+                                       Padding="{TemplateBinding h:Cattach.ContentPadding}"
+                                       Foreground="{TemplateBinding Background}"
+                                       FontSize="{TemplateBinding FontSize}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Grid>
+                        <!--Visibility="{TemplateBinding h:Cattach.Detail,Converter={StaticResource StringToVisible},ConverterParameter='Len[>0]'}"-->
+                        <Border x:Name="marker"
+                                HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                Margin="{TemplateBinding h:Cattach.MarkerMargin}"
+                                Background="{TemplateBinding h:Cattach.MarkerBackground}"
+                                CornerRadius="{TemplateBinding h:Cattach.MarkerCornerRadius}"
+                                MinWidth="{TemplateBinding h:Cattach.MarkerWidth}"
+                                MaxWidth="{TemplateBinding Width}"
+                                Height="{TemplateBinding h:Cattach.MarkerHeight}"
+                                MaxHeight="{TemplateBinding Height}">
+                            <TextBlock Text="{TemplateBinding h:Cattach.Detail}" Foreground="White"
+                                       FontSize="12" TextTrimming="CharacterEllipsis"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.8"/>
+                            <Setter TargetName="marker" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Path=(h:Cattach.Detail),RelativeSource={RelativeSource Self}}" Value="">
+                            <Setter TargetName="marker" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=(h:Cattach.Detail),RelativeSource={RelativeSource Self}}" Value="{x:Null}">
+                            <Setter TargetName="marker" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--圆角按钮 内配文字-->
+    <Style x:Key="S.Button.Round" TargetType="Button">
+        <Setter Property="Background" Value="#4C81F7"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="h:Cattach.MouseOverBorderThickness" Value="0"/>
+        <Setter Property="h:Cattach.MouseOverBorderBrush" Value="Transparent"/>
+        <Setter Property="h:Cattach.MouseOverBackground" Value="#3DAAF5"/>
+        <Setter Property="h:Cattach.MouseOverForeground" Value="White"/>
+
+        <!--图标部分(可不指定)-->
+        <!--<Setter Property="h:Cattach.FIcon" Value=""/>-->
+        <Setter Property="h:Cattach.FIconSize" Value="30"/>
+        <Setter Property="h:Cattach.FIconMargin" Value="0 0 0 0"/>
+        <!--标记(可不指定)-->
+        <Setter Property="h:Cattach.MarkerMargin" Value="0 -6 -6 0"/>
+        <Setter Property="h:Cattach.MarkerPadding" Value="0 0"/>
+        <Setter Property="h:Cattach.MarkerWidth" Value="20"/>
+        <Setter Property="h:Cattach.MarkerHeight" Value="20"/>
+        <!--MaxWidth可指定 默认为Auto-->
+        <!--<Setter Property="h:Cattach.MarkerMaxWidth" Value="40"/>-->
+        <Setter Property="h:Cattach.MarkerCornerRadius" Value="10"/>
+        <Setter Property="h:Cattach.MarkerBackground" Value="Red"/>
+        <Setter Property="h:Cattach.MarkerFontSize" Value="12"/>
+        
+        <Setter Property="h:Cattach.ContentMargin" Value="0 0"/>
+        <Setter Property="h:Cattach.Orientation" Value="Horizontal"/>
+        <Setter Property="h:Cattach.CornerRadius" Value="5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Border x:Name="border" Background="{TemplateBinding Background}"
+                            CornerRadius="{TemplateBinding h:Cattach.CornerRadius}"
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Orientation="{TemplateBinding h:Cattach.Orientation}">
+                                <TextBlock x:Name="icon" Text="{TemplateBinding h:Cattach.FIcon}" 
+                                       Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       FontFamily="{DynamicResource IconFont}"
+                                       FontSize="{TemplateBinding h:Cattach.FIconSize}"
+                                       Margin="{TemplateBinding h:Cattach.FIconMargin}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock x:Name="txt" Text="{TemplateBinding Content}" 
+                                        Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        FontSize="{TemplateBinding FontSize}"
+                                        Margin="{TemplateBinding h:Cattach.ContentMargin}"
+                                        VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Border>
+                        <!--Visibility="{TemplateBinding h:Cattach.Detail,Converter={StaticResource StringToVisible},ConverterParameter='Len[>0]'}"-->
+                        <Border x:Name="marker" 
+                                HorizontalAlignment="Right" VerticalAlignment="Top" 
+                                Margin="{TemplateBinding h:Cattach.MarkerMargin}"
+                                Background="{TemplateBinding h:Cattach.MarkerBackground}"
+                                CornerRadius="{TemplateBinding h:Cattach.MarkerCornerRadius}"
+                                MinWidth="{TemplateBinding h:Cattach.MarkerWidth}"
+                                MaxWidth="{TemplateBinding h:Cattach.MarkerMaxWidth}"
+                                Height="{TemplateBinding h:Cattach.MarkerHeight}">
+                            <TextBlock x:Name="markertxt" Text="{TemplateBinding h:Cattach.Detail}" Foreground="White"
+                                       Padding="{TemplateBinding h:Cattach.MarkerPadding}"
+                                       FontSize="{TemplateBinding h:Cattach.MarkerFontSize}" TextTrimming="CharacterEllipsis"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{Binding Path=(h:Cattach.MouseOverBackground),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{Binding Path=(h:Cattach.MouseOverBorderBrush),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="border" Property="BorderThickness" Value="{Binding Path=(h:Cattach.MouseOverBorderThickness),RelativeSource={RelativeSource TemplatedParent}}"/>
+                            <Setter TargetName="txt" Property="Foreground" Value="{Binding Path=(h:Cattach.MouseOverForeground),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.9"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Path=Text, ElementName=markertxt}" Value="">
+                            <Setter TargetName="marker" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--面板式按钮 左右结构、圆角  左侧Content 右侧Detail-->
+    <Style x:Key="S.Button.Panel" TargetType="Button">
+        <!--备选颜色#4C81F7 #4EC9EE #FCB633 #FF93A4 #7D7EF8-->
+        <Setter Property="Background" Value="#4C81F7"/>
+        <Setter Property="Width" Value="70"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="h:Cattach.CornerRadius" Value="7"/>
+        <Setter Property="h:Cattach.Detail" Value=""/>
+        <Setter Property="h:Cattach.LeftGridLength" Value="*"/>
+        <Setter Property="h:Cattach.RightGridLength" Value="Auto"/>
+        <Setter Property="h:Cattach.MouseOverBackground" Value="#5190FA"/>
+        <Setter Property="h:Cattach.ContentMargin" Value="8 0"/>
+        <Setter Property="h:Cattach.Orientation" Value="Horizontal"/>
+        <!--图标部分(可不指定)-->
+        <!--<Setter Property="h:Cattach.FIcon" Value=""/>-->
+        <Setter Property="h:Cattach.FIconSize" Value="30"/>
+        <Setter Property="h:Cattach.FIconMargin" Value="0 0 0 0"/>
+        <!--标记(可不指定)-->
+        <Setter Property="h:Cattach.MarkerPadding" Value="0"/>
+        <Setter Property="h:Cattach.MarkerFontSize" Value="15"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border HorizontalAlignment="Left" VerticalAlignment="Center" CornerRadius="7" 
+                                Background="{TemplateBinding Background}"
+                                Height="{TemplateBinding Height}" 
+                                Width="{TemplateBinding Width}"
+                                ClipToBounds="True">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="{TemplateBinding h:Cattach.LeftGridLength}"/>
+                                <ColumnDefinition Width="{TemplateBinding h:Cattach.RightGridLength}"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"
+                                        Orientation="{TemplateBinding h:Cattach.Orientation}">
+                                <TextBlock x:Name="icon" Text="{TemplateBinding h:Cattach.FIcon}" 
+                                            Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            FontFamily="{DynamicResource IconFont}"
+                                            FontSize="{TemplateBinding h:Cattach.FIconSize}"
+                                            Margin="{TemplateBinding h:Cattach.FIconMargin}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                <TextBlock Grid.Column="0" Text="{TemplateBinding Content}" Padding="10 0 10 0" 
+                                            Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                            TextTrimming="CharacterEllipsis" FontWeight="Bold" 
+                                            Margin="{TemplateBinding h:Cattach.ContentMargin}"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center"
+                                            FontSize="{TemplateBinding FontSize}" 
+                                            Foreground="{TemplateBinding Foreground}" Background="Transparent"/>
+                            </StackPanel>
+                            <!--左侧偏置点标记-->
+                            <Border Grid.Column="0" CornerRadius="10" Width="20" Height="20" HorizontalAlignment="Left" 
+                                    Margin="-10" Background="White" Opacity="0.5"/>
+                            <Grid x:Name="marker" Grid.Column="1">
+                                <Border CornerRadius="0 7 7 0" Background="White" Opacity="0.5"/>
+                                <TextBlock Grid.Column="1" Text="{TemplateBinding h:Cattach.Detail}" 
+                                               TextTrimming="CharacterEllipsis"
+                                               Padding="{TemplateBinding h:Cattach.MarkerPadding}" 
+                                               VerticalAlignment="Center" HorizontalAlignment="Center"
+                                               FontSize="{TemplateBinding h:Cattach.MarkerFontSize}" 
+                                               Foreground="White" Background="Transparent"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{Binding Path=(h:Cattach.MouseOverBackground),RelativeSource={RelativeSource Self}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--圆形图标按钮 圆形 【右上角数字项】-->
+    <Style x:Key="S.Button.Circle" TargetType="Button">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="#14DFEA" Offset="0"/>
+                    <GradientStop Color="#5190FA" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontSize" Value="15"/>
+        <!--<Setter Property="h:Cattach.Detail" Value=""/>-->
+        <Setter Property="h:Cattach.MarkerWidth" Value="20"/>
+        <Setter Property="h:Cattach.MarkerHeight" Value="20"/>
+        <!--MaxWidth可指定 默认为Auto-->
+        <!--<Setter Property="h:Cattach.MarkerMaxWidth" Value="40"/>-->
+        <Setter Property="h:Cattach.MarkerFontSize" Value="12"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleX="1" ScaleY="1" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <Ellipse Fill="{TemplateBinding Background}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"/>
+                        <!--内容文字-->
+                        <TextBlock Text="{TemplateBinding Content}" 
+                                   Foreground="{TemplateBinding Foreground}" FontSize="{TemplateBinding FontSize}" 
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <!--右上角数字显示-->
+                        <!--Visibility="{TemplateBinding h:Cattach.Detail,Converter={StaticResource StringToVisible},ConverterParameter='Len[>0]'}"-->
+                        <Border x:Name="marker" Background="Red" HorizontalAlignment="Right" Margin="0 -5 0 0"
+                                CornerRadius="10" 
+                                MaxWidth="{TemplateBinding h:Cattach.MarkerMaxWidth}" MinWidth="{TemplateBinding h:Cattach.MarkerWidth}"
+                                VerticalAlignment="Top" Height="{TemplateBinding h:Cattach.MarkerHeight}">
+                            <TextBlock x:Name="markertxt" Padding="5 0 5 0" Text="{TemplateBinding h:Cattach.Detail}" 
+                                       TextTrimming="CharacterEllipsis" Foreground="White" 
+                                       FontSize="{TemplateBinding h:Cattach.MarkerFontSize}"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <!--<BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Height" To="50" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Width" To="50" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>-->
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1.2" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1.2" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <!--<BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetProperty="Height" To="40" Duration="0:0:0.2"/>
+                                        <DoubleAnimation Storyboard.TargetProperty="Width" To="40" Duration="0:0:0.2"/>
+                                    </Storyboard>
+                                </BeginStoryboard>-->
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleX)" />
+                                        <DoubleAnimation To="1" Duration="0:0:0.2"
+                                                     Storyboard.TargetProperty="(Button.RenderTransform).(ScaleTransform.ScaleY)" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Path=Text, ElementName=markertxt}" Value="">
+                            <Setter TargetName="marker" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=Text, ElementName=markertxt}" Value="0">
+                            <Setter TargetName="marker" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--图片按钮-->
+    <Style x:Key="S.Button.Image" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <!--<Setter Property="h:Cattach.ShowImage" Value=""/>-->
+        <Setter Property="h:Cattach.MouseOverBackground" Value="#3DAAF5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Image Source="{TemplateBinding h:Cattach.ShowImage}" 
+                               ToolTip="{TemplateBinding Content}"  
+                               VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.85"/>
+                            <Setter Property="Background" Value="{Binding Path=(h:Cattach.MouseOverBackground),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--多状态图片按钮-->
+    <Style x:Key="S.Button.MultiImage" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <!--<Setter Property="h:Cattach.ShowImage" Value=""/>
+        <Setter Property="h:Cattach.MouseOverImage" Value=""/>
+        <Setter Property="h:Cattach.MousePressedImage" Value=""/>-->
+        <Setter Property="h:Cattach.MouseOverBackground" Value="#3DAAF5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Image x:Name="img" Source="{TemplateBinding h:Cattach.ShowImage}" 
+                               ToolTip="{TemplateBinding Content}"  
+                               VerticalAlignment="Center" HorizontalAlignment="Center" Stretch="Fill"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.85"/>
+                            <Setter Property="Background" Value="{Binding Path=(h:Cattach.MouseOverBackground),RelativeSource={RelativeSource Self}}"/>
+                            <Setter TargetName="img" Property="Source" Value="{Binding Path=(h:Cattach.MouseOverImage),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="0.85"/>
+                            <Setter Property="Background" Value="{Binding Path=(h:Cattach.MouseOverBackground),RelativeSource={RelativeSource Self}}"/>
+                            <Setter TargetName="img" Property="Source" Value="{Binding Path=(h:Cattach.MousePressedImage),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--图片文字按钮 可配置方向 ImageMargin调整图片位置 ContentMargin 调整文字位置-->
+    <Style x:Key="S.Button.ImageText" TargetType="Button">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="#555"/>
+        <Setter Property="h:Cattach.MouseOverOpacity" Value="0.5"/>
+        <Setter Property="h:Cattach.Orientation" Value="Horizontal"/>
+        <Setter Property="h:Cattach.CutomBorderWidth" Value="35"/>
+        <Setter Property="h:Cattach.CustomBorderHeight" Value="35"/>
+        <Setter Property="h:Cattach.CustomBorderCornerRadius" Value="10"/>
+        <!--<Setter Property="h:Cattach.ShowImage" Value=""/>-->
+        <Setter Property="h:Cattach.ImageMargin" Value="5"/>
+        <Setter Property="h:Cattach.ContentMargin" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid x:Name="border">
+                        <StackPanel Orientation="{TemplateBinding h:Cattach.Orientation}" HorizontalAlignment="Center">
+                            <Border CornerRadius="{TemplateBinding h:Cattach.CustomBorderCornerRadius}"
+                                    Width="{TemplateBinding h:Cattach.CutomBorderWidth}"
+                                    Height="{TemplateBinding h:Cattach.CustomBorderHeight}"
+                                    Background="{TemplateBinding Background}">
+                                <Image Source="{TemplateBinding h:Cattach.ShowImage}" Margin="{TemplateBinding h:Cattach.ImageMargin}" Stretch="Fill"/>
+                            </Border>
+                            <TextBlock x:Name="txt" Text="{TemplateBinding Content}" 
+                                       Style="{DynamicResource S.TextBlock.IfNullCollapsed}"
+                                       Foreground="{TemplateBinding Foreground}" 
+                                       FontSize="{TemplateBinding FontSize}"
+                                       Margin="{TemplateBinding h:Cattach.ContentMargin}"
+                                       VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Opacity" Value="{Binding Path=(h:Cattach.MouseOverOpacity),RelativeSource={RelativeSource TemplatedParent}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

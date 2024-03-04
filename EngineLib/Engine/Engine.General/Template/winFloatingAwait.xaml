@@ -1,0 +1,25 @@
+﻿<Window x:Class="Engine.Template.winFloatingAwait"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engine.Template"
+        mc:Ignorable="d"  WindowStartupLocation="Manual" SizeToContent="Manual"
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        ResizeMode="NoResize"
+        Title="" Height="40" Width="130">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2.5*"/> 
+        </Grid.ColumnDefinitions>
+        <Border CornerRadius="8 0 0 8" Background="#0496FF">
+            <TextBlock x:Name="_IconText" Text="SPW" FontWeight="Bold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+        <Border CornerRadius="0 8 8 0" Background="#EDF9FF" Grid.Column="1"
+                BorderBrush="#0496FF" BorderThickness="1">
+            <TextBlock x:Name="_WinTitle" Text="光谱在线分析" Foreground="#0496FF" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Border>
+    </Grid>
+ 
+</Window>

@@ -1,0 +1,151 @@
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\NPOI.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\NPOI.OOXML.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\NPOI.OpenXml4Net.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\NPOI.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\NPOI.OOXML.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\NPOI.OpenXmlFormats.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\NPOI.OpenXml4Net.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\知识储备库\03.C#上位机开发\03. C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.dll.config
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+D:\Temp\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\2022年和澳出货设备\【2022-1-20 沙钢】东区新转炉化验室炉前快分\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.dll
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.xml
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 宝武特冶】全自动风动控制系统\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.dll
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.xml
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+F:\宝武风动_下班代码\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.dll
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.xml
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 浙江巨石】配合料自动取制样检测系统 & 布鲁克荧光\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.xml
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\bin\Debug\System.Windows.Interactivity.xml
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.Data.MySQL.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\MySql.Data.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Newtonsoft.Json.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\bin\Debug\Engine.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csprojAssemblyReference.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CoreCompileInputs.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.csproj.CopyComplete
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.MySQL\obj\Debug\Engine.Data.MySQL.pdb

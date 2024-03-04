@@ -1,0 +1,7 @@
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\bin\Debug\Engine.MySQL.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\bin\Debug\Engine.MySQL.pdb
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\obj\Debug\Engine.MySQL.csproj.CoreCompileInputs.cache
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\obj\Debug\Engine.MySQL.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\obj\Debug\Engine.MySQL.pdb
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\bin\Debug\MySql.Data.dll
+E:\知识储备库\A_系统编程随身技术包（2021整订版）\90. C#商业模块资源库(专题篇)\03. Engine集成类库\EngineLibTest\Engine.MySQL\obj\Debug\Engine.MySQL.csproj.CopyComplete

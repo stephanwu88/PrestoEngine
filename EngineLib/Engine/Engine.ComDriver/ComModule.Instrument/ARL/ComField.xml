@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldMappings xmlns:ns="http://www.example.com/namespace">
+  <!--SMS_MODE: 控制系统状态  InstrumentMode:分析仪器状态  PrepMode:制样设备状态-->
+  <FieldMapping Name="STATUS_MODE" Comment ="SMS模式状态" Type ="STATUS">
+    <Field Code="A" Text="自动模式" Type="STATUS"/>
+    <Field Code="M" Text="手动模式" Type="STATUS"/>
+    <Field Code="S" Text="模式切换中" Type="STATUS"/>
+    <Field Code="T" Text="测试模式" Type="STATUS"/>
+    <Field Code="" Text="已离线" Type="STATUS"/>
+  </FieldMapping>
+  <FieldMapping Name="STATUS_REGISTER" Comment ="SMS注册状态" Type ="STATUS">
+    <Field Code="E" Text="允许注册" />
+    <Field Code="D" Text="禁止注册" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="STATUS_SCT" Comment ="标准化状态" Type ="STATUS">
+    <Field Code="Y" Text="正在标准化" />
+    <Field Code="N" Text="无标准化任务" />
+  </FieldMapping>
+ 
+  <FieldMapping Name="PS_REGISTERED_COMMAND" Comment ="生产样注册指令状态" Type ="COMMAND">
+    <Field Code="S" Text="生产样注册成功" />
+    <Field Code="F" Text="生产样注册失败" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="PS_PROCESS_STARTED_COMMAND" Comment ="生产样启动流程指令状态" Type ="COMMAND">
+    <Field Code="S" Text="生产样流程已启动" />
+    <Field Code="F" Text="生产样流程启动失败" Type="ERROR"/>
+  </FieldMapping>
+</FieldMappings>

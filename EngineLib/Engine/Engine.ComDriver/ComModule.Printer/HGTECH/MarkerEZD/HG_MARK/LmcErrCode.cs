@@ -1,0 +1,33 @@
+﻿
+namespace Engine.ComDriver.HGTECH
+{
+    public enum LmcErrCode
+    {
+        LMC1_ERR_SUCCESS,
+        LMC1_ERR_EZCADRUN,
+        LMC1_ERR_NOFINDCFGFILE,
+        LMC1_ERR_FAILEDOPEN,
+        LMC1_ERR_NODEVICE,
+        LMC1_ERR_HARDVER,
+        LMC1_ERR_DEVCFG,
+        LMC1_ERR_STOPSIGNAL,
+        LMC1_ERR_USERSTOP,
+        LMC1_ERR_UNKNOW,
+        LMC1_ERR_OUTTIME,
+        LMC1_ERR_NOINITIAL,
+        LMC1_ERR_READFILE,
+        LMC1_ERR_OWENWNDNULL,
+        LMC1_ERR_NOFINDFONT,
+        LMC1_ERR_PENNO,
+        LMC1_ERR_NOTTEXT,
+        LMC1_ERR_SAVEFILE,
+        LMC1_ERR_NOFINDENT,
+        LMC1_ERR_STATUE,
+        LMC1_ERR_PARAM,
+        LMC1_ERR_BRAND,
+        LMC1_ERROR_NOEZDFILE,
+        LMC1_ERROR_NOINIT,
+        LMC1_ERROR_OUTOFPORTRANGE,
+        LMC1_ERROR_NOFINDMARKEZD
+    }
+}

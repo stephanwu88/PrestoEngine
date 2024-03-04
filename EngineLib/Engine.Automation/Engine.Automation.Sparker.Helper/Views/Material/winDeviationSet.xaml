@@ -1,0 +1,109 @@
+﻿<Window x:Class="Engine.Automation.Sparker.winDeviationSet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engine.Automation.Sparker"
+        mc:Ignorable="d" FontSize="14" ResizeMode="NoResize" WindowStartupLocation="CenterOwner"
+        Title="偏差管理" Height="362" Width="670">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Border Height="10" BorderThickness="0 0 0 2" BorderBrush="#FFF0F0F0">
+            <StackPanel Margin="150 0 100 0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
+
+            </StackPanel>
+        </Border>
+
+        <Grid Grid.Row="1" DataContext="{Binding CurrentEditMaterialDeviation}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--左侧边栏-->
+            <Border Margin="0 10" BorderThickness="0 0 1 0" BorderBrush="#FFF0F0F0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                <StackPanel Margin="0 20">
+                    <StackPanel.Resources>
+                        <Style TargetType="RadioButton">
+                            <Setter Property="Margin" Value="20 10"/>
+                            <Setter Property="VerticalAlignment" Value="Top"/>
+                            <Setter Property="HorizontalAlignment" Value="Left"/>
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+                        </Style>
+                    </StackPanel.Resources>
+                    <RadioButton Content="标准差" IsChecked="{Binding GamaMode,Converter={StaticResource StringToChecked}, ConverterParameter=Equals[标准差]}"/>
+                    <RadioButton Content="相对标准差" IsChecked="{Binding GamaMode,Converter={StaticResource StringToChecked}, ConverterParameter=Equals[相对标准差]}"/>
+                    <RadioButton Content="r常量" IsChecked="{Binding GamaMode,Converter={StaticResource StringToChecked}, ConverterParameter=Equals[r常量]}"/>
+                    <RadioButton Content="r公式" IsChecked="{Binding GamaMode,Converter={StaticResource StringToChecked}, ConverterParameter=Equals[r公式]}"/>
+                </StackPanel>
+            </Border>
+
+            <!--右侧栏-->
+            <Border Grid.Column="1">
+                <Grid>
+                    <Grid.Resources>
+                        <Style TargetType="TextBox">
+                            <Setter Property="VerticalContentAlignment" Value="Center"/>
+                            <Setter Property="TextWrapping" Value="NoWrap"/>
+                            <Setter Property="VerticalAlignment" Value="Top"/>
+                        </Style>
+                    </Grid.Resources>
+                    <Label Content="r :" HorizontalAlignment="Left" Margin="72,72,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="94,72,0,0" Text="{Binding Gama1}" Width="94"/>
+
+                    <Label Content="1.2r :" HorizontalAlignment="Left" Margin="218,71,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="268,72,0,0" Text="{Binding Gama2}" Width="94"/>
+
+                    <Label Content="1.3r :" HorizontalAlignment="Left" Margin="364,72,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="410,72,0,0" Text="{Binding Gama3}" Width="94"/>
+
+                    <Label Content="A :" HorizontalAlignment="Left" Margin="67,103,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="94,103,0,0" Text="{Binding A}" Width="94"/>
+
+                    <Label Content="B :" HorizontalAlignment="Left" Margin="237,103,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="268,103,0,0" Text="{Binding B}" Width="94"/>
+
+                    <Label Content="r公式 :" HorizontalAlignment="Left" Margin="37,150,0,0" VerticalAlignment="Top" Height="30"/>
+                    <ComboBox x:Name="_GamaExpress" HorizontalAlignment="Left" Height="26" Margin="94,150,0,0" Text="{Binding GamaExpress}" Width="282" VerticalAlignment="Top"/>
+
+                    <Label Content="偏差 :" HorizontalAlignment="Left" Margin="50,34,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="94,34,0,0" Text="{Binding SD}" Width="94"/>
+
+                    <Label Content="相对偏差 :" HorizontalAlignment="Left" Margin="189,34,0,0" VerticalAlignment="Top" Height="30"/>
+                    <TextBox HorizontalAlignment="Left" Height="26" Margin="268,34,0,0" Text="{Binding RSD}" Width="94"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Border BorderThickness="0 2 0 0" BorderBrush="#FFF0F0F0" Grid.Row="2">
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Height" Value="30"/>
+                        <Setter Property="Width" Value="90"/>
+                        <Setter Property="Margin" Value="10 0 40 0"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                    </Style>
+                </Grid.Resources>
+
+                <CheckBox Content="管控" Visibility="Collapsed" IsChecked="{Binding CurrentEditMaterialDeviation.IsEnabled,Converter={StaticResource StringToChecked}}" 
+                          Width="107" Margin="21,15,0,0" HorizontalAlignment="Left" VerticalContentAlignment="Center" VerticalAlignment="Top"/>
+
+                <Button Content="取消" Command="{Binding CommandCloseWindow}" 
+                        CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" 
+                        DockPanel.Dock="Right" HorizontalAlignment="Left" Margin="346,59,0,0" VerticalAlignment="Top"/>
+                <Button Content="确认" Command="{Binding CommandCommitDeviationSet}"
+                        DockPanel.Dock="Right" Margin="233,59,0,0" VerticalAlignment="Top" Width="90" HorizontalAlignment="Left"/>
+                <Label Content="备注 :" HorizontalAlignment="Left" Margin="173,12,0,0" VerticalAlignment="Top" Height="30"/>
+                <TextBox HorizontalAlignment="Left" Height="30" Margin="224,12,0,0" Text="" Width="412" VerticalAlignment="Top"/>
+
+
+            </Grid>
+        </Border>
+    </Grid>
+
+</Window>

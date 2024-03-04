@@ -1,0 +1,69 @@
+﻿<Window x:Class="Engine.Core.TaskSchedule.winNewProcess"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engine.Core.TaskSchedule"
+        mc:Ignorable="d"
+        Title="winNewProcess" Height="446.993" Width="664.699" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="指令选择：" HorizontalAlignment="Left" Margin="10,14,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="_CmdGroup" HorizontalAlignment="Left" Height="25" Margin="99,14,0,0" VerticalAlignment="Top" Width="215" SelectionChanged="_CmdGroup_SelectionChanged"/>
+        <Border x:Name="_Border_Macro"  BorderBrush="#FFE0E0E0" BorderThickness="1" Height="140" Margin="10,86,10,0" VerticalAlignment="Top">
+            <Grid Margin="0,0,0,0" >
+                <Label x:Name="_g1_msg_var1" Content="目标工位：" HorizontalAlignment="Left" Margin="14,37,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="_g1_msg_var2" Content="目标项：" HorizontalAlignment="Left" Margin="14,67,0,0" VerticalAlignment="Top" Width="68"/>
+                <Label x:Name="_g1_msg_var3" Content="设定值：" HorizontalAlignment="Left" Margin="14,100,0,0" VerticalAlignment="Top" Width="68"/>
+
+                <Label x:Name="_g1_msg_sourceStation" Content="源工位：" HorizontalAlignment="Left" Margin="355,37,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="_g1_msg_sourceItem" Content="源项：" HorizontalAlignment="Left" Margin="355,67,0,0" VerticalAlignment="Top" Width="68"/>
+                <ComboBox x:Name="_PosSource" HorizontalAlignment="Left" Margin="409,39,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="_PosSource_SelectionChanged" />
+                <ComboBox x:Name="_ItemSource" HorizontalAlignment="Left" Margin="409,70,0,0" VerticalAlignment="Top" Width="203"/>
+                <CheckBox x:Name="_sourceType" VerticalContentAlignment="Center" Content="设定可变量" HorizontalAlignment="Left" Height="20" Margin="408,11,0,0" VerticalAlignment="Top" Width="96" Checked="_sourceType_Checked" Unchecked="_sourceType_Unchecked"/>
+
+                <Label x:Name="_g2_msg_var1"  Content="选择事件：" HorizontalAlignment="Left" Margin="14,18,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="_g2_msg_var2" Content="事件程序：" HorizontalAlignment="Left" Margin="14,46,0,0" VerticalAlignment="Top"/>
+
+                <ComboBox x:Name="_Pos_Macro" HorizontalAlignment="Left" Margin="90,39,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="_Pos_Macro_SelectionChanged"/>
+                <ComboBox x:Name="_Pos_Item" HorizontalAlignment="Left" Margin="90,70,0,0" VerticalAlignment="Top" Width="203"/>
+                <TextBox x:Name="_Content_Set" Background="White" HorizontalAlignment="Left" Height="23" Margin="90,101,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="203"/>
+                <ComboBox x:Name="_Event_Content" HorizontalAlignment="Left" Margin="90,18,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="_Event_Content_SelectionChanged"/>
+                <TextBox x:Name="_Event_Prog" IsReadOnly="True" Background="#FFECECEC" HorizontalAlignment="Left" Height="23" Margin="90,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="203"/>
+            </Grid>
+        </Border>
+
+        <Border x:Name="_Border_Driver"  Visibility="Hidden"  BorderBrush="#FFE0E0E0" BorderThickness="1" Height="140" Margin="10,86,10,0" VerticalAlignment="Top" >
+            <Grid Margin="0,0,0,0" >
+                <Label Content="目标工位：" HorizontalAlignment="Left" Margin="14,37,0,0" VerticalAlignment="Top"/>
+                <Label Content="任务内容：" HorizontalAlignment="Left" Margin="14,67,0,0" VerticalAlignment="Top" Width="68"/>
+                <Label Content="任务命令：" HorizontalAlignment="Left" Margin="14,100,0,0" VerticalAlignment="Top" Width="68"/>
+                <Label Content="进入任务时工位状态：" HorizontalAlignment="Left" Margin="357,35,0,0" VerticalAlignment="Top"/>
+                <Label Content="退出任务时工位状态：" HorizontalAlignment="Left" Margin="357,66,0,0" VerticalAlignment="Top"/>
+
+                <ComboBox x:Name="_Pos_Driver" HorizontalAlignment="Left" Margin="90,39,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="_Pos_Driver_SelectionChanged"/>
+                <ComboBox x:Name="_TaskContent" HorizontalAlignment="Left" Margin="90,70,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="_TaskContent_SelectionChanged"/>
+                <ComboBox x:Name="_Task_IN" HorizontalAlignment="Left" Margin="500,37,0,0" VerticalAlignment="Top" Width="103"/>
+                <ComboBox x:Name="_Task_OUT" HorizontalAlignment="Left" Margin="500,69,0,0" VerticalAlignment="Top" Width="103" />
+                <TextBox x:Name="_TaskID" IsReadOnly="True" Background="#FFDEDCDC" HorizontalAlignment="Left" Height="23" Margin="90,101,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top" Width="203"/>
+
+            </Grid>
+        </Border>
+
+
+        <Label Content="设置" HorizontalAlignment="Left" Margin="24,74,0,0" VerticalAlignment="Top" Background="White"/>
+        <Border BorderBrush="#FFE0E0E0" BorderThickness="1" Height="131" Margin="10,241,10,0" VerticalAlignment="Top">
+            <Grid >
+                <CheckBox x:Name="_Chk_Enable" IsChecked="True" Content="已启用" HorizontalAlignment="Left" Height="17" Margin="21,22,0,0" VerticalAlignment="Top" Width="94"/>
+                <CheckBox x:Name="_Chk_MsgFrom" Content="从工位获取信息流到流程:" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="20,50,0,0" VerticalAlignment="Top" Height="19" Width="187" Checked="_Chk_MsgFrom_Checked" Unchecked="_Chk_MsgFrom_Unchecked"/>
+                <ComboBox x:Name="_MsgFromStation" HorizontalAlignment="Left" Margin="204,47,0,0" VerticalAlignment="Top" Width="146" />
+                <CheckBox x:Name="_Chk_KillSoucre" IsChecked="True" Content="是否删除源?" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="365,48,0,0" VerticalAlignment="Top" Height="19" Width="91"/>
+                <CheckBox x:Name="_Chk_MsgTo" Content="信息流传递至工位:" IsChecked="True" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="20,81,0,0" VerticalAlignment="Top" Height="19" Width="187" Checked="_Chk_MsgTo_Checked" Unchecked="_Chk_MsgTo_Unchecked"/>
+                <ComboBox x:Name="_MsgToStation" HorizontalAlignment="Left" Margin="204,82,0,0" VerticalAlignment="Top" Width="146" />
+                <CheckBox x:Name="_Chk_KeepCopy" IsEnabled="True" IsChecked="True" Content="是否存副本?" HorizontalAlignment="Left" VerticalContentAlignment="Center" Margin="365,82,0,0" VerticalAlignment="Top" Height="19" Width="91"/>
+            </Grid>
+        </Border>
+        <Label Content="高级设置" HorizontalAlignment="Left" Margin="24,230,0,0" VerticalAlignment="Top" Background="White"/>
+        <Button x:Name="_Cmd_Sure" Content="确定" Margin="490,380,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="68" IsDefault="True" Click="_Cmd_Sure_Click"/>
+        <Button x:Name="_Cmd_Cancel" Content="取消" Margin="578,380,0,0" HorizontalAlignment="Left" Width="68" Height="26" VerticalAlignment="Top" IsCancel="True" Click="_Cmd_Cancel_Click"/>
+    </Grid>
+</Window>

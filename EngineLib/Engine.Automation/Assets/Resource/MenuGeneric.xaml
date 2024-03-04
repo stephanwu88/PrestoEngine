@@ -1,0 +1,80 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--仪器管理 分析程序管理相关页面-->
+    <system:String x:Key="Automation.Uri.PageAnaPgm">pack://application:,,,/Engine.Automation;component/Engine.Automation.Sparker.Helper/Views/AnaPgm/PageAnaPgm.xaml</system:String>
+    <system:String x:Key="Automation.Uri.PageInsElemBaseLib">pack://application:,,,/Engine.Automation;component/Engine.Automation.Sparker.Helper/Views/AnaPgm/PageInsElemBaseLib.xaml</system:String>
+    
+    <!--牌号管理相关页面-->
+    <system:String x:Key="Automation.Uri.PageMaterial">pack://application:,,,/Engine.Automation;component/Engine.Automation.Sparker.Helper/Views/Material/PageMaterial.xaml</system:String>
+    
+    <!--控样管理相关页面-->
+    <system:String x:Key="Automation.Uri.PageProben">pack://application:,,,/Engine.Automation;component/Engine.Automation.Sparker.Helper/Views/Proben/PageProben.xaml</system:String>
+    <system:String x:Key="Automation.Uri.PageProbenStd">pack://application:,,,/Engine.Automation;component/Engine.Automation.Sparker.Helper/Views/Proben/PageProbenStd.xaml</system:String>
+    
+
+    <system:String x:Key="Automation.Type.PageAnaPgm">Engine.Automation | Engine.Automation.Sparker.PageAnaPgm</system:String>
+    <system:String x:Key="Automation.Type.PageMaterial">Engine.Automation | Engine.Automation.Sparker.PageMaterial</system:String>
+    <system:String x:Key="Automation.Type.PageRelatedSteel">Engine.Automation | Engine.Automation.Sparker.PageRelatedSteel</system:String>
+    <system:String x:Key="Automation.Type.PageProben">Engine.Automation | Engine.Automation.Sparker.PageProben</system:String>
+    <system:String x:Key="Automation.Type.PageProbenStd">Engine.Automation | Engine.Automation.Sparker.PageProbenStd</system:String>
+
+
+    <!--会显示语法错误，但是可以运行-->
+    <!--ItemsSource="{Binding Source={StaticResource Automation.Provider.MenuGeneric},XPath='/Root/FileSystem[@Name=\'ShellWindow\']/Folder'}"-->
+    <system:String x:Key="Automation.XPath.PageInsElemBaseLib">Root/FileSystem[@Name='PageInsElemBaseLib']/Folder[@Enable='1']</system:String>
+    <system:String x:Key="Automation.XPath.PageAnaElemBase">Root/FileSystem[@Name='PageAnaElemBase']/Folder[@Enable='1']</system:String>
+    <system:String x:Key="Automation.XPath.PageRelatedSteel">Root/FileSystem[@Name='PageRelatedSteel']/Folder[@Enable='1']</system:String>
+
+    <XmlDataProvider x:Key="Automation.Provider.MenuGeneric">
+        <x:XData>
+            <Root xmlns="">
+                <!--分析管理 - 仪器元素库 - 菜单 -->
+                <FileSystem Name="PageInsElemBaseLib">
+                    <Folder Enable="1" Name="添加" Value="AddNew" FIcon="&#xea70;" Image="/Assets/Image/1.png"/>
+                    <Folder Enable="1" Name="删除" Value="Delete" FIcon="&#xea70;" Image="/Assets/Image/2.png"/>
+                    <Folder Enable="0" Name="复制" Value="Copy"   FIcon="&#xea70;" Image="/Assets/Image/3.png"/>
+                    <Folder Enable="0" Name="粘贴" Value="Paste"  FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="1" Name="上调" Value="MoveUp" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="1" Name="下调" Value="MoveDn" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="0" Name="导入" Value="Import" FIcon="&#xea70;" Image="/Assets/Image/5.png"/>
+                    <Folder Enable="0" Name="导出" Value="Export" FIcon="&#xea70;" Image="/Assets/Image/7.png"/>
+                    <Folder Enable="1" Name="保存" Value="Save" FIcon="&#xea70;" Image="/Assets/Image/7.png"/>
+                    <Folder Enable="1" Name="刷新" Value="Update" FIcon="&#xea70;" Image="/Assets/Image/2.png"/>
+                </FileSystem>
+
+                <!--分析管理  - 分析方法 - 拓展元素页 - 菜单 -->
+                <FileSystem Name="PageAnaElemBase">
+                    <Folder Enable="1" Name="添加" Value="AddNew" FIcon="&#xea70;" Image="/Assets/Image/1.png"/>
+                    <Folder Enable="1" Name="从库添加" Value="AddFromLib" FIcon="&#xea70;" Image="/Assets/Image/1.png"/>
+                    <Folder Enable="1" Name="删除" Value="Delete" FIcon="&#xea70;" Image="/Assets/Image/2.png"/>
+                    <Folder Enable="0" Name="复制" Value="Copy"   FIcon="&#xea70;" Image="/Assets/Image/3.png"/>
+                    <Folder Enable="0" Name="粘贴" Value="Paste"  FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="1" Name="上调" Value="MoveUp" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="1" Name="下调" Value="MoveDn" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="0" Name="导入" Value="Import" FIcon="&#xea70;" Image="/Assets/Image/5.png"/>
+                    <Folder Enable="0" Name="导出" Value="Export" FIcon="&#xea70;" Image="/Assets/Image/7.png"/>
+                    <Folder Enable="1" Name="保存" Value="Save" FIcon="&#xea70;" Image="/Assets/Image/7.png"/>
+                    <Folder Enable="1" Name="刷新" Value="Update" FIcon="&#xea70;" Image="/Assets/Image/2.png"/>
+                </FileSystem>
+
+                <!--分析管理 - 钢种管理  - 菜单 -->
+                <FileSystem Name="PageRelatedSteel">
+                    <Folder Enable="1" Name="添加" Value="AddNew" FIcon="&#xea70;" Image="/Assets/Image/1.png"/>
+                    <Folder Enable="1" Name="删除" Value="Delete" FIcon="&#xea70;" Image="/Assets/Image/2.png"/>
+                    <Folder Enable="0" Name="复制" Value="Copy"   FIcon="&#xea70;" Image="/Assets/Image/3.png"/>
+                    <Folder Enable="0" Name="粘贴" Value="Paste"  FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="0" Name="导入" Value="Import" FIcon="&#xea70;" Image="/Assets/Image/5.png"/>
+                    <Folder Enable="0" Name="导出" Value="Export" FIcon="&#xea70;" Image="/Assets/Image/7.png"/>
+                    <Folder Enable="1" Name="保存" Value="Save" FIcon="&#xea70;" Image="/Assets/Image/7.png"/>
+                    <Folder Enable="1" Name="刷新" Value="Update" FIcon="&#xea70;" Image="/Assets/Image/2.png"/>
+
+                    <Folder Enable="1" Name="上升" Value="MoveUp" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="1" Name="下降" Value="MoveDn" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                    <Folder Enable="1" Name="关联牌号" Value="RelatedMaterial" FIcon="&#xea70;" Image="/Assets/Image/4.png"/>
+                </FileSystem>
+            </Root>
+        </x:XData>
+    </XmlDataProvider>
+</ResourceDictionary>

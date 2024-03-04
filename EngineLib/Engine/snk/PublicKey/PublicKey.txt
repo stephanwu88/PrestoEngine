@@ -1,0 +1,99 @@
+﻿
+秘钥公钥文件生成及使用方法
+==============================
+1、Cmd进入Shell环境
+2、sn.exe -k D:\presto.snk							生成秘钥文件
+3、sn.exe -p D:\presto.snk D:\prestoPublic.snk		生成公钥文件
+4、sn.exe -tp D:\prestoPublic.snk					查看PublicKey、PublicKeyToken
+=====================================================================================================================
+Microsoft Windows [版本 10.0.19044.2251]
+(c) Microsoft Corporation。保留所有权利。
+
+C:\Users\Admin>cd C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools>sn.exe -k D:\presto.snk
+
+Microsoft(R) .NET Framework 强名称实用工具 版本 4.0.30319.0
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+密钥对写入到 D:\presto.snk
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools>sn.exe -p D:\presto.snk D:\prestoPublic.snk
+
+Microsoft(R) .NET Framework 强名称实用工具 版本 4.0.30319.0
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+公钥已写入到 D:\prestoPublic.snk
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools>sn.exe -tp D:\prestoPublic.snk
+
+Microsoft(R) .NET Framework 强名称实用工具 版本 4.0.30319.0
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+公钥(哈希算法: sha1):
+0024000004800000940000000602000000240000525341310004000001000100a5976c60e83ce0
+dd18dc0c4534b40acdaaca61f9a1057ca7d6b5183c83d302cbfd2cd3cfeeabc2c253a8938a371e
+261707e81c98573eed600b709e3448f103e5138f36483f3fa61a77f28241fc385925c17c100928
+52eb6beb411d16ace1464f89eb55775ea02ca2ca29723c993961057c960ac37b67eeb69be0741a
+b9a04ac2
+
+公钥标记为 0fb3ebd30436f94b
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools>sn.exe -tp D:\heao.snk
+
+Microsoft(R) .NET Framework 强名称实用工具 版本 4.0.30319.0
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+公钥(哈希算法: sha1):
+0024000004800000940000000602000000240000525341310004000001000100b5321a1ba676c2
+e5761edf925ac3049b3501080cbc3f882105c1b805d4dc04edad0a8042b1d7ecf02659ec3ef615
+84e8f52bbbf2a97e4a8592044efef0b8c2ecc46ecdf5f41f93437320cb67378464945cd926db15
+24e43fd91aad383e1dc0a7038b9d8092ceb6b1411b5e96e8710826d4c2bb33e009e1bf72eaf932
+fe74839b
+
+公钥标记为 1859617a68820237
+
+C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools>
+=====================================================================================================================
+
+=====================================================================================================================
+heao.snk
+------------------------------------------------------------------------------
+PublicKey:
+0024000004800000940000000602000000240000525341310004000001000100b5321a1ba676c2
+e5761edf925ac3049b3501080cbc3f882105c1b805d4dc04edad0a8042b1d7ecf02659ec3ef615
+84e8f52bbbf2a97e4a8592044efef0b8c2ecc46ecdf5f41f93437320cb67378464945cd926db15
+24e43fd91aad383e1dc0a7038b9d8092ceb6b1411b5e96e8710826d4c2bb33e009e1bf72eaf932
+fe74839b
+
+PrestoPublic.snk
+------------------------------------------------------------------------------
+PublicKey:
+0024000004800000940000000602000000240000525341310004000001000100a5976c60e83ce0
+dd18dc0c4534b40acdaaca61f9a1057ca7d6b5183c83d302cbfd2cd3cfeeabc2c253a8938a371e
+261707e81c98573eed600b709e3448f103e5138f36483f3fa61a77f28241fc385925c17c100928
+52eb6beb411d16ace1464f89eb55775ea02ca2ca29723c993961057c960ac37b67eeb69be0741a
+b9a04ac2
+
+PublicKeyToken:
+0fb3ebd30436f94b
+=====================================================================================================================
+
+编程实现:
+		private static bool ValidateUser()
+        {
+            //获取执行App程序的FullName -- HeaoIPS, Version=1.0.0.0, Culture=neutral, PublicKeyToken=52b73f80d00d732b
+            string ExeFullName = Assembly.GetEntryAssembly().GetName().FullName;
+            string ExePublicKey = Assembly.GetEntryAssembly().GetName().GetPublicKey().ByteArrayToHexString(false);
+			string ExePublicKeyToken = Assembly.GetEntryAssembly().GetName().GetPublicKeyToken().ByteArrayToHexString(false);
+
+			//获取Engine.dll文件  -- PublicKey
+            string fileName = Assembly.GetCallingAssembly().Location;
+            Assembly AssemblyInfo = Assembly.LoadFrom(fileName);
+            string EngineFileFullName = AssemblyInfo.GetName().FullName;
+			string EngineFilePublicKey = AssemblyInfo.GetName().GetPublicKey().ByteArrayToHexString(false);
+			string EngineFilePublicKeyToken = AssemblyInfo.GetName().GetPublicKeyToken().ByteArrayToHexString(false);
+            return ExePublicKeyToken==EngineFilePublicKeyToken;
+        }
+
+=====================================================================================================================

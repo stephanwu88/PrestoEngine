@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:App.Assets.Resource">
+    <local:StdShelfPosMatrix x:Key="StdShelfPosMatrix"/>
+    <local:ProbenMainFullNameConverter x:Key="ProbenMainFullNameConverter"/>
+    <local:LstMaterialElemToProbenName x:Key="LstMaterialElemToProbenName"/>
+</ResourceDictionary>

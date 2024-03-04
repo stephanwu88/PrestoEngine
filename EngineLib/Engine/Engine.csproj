@@ -1,0 +1,1532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{238F5ADE-5043-4D62-B20A-C464044986B8}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Engine</RootNamespace>
+    <AssemblyName>Engine</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;长治;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>snk\PrivateKey\heao.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Engine.ComDriver\ComModule.DataHandler\PlcDataHandler.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument.Public\EnumAnaJobType.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument.Public\ModelXRFData.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\Bruker\sComAXSXRF.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\AutomationCommand.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\AutomationEvent.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\EnumReq.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\sComLASCmd.Data.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\sComLASCmd.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\sComLASCmd.Invoke.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\sComLASEvent.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\HGTECH\EzCad2\sComEzCad2.cs" />
+    <Compile Include="Engine.ComDriver\ComModule\ComTask.cs" />
+    <Compile Include="Engine.ComDriver\ComModule\TelegramParsedResult.cs" />
+    <Compile Include="Engine.ComDriver\ComModule\TelegramStruct.cs" />
+    <Compile Include="Engine.Common.Access\Base24Encoding.cs" />
+    <Compile Include="Engine.Common.Access\Encryption.cs" />
+    <Compile Include="Engine.Common.Access\KeyGenBasic.cs" />
+    <Compile Include="Engine.Common.Access\KeyGenPro.cs" />
+    <Compile Include="Engine.Common.Access\USBKey.cs" />
+    <Compile Include="Engine.Common\Common.WmiService.cs" />
+    <Compile Include="Engine.Common.FileZip\WinRarZip.cs" />
+    <Compile Include="Engine.Common.File\Common.ExcelEIO.cs" />
+    <Compile Include="Engine.Common.File\Common.Json.cs" />
+    <Compile Include="Engine.Common.File\Common.ResourceFile.cs" />
+    <Compile Include="Engine.Common.File\Common.Xml.cs" />
+    <Compile Include="Engine.Common.UserCustom\Common.Changzhi.cs" />
+    <Compile Include="Engine.Common.File\Common.FilePath.cs" />
+    <Compile Include="Engine.Common\Common.Comparer.cs" />
+    <Compile Include="Engine.Common\Common.DependObjectExtension.cs" />
+    <Compile Include="Engine.Common\Common.EqualityComparer.cs" />
+    <Compile Include="Engine.Common\Common.Math.cs" />
+    <Compile Include="Engine.Common.Control\Common.PageNavigater.cs" />
+    <Compile Include="Engine.Common\Common.Regex.cs" />
+    <Compile Include="Engine.Common\Common.Thread.cs" />
+    <Compile Include="Engine.Common\Common.JDict.cs" />
+    <Compile Include="Engine.Common\Common.Win32.cs" />
+    <Compile Include="Engine.Common\Common.WinOS.cs" />
+    <Compile Include="Engine.Common\Common.Xaml.cs" />
+    <Compile Include="Engine.Data\Engine.Data.MSACCESS\DBMSACCESS.cs" />
+    <Compile Include="Engine.Data\Engine.Data.MSACCESS\SqlMaker.cs" />
+    <Compile Include="Engine.Data\Engine.Data.MSEXCEL\DBMSEXCEL.cs" />
+    <Compile Include="Engine.Data\Engine.Data.MSEXCEL\SqlMaker.cs" />
+    <Compile Include="Engine.Data\Engine.Data.MSSQL\DBMSSQL.cs" />
+    <Compile Include="Engine.Data\Engine.Data.MSSQL\SqlMaker.cs" />
+    <Compile Include="Engine.Data\Model\LocalSource.cs" />
+    <Compile Include="Engine.Data\Model\ServerNode.cs" />
+    <Compile Include="Engine.General\Template\winFloatingAwait.xaml.cs">
+      <DependentUpon>winFloatingAwait.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Attribute\ViewAttribute.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\ClipBoardService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\DependencyObjectExtensions.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\FlashBehavior.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\GeometryExtension.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\IconHelper.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\MathExtensions.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\ObjectRoutedEventArgs.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\PrintControlTreeService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\PropertyService\ObjectProperty.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\PropertyService\ObjectPropertyFactory.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\Service.Behavior\DrapAdornerBehavior.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\Service.Behavior\DropAdornerBehavior.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\Service.Behavior\ElementAllowDrapBehavior.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\Service.Behavior\LoadedAdornerBehavior.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\Service.Behavior\ZoomWithWheelAndMoveBehavior.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\VisualTreeHelperEx.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\AttachableCollection.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Behavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\BehaviorCollection.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\ComparisonLogic.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ActionCommand.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ComparisonCondition.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ComparisonConditionType.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ConditionalExpression.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ConditionCollection.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\DataTrigger.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ExtendedVisualStateManager.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\ICondition.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Core\SetDataStoreValueAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\CustomPropertyValueEditorAttribute.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\DataBindingHelper.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\DefaultTriggerAttribute.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\DependencyObjectHelper.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\EventObserver.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\EventTriggerBase.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\IAttachedObject.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Interaction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\InteractionContext.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\InvokeCommandAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\InvokeFountainAnimationAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\InvokeTimeSplitAnimationAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\ITickTimer.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\NameResolver.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\ScreenType.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\Serializer.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TargetedTriggerAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TriggerAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TriggerActionCollection.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TriggerBase.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TriggerCollection.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TypeConstraintAttribute.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\TypeConverterHelper.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Provider\VisualStateUtilities.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\ConditionBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\AutoCompleteBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\AutoDisabledImageBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ClickSelectedStateBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\CloseTabItemAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\CloseWindowAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\CloseWindowBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ClosingWindowBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ContextMenuDisplayBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\DataGridRowDragBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\DataGridRowIndexBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\DeferredScrollBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\DragMoveElementBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\DragPositionBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ElementDragStateBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\FountainAnimationBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ListDragBlendBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ListDropBlendBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ListViewColumnAutoSizeBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ListViewSortBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\LoadAnimationBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\MaskedTextBoxBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\MouseGestureScrollViewerBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\MultiSelectTreeViewBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\NumericTextBoxBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\OpenTargetInTabControlAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\QinBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ScrollbarPreviewBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ScrollingPreviewBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ScrollingTrigger.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ScrollToTargetAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ScrollViewMouseDragBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\SelectedItemsCollectionSynchronizerBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\SelectListBoxItemElementBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\SelectorAutoClearBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\SelectTextOnFocusBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\SelectZIndexElementBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\SynchronizedScrollingBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\TextBoxSelectionStartBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\ViewportSynchronizerBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\VisibilityCollapsedOpacityBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Custom\WatermarkTextBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\DataStateBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\DataStoreChangedTrigger.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Input\KeyTrigger.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Input\TranslateZoomRotateBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Layout\FluidMoveBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\Layout\MouseDragElementBehavior.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\CallMethodAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\ChangePropertyAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\EventTrigger.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\GoToStateAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\LaunchUriOrFileAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\Media\TransitionEffect.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\PropertyChangedTrigger.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\PrototypingActions.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\RemoveElementAction.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Trigger\TimerTrigger.cs" />
+    <Compile Include="Engine.WpfBase\ResourceManager\ResouceManager.cs" />
+    <Compile Include="Engine.WpfControlExtension\DataGridHelper.cs" />
+    <Compile Include="Engine.WpfControlExtension\GridHelper.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Adorner\BorderAdorner.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Adorner\DragAdorner.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Adorner\ScrollAdorner.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Adorner\WaterMarkAdorner.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\FTabControl.xaml.cs">
+      <DependentUpon>FTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Mvc\LinkActionFrame.xaml.cs">
+      <DependentUpon>LinkActionFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Mvc\MvcAddFrame.xaml.cs">
+      <DependentUpon>MvcAddFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Mvc\MvcEditFrame.xaml.cs">
+      <DependentUpon>MvcEditFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Mvc\MvcListFrame.xaml.cs">
+      <DependentUpon>MvcListFrame.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\IndexedItemOffsetMultiplierExtension.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\IZIndexController.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\NullToVisibilityConverter.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\ShadowAssist.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\ShadowConverter.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\ShadowEdgeConverter.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\ShadowInfo.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\SizeToRectConverter.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\ToggleExpander.xaml.cs">
+      <DependentUpon>ToggleExpander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\ITransitionEffect.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\ITransitionEffectSubject.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\TransitionEffect.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\TransitionEffectBase.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\TransitionEffectExtension.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\TransitionEffectKind.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionEffect\TransitionEffectTypeConverter.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\CircleWipe.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\FadeWipe.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\ITransitionWipe.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\SlideDirection.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\SlideOutScale.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\SlideOutWipe.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\SlideWipe.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\TransitionerSlide.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\ITransitionWipe\TransitionerSlideState.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\SwtichTransitioner.xaml.cs">
+      <DependentUpon>SwtichTransitioner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\Transitioner.xaml.cs">
+      <DependentUpon>Transitioner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\TransitioningContent.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\TransitioningContentBase.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Zoom\PriorityQuadTree.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Zoom\PriorityQueue.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Zoom\StiZoomableCanvas.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Zoom\VirtualPanel.cs" />
+    <Compile Include="Engine.WpfControlExtension\CustomFrame.cs" />
+    <Compile Include="Engine.WpfControlLib\Provider\Command\CommandService.cs" />
+    <Compile Include="Engine.WpfControlLib\Service\LinkAction.cs" />
+    <Compile Include="Engine\Attribute\AttributeBase.cs" />
+    <Compile Include="Engine\Attribute\AttributeModel.cs" />
+    <Compile Include="Engine\Attribute\BasicAttribute.cs" />
+    <Compile Include="Engine\Attribute\NumbericAttribute.cs" />
+    <Compile Include="Engine\Attribute\NumberRuleAttribute.cs" />
+    <Compile Include="Engine\Attribute\StringRuleAttribute.cs" />
+    <Compile Include="Engine.Common\Common.Mod.Sheet.cs" />
+    <Compile Include="Engine.Common.Control\Common.Window.cs" />
+    <Compile Include="Engine.Common\Common.Enum.cs" />
+    <Compile Include="Engine.Common.File\Common.FileDialog.cs" />
+    <Compile Include="Engine.Common.File\Common.FileOp.cs" />
+    <Compile Include="Engine.Common\Common.Net.cs" />
+    <Compile Include="Engine.Common\Common.MyAssem.cs" />
+    <Compile Include="Engine.Common\Common.Base.cs" />
+    <Compile Include="Engine.Common\Common.Conversion.cs" />
+    <Compile Include="Engine.Common\Common.MyList.cs" />
+    <Compile Include="Engine.Common\Common.Reflection.cs" />
+    <Compile Include="Engine.Common\StartUpWithSystem.cs" />
+    <Compile Include="Engine.Common.Control\Common.TabControl.cs" />
+    <Compile Include="Engine.Common\ValidateError.cs" />
+    <Compile Include="Engine.Common.File\Common.CSV.cs" />
+    <Compile Include="Engine.Common.File\Common.RegistryHandler.cs" />
+    <Compile Include="Engine.Common.File\FileTextRW.cs" />
+    <Compile Include="Engine.Common.FileZip\IFileCompress.cs" />
+    <Compile Include="Engine.Common.File\Common.Ini.cs" />
+    <Compile Include="Engine.Common.File\MyPath.cs" />
+    <Compile Include="Engine.Common.File\NPOIHelper.cs" />
+    <Compile Include="Engine.Common.File\Common.Serialize.cs" />
+    <Compile Include="Engine.General\Template\winAboutEx.xaml.cs">
+      <DependentUpon>winAboutEx.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.General\Template\winActivation.xaml.cs">
+      <DependentUpon>winActivation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.General\Template\winHeaoActivation.xaml.cs">
+      <DependentUpon>winHeaoActivation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.General\Template\winQuickService.xaml.cs">
+      <DependentUpon>winQuickService.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.Wrap\MarkupCommandBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\InstanceBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IAutoColumnPagedDataGridMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IContainerMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IMessageService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\INotifyMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IPresenterMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IPrintBoxMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IPropertyGridMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\ISnackMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\ISystemNotifyMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\ITaskBarMessage.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageService\IWindowDialogService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Markup\EnumExtension.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Markup\RandomExtension.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Validation\RegularExpressionValidationRule.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Validation\RequiredValidationRule.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Validation\ValidationRuleBase.cs" />
+    <Compile Include="Engine.WpfBase\Attach\Cattach.Animation.cs" />
+    <Compile Include="Engine.WpfBase\Attach\Cattach.GridOption.cs" />
+    <Compile Include="Engine.WpfBase\Attach\Cattach.Raw.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\WinAtWorkArea.cs" />
+    <Compile Include="Engine.WpfBase\Interactivity\Service\Behaviors\WinDragMoveBehavior.cs" />
+    <Compile Include="Engine.ComDriver\ComMain\DriverCommon.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\ARL\ModelOESData.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\ARL\sComARL_MM.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\ARL\sComSMS.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\ARL\sComSMSData.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\HEAO\PageHeaoHCP.xaml.cs">
+      <DependentUpon>PageHeaoHCP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComModule.Stand\HEAO\winAddNew.xaml.cs">
+      <DependentUpon>winAddNew.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComModule.Printer\HGTECH\MarkerEZD\HG_MARK\HGMarker.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\HGTECH\MarkerEZD\HG_MARK\LmcErrCode.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\HGTECH\MarkerEZD\sComMarkEZD.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\HGTECH\ModelComHG.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\HGTECH\sComHGLaser.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument.Public\ModelOESData.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\ComS7.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\ModelComS7.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\PART\S7Common.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\sComS7PLC.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\Simultix\ModelXRFData.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\Simultix\sComSimultix.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\Valentin\sComAPL.cs" />
+    <Compile Include="Engine.ComDriver\ComMS\sSerialPort.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\JBPrinter\ComJBPrinter.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\IComPrinter.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Printer\JBPrinter\ModelPrint.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\CRCAsm.cs" />
+    <Compile Include="Engine.ComDriver\ComModule\ModelComInstr.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\S7String.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\S7WString.cs" />
+    <Compile Include="Engine.ComDriver\ComModule\ModelComBase.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument.Views\PageComInstr.xaml.cs">
+      <DependentUpon>PageComInstr.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComModule.Instrument.Views\winNewVariable.xaml.cs">
+      <DependentUpon>winNewVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\Symbol\winAddSystemGroup.xaml.cs">
+      <DependentUpon>winAddSystemGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.File\LogItem.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.File\TxtFile.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.Sample\ModelSampleLogger.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.Sample\SampleLogger.cs" />
+    <Compile Include="Engine.Mod\FieldSheet\BooklFielder.cs" />
+    <Compile Include="Engine.Mod\FieldManager\FieldManager.cs" />
+    <Compile Include="Engine.Mod\FieldOption\OptionFielder.cs" />
+    <Compile Include="Engine.Mod\FieldOption\ModelFieldGroup.cs" />
+    <Compile Include="Engine.Mod\FieldOption\ModelFieldItem.cs" />
+    <Compile Include="Engine.Mod\FieldOption\PageSystemField.xaml.cs">
+      <DependentUpon>PageSystemField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Mod\FieldOption\winAddFieldItem.xaml.cs">
+      <DependentUpon>winAddFieldItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Mod\FieldOption\winAddFieldGroup.xaml.cs">
+      <DependentUpon>winAddFieldGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Mod\FieldOption\winSystemField.xaml.cs">
+      <DependentUpon>winSystemField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.Alarm\FaultLogger.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.File\LogType.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.File\FileLogger.cs" />
+    <Compile Include="Engine.ComDriver\ComMain\ModelDriverItem.cs" />
+    <Compile Include="Engine.ComDriver\ComMain\ComMain.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\HEAO\ModelComHeao.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\HEAO\sComHeaoHCP.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\HEAO\sComHeaoMM.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\MODBUS\sComModbusTcp.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\OBLF\sComOblfSpectro.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Instrument\PANalytical\sComSuperQ5.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\PART\FunCodeAttribute.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\sComTMPLC.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\winNewVariable.xaml.cs">
+      <DependentUpon>winNewVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\PageSchneiderTM.xaml.cs">
+      <DependentUpon>PageSchneiderTM.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\ModelComTM.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\ComTMPLC.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\Page\PageVarList.xaml.cs">
+      <DependentUpon>PageVarList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\Page\winNewVariable.xaml.cs">
+      <DependentUpon>winNewVariable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComMS\DriverItem.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\ErrorCode.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\EventArgs.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\IComDriver.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\MODBUS\PART\Conversion.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Stand\MODBUS\PART\Enums.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\PART\Conversion.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Schneider\PART\Enums.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\PART\Conversion.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\PART\Enums.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\IComDriverNetCom.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\IComDriverSerialCom.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\IComPlcWorker.cs" />
+    <Compile Include="Engine.ComDriver\ComModule\ModelComPLC.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\sComNetDevice.cs" />
+    <Compile Include="Engine.ComDriver\ComMS\sSocket.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\sComSerialDevice.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\sPlcDataIO.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Bit.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Boolean.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Byte.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\ByteArray.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\SiemensClass.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Counter.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.PLC\Siemens\PART\DataItem.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Real.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Enums.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\DInt.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\DWord.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Int.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\String.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Struct.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Timer.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesPLC\Types\Word.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesTCP\IComRule.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesTCP\IComRuleNetCom.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesTCP\IComRuleSerialCom.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesTCP\sComRuleAsc.cs" />
+    <Compile Include="Engine.ComDriver\ComRulesTCP\sComRuleHex.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Web\WebReqCaller.cs" />
+    <Compile Include="Engine.ComDriver\ComModule.Web\WebServiceCaller.cs" />
+    <Compile Include="Engine.ComDriver\ComMain.Views\PageController.xaml.cs">
+      <DependentUpon>PageController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComMain.Views\winComDriver.xaml.cs">
+      <DependentUpon>winComDriver.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ComDriver\ComMain.Views\winNewController.xaml.cs">
+      <DependentUpon>winNewController.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\Accessor\Accessor.cs" />
+    <Compile Include="Engine.Core.Automation\Accessor\ModelDataView.cs" />
+    <Compile Include="Engine.Core.Automation\ParsePosItem.cs" />
+    <Compile Include="Engine.Core.Automation\Macro\MacroCommand.cs" />
+    <Compile Include="Engine.ComDriver\ComMain\ModelComLink.cs" />
+    <Compile Include="Engine.Core.Automation\Project\Model\ModelProjectNormal.cs" />
+    <Compile Include="Engine.Core.Automation\Project\Model\ModelAppStartUp.cs" />
+    <Compile Include="Engine.Core.Automation\Project\Model\ModelProjectStartUP.cs" />
+    <Compile Include="Engine.Core.Automation\Symbol\ModelSystemGroup.cs" />
+    <Compile Include="Engine.Core.Automation\Project\Project.cs" />
+    <Compile Include="Engine.Mod\Macro\MacroManager.cs" />
+    <Compile Include="Engine.Mod\FieldSheet\ModelSheetColumn.cs" />
+    <Compile Include="Engine.Mod\FieldSheet\ModelSheetGroup.cs" />
+    <Compile Include="Engine.Mod\FieldSheet\PageSheetManage.xaml.cs">
+      <DependentUpon>PageSheetManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Mod\FieldSheet\winAddSheetColumn.xaml.cs">
+      <DependentUpon>winAddSheetColumn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Mod\FieldSheet\winSheetManage.xaml.cs">
+      <DependentUpon>winSheetManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\Symbol\ModelSystemSymbol.cs" />
+    <Compile Include="Engine.Core.Automation\Symbol\PageSystemSymbol.xaml.cs">
+      <DependentUpon>PageSystemSymbol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\Symbol\winAddSymbol.xaml.cs">
+      <DependentUpon>winAddSymbol.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Mod\FieldSheet\winAddSheetGroup.xaml.cs">
+      <DependentUpon>winAddSheetGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\Symbol\winSymbolManage.xaml.cs">
+      <DependentUpon>winSymbolManage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.Alarm\ModelAlarmItem.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelCabinet.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelContent.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelDryer.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelGate.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelNormal.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelProcess.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelSettting.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelSubStation.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\ModelTrigger.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\TreeNodeItem.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\Model\TaskItem.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContent.xaml.cs">
+      <DependentUpon>PageScheduleContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfGate.xaml.cs">
+      <DependentUpon>PageScheduleContentOfGate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfNormal.xaml.cs">
+      <DependentUpon>PageScheduleContentOfNormal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfProcess.xaml.cs">
+      <DependentUpon>PageScheduleContentOfProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfSetting.xaml.cs">
+      <DependentUpon>PageScheduleContentOfSetting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfTrigger.xaml.cs">
+      <DependentUpon>PageScheduleContentOfTrigger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\TaskFactoryFrame.cs" />
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\winNewGate.xaml.cs">
+      <DependentUpon>winNewGate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\winNewProcess.xaml.cs">
+      <DependentUpon>winNewProcess.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\winNewTrigger.xaml.cs">
+      <DependentUpon>winNewTrigger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\PageView\winScheduleEditor.xaml.cs">
+      <DependentUpon>winScheduleEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Core.Automation\TaskSchedule\winTaskSchedule.xaml.cs">
+      <DependentUpon>winTaskSchedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.Data\DbCommon.cs" />
+    <Compile Include="Engine.Data\DbFactory.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.Task\ModelTaskLogger.cs" />
+    <Compile Include="Engine.ModExtension\Engine.Mod.Logger\Logger.Task\TaskLogger.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Cache\ICache.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Cache\MemoryCache.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Cache\MemoryCacheService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\ActionResult.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\IActionResult.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\ILinkActionBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\LinkAction.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\LinkActionBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\LinkActionExtention.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\LinkActionGroup.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.LinkAction\LinkActionGroups.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Attribute\ActionAttribute.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Attribute\ControllerAttribute.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Attribute\ModuleAttribute.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Attribute\RegisterAttribute.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Attribute\ViewModelAttribute.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Base\Controller\Controller.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Base\Controller\ControllerBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Base\Controller\MvcLogControllerBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Base\Controller\MvcNavigationControllerBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Base\IController.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\Base\IMvcLog.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\MvcService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\ServiceCollectionExtention.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\TypeExtention.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\DesignerPlatformLibrary.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\Empty.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\FeatureDetection.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\IExecuteWithObject.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\IExecuteWithObjectAndResult.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\WeakAction.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\WeakActionGeneric.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\WeakFunc.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Helpers\WeakFuncGeneric.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\GenericMessage.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\IMessenger.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\MessageBase.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\Messenger.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\NotificationMessage.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\NotificationMessageAction.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\NotificationMessageActionGeneric.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\NotificationMessageGeneric.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\NotificationMessageWithCallback.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\PropertyChangedMessage.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Messenger\PropertyChangedMessageBase.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewFrame\DialogService.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewFrame\PrsMenuItem.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewFrame\ViewFrameBase.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewModelBase\ModelComponent.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewModelBase\ModelTableInvoke.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewModelBase\NotifyPropertyChanged.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Animation\IAnimationAction.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Injection\ConfigService\IThemeLocalizeService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Injection\LogService\ILogService.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\DownLoadWindow.xaml.cs">
+      <DependentUpon>DownLoadWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\FloatWindow.xaml.cs">
+      <DependentUpon>FloatWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\LoginWindow.xaml.cs">
+      <DependentUpon>LoginWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\NotifyDialogWindow.xaml.cs">
+      <DependentUpon>NotifyDialogWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\NotifyMessageWindow.xaml.cs">
+      <DependentUpon>NotifyMessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\NotifyWindow.xaml.cs">
+      <DependentUpon>NotifyWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\StartWindow.xaml.cs">
+      <DependentUpon>StartWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\UpgradeWindow.xaml.cs">
+      <DependentUpon>UpgradeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\BlurWindowBase.xaml.cs">
+      <DependentUpon>BlurWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\FloatWindowBase.xaml.cs">
+      <DependentUpon>FloatWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\ManagerWindowBase.xaml.cs">
+      <DependentUpon>ManagerWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\MenuWindowBase.xaml.cs">
+      <DependentUpon>MenuWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\OfficeWindowBase.xaml.cs">
+      <DependentUpon>OfficeWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\StartWindowBase.xaml.cs">
+      <DependentUpon>StartWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\ToolWindowBase.xaml.cs">
+      <DependentUpon>ToolWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\Message\ObjectContentDialog.xaml.cs">
+      <DependentUpon>ObjectContentDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\Message\PercentProgressDialog.xaml.cs">
+      <DependentUpon>PercentProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\Message\ResultMessageDialog.xaml.cs">
+      <DependentUpon>ResultMessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\Message\SampleMessageDialog.xaml.cs">
+      <DependentUpon>SampleMessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\Message\StringProgressDialog.xaml.cs">
+      <DependentUpon>StringProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\Message\WaittingMessageDialog.xaml.cs">
+      <DependentUpon>WaittingMessageDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Service\ApplicationBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.Wrap\ActionVisibleCommand.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\UIElementBinder.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.Wrap\CollapsedOfOpacityCommand.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.Wrap\MessageLayerCloseCommand.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.Wrap\ProcessCommand.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Command\CommandService.Wrap\VisibleOfOpacityCommand.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\HsbaColor.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Injection\IApplicationBuilder.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Injection\IServiceCollection.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Injection\ServiceRegistry.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Image\ImageService.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\MessageService.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\ViewModelBase\IMvcEntityViewModelBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\ViewModelBase\IMvcViewModelBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Mvc\ViewModelBase\MvcViewModelBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Observable\IObservableSource.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Observable\ObservableExtension.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.Observable\ObservableSource.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.StoryBoard\DoubleStoryboardEngine.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.StoryBoard\EasingFunctionFactroy.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.StoryBoard\ElementStoryBoardExtention.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.StoryBoard\StoryboardEngineBase.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.StoryBoard\StoryBoardService.cs" />
+    <Compile Include="Engine.WpfBase\DataConverter\DataConverter.xaml.cs">
+      <DependentUpon>DataConverter.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfBase.Service\Service.TypeConverter\EnumTypeConverter.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service\UrlLinkNotifyClass.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\FButton.xaml.cs">
+      <DependentUpon>FButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\FCheckBox.xaml.cs">
+      <DependentUpon>FCheckBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\FExpander.xaml.cs">
+      <DependentUpon>FExpander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\GroupPanel.xaml.cs">
+      <DependentUpon>GroupPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\ImageButton.xaml.cs">
+      <DependentUpon>ImageButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\MediaButton.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MediaButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\PasswordBoxEx.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\Extensions.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Share\ValidationAssist.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Control\Transitioner\TransitionAssist.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\MessageContainer.xaml.cs">
+      <DependentUpon>MessageContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\NotifyIcon.xaml.cs">
+      <DependentUpon>NotifyIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Panel\ArcPanel.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Panel\CirclePanel.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Panel\ContainPanel.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Panel\PanelBase.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\ISnackbarMessageQueue.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\MessageQueueExtension.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\Snackbar.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\SnackbarMessage.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\SnackbarMessageEventArgs.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\SnackbarMessageQueue.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\SnackbarMessageQueueItem.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.UIPart\Snack\SnackbarMessageTypeConverter.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Window\ViewModel\WindowLinkViewModel.cs" />
+    <Compile Include="Engine.WpfControlLib\Service\WindowBaseExtention.cs" />
+    <Compile Include="Engine.WpfControlLib\Service\WindowBaseNotifyPropertyChanged.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Window\LoginWindowBase.xaml.cs">
+      <DependentUpon>LoginWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\ViewModel\LoginViewModel.cs" />
+    <Compile Include="Engine.WpfControlLib\Custom.Window\WindowBase.xaml.cs">
+      <DependentUpon>WindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\DialogWindowBase.xaml.cs">
+      <DependentUpon>DialogWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\LinkWindowBase.xaml.cs">
+      <DependentUpon>LinkWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Window\MainWindowBase.xaml.cs">
+      <DependentUpon>MainWindowBase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogClosingEventArgs.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogClosingEventHandler.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogHost.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogHostEx.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogOpenedEventArgs.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogOpenedEventHandler.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DialogSession.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\DrawerHost.cs" />
+    <Compile Include="Engine.WpfControlLib\MessageDialog\MessageWindow.xaml.cs">
+      <DependentUpon>MessageWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\CustomHMI\PipeLine.xaml.cs">
+      <DependentUpon>PipeLine.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\CustomHMI\RegionIO.xaml.cs">
+      <DependentUpon>RegionIO.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\CustomIndustrial\Elem.xaml.cs">
+      <DependentUpon>Elem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\CustomIndustrial\ExciterArea.xaml.cs">
+      <DependentUpon>ExciterArea.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\CustomIndustrial\SparkPoints.xaml.cs">
+      <DependentUpon>SparkPoints.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\CustomLoading\LoadingHelper.cs" />
+    <Compile Include="Engine.WpfControlLib\CustomLoading\winLoading.xaml.cs">
+      <DependentUpon>winLoading.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfBase\DataTemplate\DataTemplateSelector.cs" />
+    <Compile Include="Engine.WpfBase.Service\Service.IOC\MessageProxy.cs" />
+    <Compile Include="Engine.WpfTheme\Color\ThemeService.cs" />
+    <Compile Include="Engine\DefCallResult.cs" />
+    <Compile Include="Engine.Data\EntityBase.cs" />
+    <Compile Include="Engine.Data\EntityBaseDynamic.cs" />
+    <Compile Include="Engine.Data\EntityFramework.cs" />
+    <Compile Include="Engine.Data\SchemaAttribute.cs" />
+    <Compile Include="Engine.Data\Model\IDBFactory.cs" />
+    <Compile Include="Engine.Data\FieldMark.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Command\MyCommand.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\Command\MyCommandGeneric.cs" />
+    <Compile Include="Engine.WpfBase\MVVM\ViewModelBase\ViewModelBase.cs" />
+    <Compile Include="Engine.WpfControlExtension\DataGridEx.cs" />
+    <Compile Include="Engine.WpfControlLib\CustomHMI\ParamEditor.xaml.cs">
+      <DependentUpon>ParamEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfControlLib\Custom.Control\TimePicker.xaml.cs">
+      <DependentUpon>TimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Engine.WpfBase\Attach\Cattach.Common.cs" />
+    <Compile Include="Engine.WpfBase\DataConverter\UIConverter.cs" />
+    <Compile Include="Engine.WpfBase\DataConverter\XConverter.cs" />
+    <Compile Include="Engine\DefPopupMessage.cs" />
+    <Compile Include="Engine\DefSystemKey.cs" />
+    <Compile Include="Engine\DefSystemDefault.cs" />
+    <Compile Include="Engine.Data\EntityEF.cs" />
+    <Compile Include="Engine\MessageStruct.cs" />
+    <Compile Include="Engine\ModelWindow.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Assets\IconFont\IconFont.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.Stand\HEAO\PageHeaoHCP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.Stand\HEAO\winAddNew.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.PLC\Schneider\winNewVariable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.PLC\Schneider\PageSchneiderTM.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.PLC\Siemens\Page\PageVarList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.PLC\Siemens\Page\winNewVariable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Properties\DesignTimeResources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Engine.ComDriver\ComMain.Views\PageController.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.ComDriver\ComMain.Views\winComDriver.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.ComDriver\ComMain.Views\winNewController.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.Instrument.Views\PageComInstr.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.ComDriver\ComModule.Instrument.Views\winNewVariable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.General\Template\winAboutEx.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.General\Template\winActivation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.General\Template\winFloatingAwait.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.General\Template\winHeaoActivation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.General\Template\winQuickService.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.Core.Automation\Symbol\winAddSystemGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldOption\PageSystemField.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldOption\winAddFieldItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldOption\winAddFieldGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldOption\winSystemField.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldSheet\PageSheetManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldSheet\winAddSheetColumn.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldSheet\winSheetManage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.Core.Automation\Symbol\PageSystemSymbol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\Symbol\winAddSymbol.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Mod\FieldSheet\winAddSheetGroup.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\Symbol\winSymbolManage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfGate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfNormal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfProcess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfSetting.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\PageScheduleContentOfTrigger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\winNewGate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\winNewProcess.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\winNewTrigger.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\PageView\winScheduleEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.Core.Automation\TaskSchedule\winTaskSchedule.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfBase\DataConverter\DataConverter.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfBase\Resource\Render.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\FButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\FCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\FExpander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\FTabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Label.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Mvc\LinkActionFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Mvc\MvcAddFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Mvc\MvcEditFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Mvc\MvcListFrame.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\ToggleExpander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Transitioner\SwtichTransitioner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Transitioner\Transitioner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.UIPart\MessageContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.UIPart\NotifyIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.UIPart\Snack\Snackbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Scene\WindowContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\GroupPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\ImageButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\MediaButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\Expander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\GroupBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\ScrollViewer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\TextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\ToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Scene\MaterPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\DownLoadWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\FloatWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\LoginWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\NotifyDialogWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\NotifyMessageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\NotifyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\StartWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\AssitantWindow\UpgradeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\BlurWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\FloatWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\LoginWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\ManagerWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\MenuWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\OfficeWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\StartWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\ToolWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\WindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\DialogWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\LinkWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Window\MainWindowBase.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\DialogHost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\MessageWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomHMI\PipeLine.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomHMI\RegionIO.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomIndustrial\SparkPoints.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfBase\DataTemplate\DataTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\Message\ObjectContentDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\Message\PercentProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\Message\ResultMessageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\Message\SampleMessageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\Message\StringProgressDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\MessageDialog\Message\WaittingMessageDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfTheme\Color\AccentThemeResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfTheme\Color\DarkThemeResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfTheme\Color\GrayThemeResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfTheme\Color\LightThemeResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfTheme\Theme\DefaultTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfBase\Resource\ImageSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomHMI\ParamEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\TimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomIndustrial\Elem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomIndustrial\ExciterArea.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\CustomLoading\winLoading.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\DataGrid2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\TabControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfBase\Resource\Base.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Engine.WpfBase\Resource\StoryBoard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.System\CheckBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfControlLib\Custom.Control\ListBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Engine.WpfTheme\Theme\Theme.ImageSource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfTheme\Theme\Theme.Resource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Engine.WpfTheme\Theme\Theme.StoryBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DependFile\" />
+    <Folder Include="Engine.ComDriver\ComModule.Stand\OPC\" />
+    <Folder Include="Engine.Mod\Receipe\" />
+    <Folder Include="Engine.WpfBase.Service\Service.Attach\" />
+    <Folder Include="Engine.WpfBase.Service\Service.Converter\" />
+    <Folder Include="Engine.WpfBase.Service\Service.Mvp\" />
+    <Folder Include="Engine.WpfBase.Service\Service.ViewModel\" />
+    <Folder Include="Engine.WpfControlLib\Service\Behavior\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.AnimatedTabControl\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.AnimationBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Book\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Chart2D\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.ColorBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.DiagraphBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Dock\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Drawer\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Explorer\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Filter\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.FontEditor\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Gif\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.GridSpliter\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Guide\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.ImagePlayer\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.LeftMenu\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.MessageContainer\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.MessageListBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Message\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.OutlookBar\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.PagedDataGrid\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.PasswordBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Ping\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.PrintBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Screen\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.ScrollInfo\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.ScrollVewerLocator\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.SearchComboBox\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Shape\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Shuttle\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Step\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.StoryBoard\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.TextEditor\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.ThemeSet\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.ToggleExpander\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.TopContainer\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.TransformAdorner\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.TreeListView\" />
+    <Folder Include="Engine.WpfControlSmart\Engine.Control.Vlc\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Image\about.ico" />
+    <Resource Include="Assets\Image\AddNew.ico" />
+    <Resource Include="Assets\Image\Copy.ico" />
+    <Resource Include="Assets\Image\CycMon.ico" />
+    <Resource Include="Assets\Image\Debug.ico" />
+    <Resource Include="Assets\Image\Del_Doc.ico" />
+    <Resource Include="Assets\Image\EditDoc.png" />
+    <Resource Include="Assets\Image\Error_Msg.ico" />
+    <Resource Include="Assets\Image\IN.ico" />
+    <Resource Include="Assets\Image\Info_Doc.ico" />
+    <Resource Include="Assets\Image\Info_Msg.ico" />
+    <Resource Include="Assets\Image\IPS.ico" />
+    <Resource Include="Assets\Image\MonOnce.ico" />
+    <Resource Include="Assets\Image\MsgInfo.ico" />
+    <Resource Include="Assets\Image\MsgText.ico" />
+    <Resource Include="Assets\Image\Network_App.ico" />
+    <Resource Include="Assets\Image\Network_Dev.ico" />
+    <Resource Include="Assets\Image\Network_Doc.ico" />
+    <Resource Include="Assets\Image\New.ico" />
+    <Resource Include="Assets\Image\Note.ico" />
+    <Resource Include="Assets\Image\Offline.png" />
+    <Resource Include="Assets\Image\Online.png" />
+    <Resource Include="Assets\Image\Open.ico" />
+    <Resource Include="Assets\Image\OUT.ico" />
+    <Resource Include="Assets\Image\Paste.png" />
+    <Resource Include="Assets\Image\Pause.ico" />
+    <Resource Include="Assets\Image\ProcEditor.ico" />
+    <Resource Include="Assets\Image\Process.ico" />
+    <Resource Include="Assets\Image\ProjectNode.ico" />
+    <Resource Include="Assets\Image\Pump0.ico" />
+    <Resource Include="Assets\Image\Question_Msg.ico" />
+    <Resource Include="Assets\Image\QuickService.ico" />
+    <Resource Include="Assets\Image\RecordText.ico" />
+    <Resource Include="Assets\Image\RegTool.ico" />
+    <Resource Include="Assets\Image\S71200.ico" />
+    <Resource Include="Assets\Image\Save.ico" />
+    <Resource Include="Assets\Image\SaveAll.ico" />
+    <Resource Include="Assets\Image\SaveAs.ico" />
+    <Resource Include="Assets\Image\Shack.ico" />
+    <Resource Include="Assets\Image\Start.ico" />
+    <Resource Include="Assets\Image\Station.ico" />
+    <Resource Include="Assets\Image\Tools.ico" />
+    <Resource Include="Assets\Image\Tree.ico" />
+    <Resource Include="Assets\Image\UnCheck.png" />
+    <Resource Include="Assets\Image\Upd1.ico" />
+    <Resource Include="Assets\Image\WarnOrExclame.png" />
+    <Resource Include="Assets\Image\Write.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Engine.ComDriver\ComModule.Instrument\Bruker\ComField.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Resource Include="Engine.ComDriver\ComModule.Instrument\ARL\ComField.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <EmbeddedResource Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\ComField.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\AutomationCommand.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Engine.ComDriver\ComModule.Instrument\SPECTROL\AutomationEvent.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Resource Include="snk\PublicKey\PublicKey.txt" />
+    <Resource Include="Assets\Image\Technology\深蓝色背景1.png" />
+    <Resource Include="Assets\Image\Technology\深蓝色背景2.png" />
+    <Resource Include="Assets\Image\Technology\觅元素_框1.png" />
+    <Resource Include="Assets\Image\Technology\觅元素_蓝色渐变圈.png" />
+    <Resource Include="Assets\Image\清除.png" />
+    <Resource Include="Assets\Image\设备完成.png" />
+    <Resource Include="Assets\Image\HeaoLogo.png" />
+    <Resource Include="Assets\Image\样品信息.png" />
+    <Resource Include="Assets\Image\网络断开.png" />
+    <Resource Include="Assets\Image\色块背景1.png" />
+    <Resource Include="Assets\Image\色块背景2.png" />
+    <Resource Include="Assets\Image\计算机网络断开.png" />
+    <Resource Include="Assets\Image\计算机网络正常.png" />
+    <Resource Include="Assets\Image\设备报警.png" />
+    <Resource Include="Assets\Image\设备空闲.png" />
+    <Resource Include="Assets\Image\设备等待.png" />
+    <Resource Include="Assets\Image\设备脱机.png" />
+    <Resource Include="Assets\Image\设备运行.png" />
+    <Resource Include="Assets\Image\设备锁定.png" />
+    <Resource Include="Assets\Image\运行监控.png" />
+    <Resource Include="Engine.WpfControlLib\CustomLoading\LoadingBackgroud.png" />
+    <Resource Include="Assets\Image\TaskAdd.png" />
+    <Resource Include="Assets\Image\TaskDel.png" />
+    <Resource Include="Assets\Image\TaskEdit.png" />
+    <Resource Include="Assets\Image\TaskGroup.png" />
+    <Resource Include="Assets\Image\TaskItem.png" />
+    <Resource Include="Assets\Image\TaskMain.png" />
+    <Resource Include="Assets\Image\Schedule2.png" />
+    <Resource Include="Assets\Image\ScheduleLib.png" />
+    <Resource Include="Assets\Image\back.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\IconFont\iconfont.ttf" />
+    <None Include="snk\PrivateKey\heao.snk" />
+    <None Include="snk\PrivateKey\presto.snk" />
+    <None Include="snk\PublicKey\heao.snk" />
+    <None Include="snk\PublicKey\prestoPublic.snk" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

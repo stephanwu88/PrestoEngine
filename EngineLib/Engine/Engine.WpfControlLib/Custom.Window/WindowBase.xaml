@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:h="QQ:178876839"
+                    xmlns:local="clr-namespace:Engine.WpfControl">
+
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Control/FButton.xaml"/> 
+    </ResourceDictionary.MergedDictionaries>-->
+    
+    <!--消息弹窗加载 由下到上 +震动--><!--
+    <Storyboard x:Key="Story.MessageLoad">
+        <ColorAnimation To="#FF000000" Duration="0" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[2].Color"/>
+        <DoubleAnimation From="1" To="0" Duration="0" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[1].Offset"/>
+        <DoubleAnimation From="1" To="0" Duration="0" BeginTime="0" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[2].Offset"/>
+        <ColorAnimation To="#FF000000" Duration="0" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[2].Color"/>
+
+        <DoubleAnimation From="-100" To="0" Duration="0:0:0.5" BeginTime="0" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+            <DoubleAnimation.EasingFunction>
+                <ElasticEase EasingMode="EaseOut" Oscillations="3" Springiness="10"></ElasticEase>
+            </DoubleAnimation.EasingFunction>
+        </DoubleAnimation>
+    </Storyboard>-->
+
+    <!--<Storyboard x:Key="Story.WindowLoad">
+        <DoubleAnimation From="1" To="0" Duration="0:0:1.5" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[1].Offset"/>
+        <DoubleAnimation From="1" To="0" Duration="0:0:1" BeginTime="0:0:0.5" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[2].Offset"/>
+        <ColorAnimation To="#FF000000" Duration="0" Storyboard.TargetProperty="OpacityMask.(GradientBrush.GradientStops)[2].Color"/>
+    </Storyboard>-->
+    
+
+</ResourceDictionary>

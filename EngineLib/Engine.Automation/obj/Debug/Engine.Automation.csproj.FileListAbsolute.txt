@@ -1,0 +1,213 @@
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.Automation.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.Automation.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.xml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Assets\Theme\DefaultTheme.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation_MarkupCompile.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation_MarkupCompile.lref
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Assets\Resource\DataConverter.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Properties\DesignTimeResources.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.g.resources
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportProben.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportMaterial.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportProben.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportMaterial.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaData.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageOblfMain.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProben.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaData.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageOblfMain.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProben.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Assets\Resource\MenuGeneric.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.Automation.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.Automation.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Newtonsoft.Json.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\Engine.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.xml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csprojAssemblyReference.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Assets\Resource\MenuGeneric.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaData.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageOblfMain.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProben.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportProben.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportMaterial.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation_MarkupCompile.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation_MarkupCompile.lref
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Assets\Resource\DataConverter.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Assets\Theme\DefaultTheme.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaData.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageOblfMain.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProben.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportProben.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportMaterial.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Properties\DesignTimeResources.baml
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.g.resources
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csproj.CoreCompileInputs.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csproj.CopyComplete
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\Engine.Automation.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\Engine.Automation.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\bin\Debug\System.Linq.Dynamic.Core.xml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Assets\Resource\MenuGeneric.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaData.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageOblfMain.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProben.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportProben.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportMaterial.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation_MarkupCompile.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation_MarkupCompile.lref
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Assets\Resource\DataConverter.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Assets\Theme\DefaultTheme.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaData.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\PageOblfMain.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProben.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportProben.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.SparkerOblf\Views\winImportMaterial.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Properties\DesignTimeResources.baml
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.g.resources
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\Engine.Automation.pdb

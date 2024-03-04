@@ -1,0 +1,45 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    
+    <ResourceDictionary.MergedDictionaries>
+        <!--#region 系统资源 字体、渲染、图片、转换器、数据模板 -->
+        <ResourceDictionary Source="/Engine;component/Assets/IconFont/IconFont.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfBase/Resource/Render.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfBase/Resource/ImageSource.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfBase/DataConverter/DataConverter.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfBase/DataTemplate/DataTemplate.xaml"/>
+        <!--#endregion-->
+        
+        <!--#region 系统原生控件样式重写-->
+        <!--系统基础控件-->
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/TextBlock.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/Button.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/RadioButton.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/CheckBox.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/DataGrid.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/ToolTip.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/TextBox.xaml"/>
+
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/DataGrid.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/GroupBox.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/ImageButton.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/ListBox.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/MediaButton.xaml"/>
+
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/TabControl.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/Expander.xaml"/>
+        
+        <!--系统容器控件-->
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.System/ScrollViewer.xaml"/>
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Control/GroupPanel.xaml"/>
+
+        <!--#endregion-->
+        
+        <!--#region 自研控件 自定义场景化应用-->
+        
+         <!--物料/样品信息化委托显示面板-->
+        <ResourceDictionary Source="/Engine;component/Engine.WpfControlLib/Custom.Scene/MaterPanel.xaml"/>
+        
+        
+        <!--#endregion-->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

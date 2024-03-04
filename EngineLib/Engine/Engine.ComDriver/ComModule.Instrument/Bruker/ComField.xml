@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldMappings xmlns:ns="http://www.example.com/namespace">
+  <FieldMapping Name="STATUS_INS" Comment ="仪器状态" Type ="STATUS">
+    <Field Code="00" Text="仪器离线" Type="STATUS"/>
+    <Field Code="01" Text="空闲，没有测量任务" Type="STATUS"/>
+    <Field Code="02" Text="本地样品激活，可取消" Type="STATUS"/>
+    <Field Code="03" Text="本地样品激活，不可取消" Type="STATUS"/>
+    <Field Code="04" Text="自动化传送带样品激活" Type="STATUS"/>
+    <Field Code="05" Text="自动化加载器上样品激活" Type="STATUS"/>
+    <Field Code="13" Text="选定位置上没有样品" Type="STATUS"/>
+    <Field Code="15" Text="测量取消，设备锁定" Type="STATUS"/>
+    <Field Code="16" Text="测量脚本错误待定,详见仪器日志" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="STATUS_INS_ERROR" Comment ="仪器状态错误信息" Type ="ERROR">
+    <Field Code="00" Text="没有错误" />
+    <Field Code="01" Text="测量被操作人员中断" Type="ERROR"/>
+    <Field Code="02" Text="测量中断，硬件错误" Type="ERROR"/>
+    <Field Code="03" Text="选定位置上没有样品" Type="ERROR"/>
+    <Field Code="05" Text="测量警告" Type="ERROR"/>
+    <Field Code="10" Text="温度警告" Type="ERROR"/>
+    <Field Code="16" Text="测量脚本错误待定,详见仪器日志" Type="ERROR"/>
+    <Field Code="20" Text="仪器门打开" Type="ERROR"/>
+    <Field Code="30" Text="发生器关闭" Type="ERROR"/>
+    <Field Code="40" Text="风扇报警" Type="ERROR"/>
+    <Field Code="41" Text="冷却水传感器故障" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="STATUS_SAMPLE" Comment ="样品状态">
+    <Field Code="01" Text="等待传送带接管" />
+    <Field Code="02" Text="样品在装载器中,等待测量开始" />
+    <Field Code="03" Text="等待样品卸载指令从自动化传送带输出" />
+    <Field Code="05" Text="由于接收到高优先级的任务中断本样品" />
+    <Field Code="06" Text="样品挂起" />
+    <Field Code="07" Text="样品停止" />
+    <Field Code="10" Text="测量运行" />
+    <Field Code="11" Text="测量完成，等待评估" />
+    <Field Code="12" Text="测量完成，结果有效" />
+    <Field Code="13" Text="测量取消，发生错误" />
+    <Field Code="14" Text="测量被主控系统发送指令取消" />
+    <Field Code="15" Text="测量被操作人员取消或者设备故障" />
+    <Field Code="16" Text="此样品的x个测量值中至少有一个已完成" />
+    <Field Code="20" Text="仪器认为应删除样品" />
+    <Field Code="21" Text="将样品从料箱中卸载到传送带上" />
+  </FieldMapping>
+  <!--Code1: 样品状态代码  Code:错误状态代码-->
+  <FieldMapping Name="STATUS_SAMPLE_ERROR" Comment ="样品错误信息" Type ="ERROR">
+    <Field Code1="12" Code="10" Text="温度警告" Type="ERROR"/>
+    <Field Code1="13" Code="02" Text="分析程序无效" Type="ERROR"/>
+    <Field Code1="13" Code="03" Text="测量位上没有样品" Type="ERROR"/>
+    <Field Code1="13" Code="04" Text="测量方法无效" Type="ERROR"/>
+    <Field Code1="15" Code="01" Text="测量被操作人员取消" Type="ERROR"/>
+    <Field Code1="15" Code="02" Text="测量中断，硬件错误" Type="ERROR"/>
+  </FieldMapping>
+    
+  <FieldMapping Name="STATUS_COMMAND" Comment ="状态指令" Type ="COMMAND">
+    <Field Code="00" Text="已响应指令，仪器状态" />
+    <Field Code="01" Text="已响应指令，样品状态" />
+    <Field Code="02" Text="已响应指令，样品列表状态" />
+    <Field Code="03" Text="已响应指令，空闲工位状态" />
+    <Field Code="12" Text="仪器内没有该样品" Type="WARN"/>
+  </FieldMapping>
+
+  <FieldMapping Name="STATUS_SAMPLE_COMMAND" Comment ="请求样品状态指令" Type ="COMMAND">
+    <Field Code="01" Text="已响应指令，样品状态" />
+    <Field Code="12" Text="仪器内没有该样品" Type="ERROR"/>
+  </FieldMapping>
+
+  <FieldMapping Name="STATUS_SAMPLE_ALL_COMMAND" Comment ="请求样品列表状态指令" Type ="COMMAND">
+    <Field Code="02" Text="已响应指令，样品列表状态" />
+  </FieldMapping>
+
+  <FieldMapping Name="STATUS_FREE_COMMAND" Comment ="请求样品列表状态指令" Type ="COMMAND">
+    <Field Code="03" Text="已响应指令，空闲工位状态" />
+    <Field Code="NN" Text="" Comment="空闲工位数量"/>
+  </FieldMapping>
+
+   <FieldMapping Name="MEASMP_COMMAND" Comment ="启动测量指令" Type ="COMMAND">
+    <Field Code="00" Text="已响应指令" />
+    <Field Code="10" Text="指令语句错误或分析方法未知" Type="ERROR"/>
+    <Field Code="11" Text="选定位置无效" Type="ERROR"/>
+    <Field Code="13" Text="拒绝注册，该样品已存在" Type="ERROR"/>
+    <Field Code="14" Text="任务列表或缓冲位置已满" Type="ERROR"/>
+    <Field Code="15" Text="传送目标位被另一样品占用" />
+    <Field Code="18" Text="样品已从传送位移动" Type="ERROR"/>
+    <Field Code="35" Text="样品中断，仪器锁定" Type="ERROR"/>
+    <Field Code="51" Text="用户无权限开始测量" Type="ERROR"/>
+    <Field Code="52" Text="模板未签名" Type="ERROR"/>
+    <Field Code="53" Text="自动化线已进样(离线)" />
+    <Field Code="54" Text="由于仪表报警，测量启动失败" Type="ERROR"/>
+  </FieldMapping>
+  
+  <FieldMapping Name="LOADSM_COMMAND" Comment ="加载样品指令" Type ="COMMAND">
+    <Field Code="00" Text="已响应指令" />
+    <Field Code="10" Text="指令语句错误" Type="ERROR"/>
+    <Field Code="13" Text="样品名称重复" Type="ERROR"/>
+    <Field Code="14" Text="没有可用的空余位置" Type="ERROR"/>
+    <Field Code="15" Text="传送目标位被另一样品占用" Type="ERROR"/>
+  </FieldMapping>
+
+  <FieldMapping Name="UNLOAD_COMMAND" Comment ="卸载样品指令" Type ="COMMAND">
+    <Field Code="00" Text="已响应指令" />
+    <Field Code="10" Text="指令语句错误" Type="ERROR"/>
+    <Field Code="12" Text="仪器内没有该样品" Type="ERROR"/>
+    <Field Code="15" Text="传送目标位被另一样品占用" Type="ERROR"/>
+    <Field Code="16" Text="样品尚未加载,状态=01" Type="ERROR"/>
+    <Field Code="17" Text="样品已卸载,正在等待确认" Type="ERROR"/>
+    <Field Code="19" Text="卸载已启动,正在传送中,状态=21" Type="ERROR"/>
+    <Field Code="20" Text="样品等待测量开始,状态=02" Type="ERROR"/>
+    <Field Code="21" Text="仪器认为应删除样品,状态=20" Type="ERROR"/>
+    <Field Code="30" Text="当前样品正在任务激活状态,不接受卸载" Type="ERROR"/>
+  </FieldMapping>
+
+  <FieldMapping Name="CANCEL_COMMAND" Comment ="取消样品指令" Type ="COMMAND">
+    <Field Code="00" Text="已响应指令" />
+    <Field Code="10" Text="指令语句错误" Type="ERROR"/>
+    <Field Code="12" Text="仪器内没有该样品" Type="ERROR"/>
+    <Field Code="17" Text="样品等待卸载" Type="WARN"/>
+    <Field Code="19" Text="样品正在被传送" Type="WARN"/>
+    <Field Code="21" Text="样品已标记为待删除状态" Type="WARN"/>
+    <Field Code="34" Text="样品已经取消" Type="ERROR"/>
+    <Field Code="35" Text="样品取消,设备锁定" Type="WARN"/>
+  </FieldMapping>
+
+  <FieldMapping Name="READRS_COMMAND" Comment ="读取结果数据指令" Type ="COMMAND">
+    <Field Code="00" Text="已响应指令" />
+    <Field Code="12" Text="样品不在任务列表中" Type="ERROR"/>
+    <Field Code="13" Text="请求的数据结果格式无效" Type="ERROR"/>
+    <Field Code="40" Text="数据未存储" Type="ERROR"/>
+    <Field Code="41" Text="数据无效,状态不等于12" Type="ERROR"/>
+  </FieldMapping>
+</FieldMappings>

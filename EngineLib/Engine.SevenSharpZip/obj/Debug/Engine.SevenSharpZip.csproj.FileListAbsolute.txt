@@ -1,0 +1,9 @@
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\bin\Debug\Engine.SevenSharpZip.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\bin\Debug\Engine.SevenSharpZip.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\bin\Debug\SevenZipSharp.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\bin\Debug\SevenZipSharp.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\obj\Debug\Engine.SevenSharpZip.csprojAssemblyReference.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\obj\Debug\Engine.SevenSharpZip.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\obj\Debug\Engine.SevenSharpZip.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\obj\Debug\Engine.SevenSharpZip.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SevenSharpZip\obj\Debug\Engine.SevenSharpZip.pdb

@@ -1,0 +1,14 @@
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\Engine.SharpPresser.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\Engine.SharpPresser.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\SharpCompress.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\System.Memory.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\System.Buffers.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\System.Numerics.Vectors.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\System.Memory.xml
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\System.Buffers.xml
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\bin\Debug\System.Numerics.Vectors.xml
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\obj\Debug\Engine.SharpPresser.csprojAssemblyReference.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\obj\Debug\Engine.SharpPresser.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\obj\Debug\Engine.SharpPresser.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\obj\Debug\Engine.SharpPresser.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.SharpPresser\obj\Debug\Engine.SharpPresser.pdb

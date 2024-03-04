@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Engine.Automation.Sparker.PageAnaPgm"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Engine.Automation.Sparker"
+             xmlns:h="QQ:178876839" 
+             DataContext="{Binding Source={StaticResource Automation.DataSource.Locator},Path=AnaPgmViewModel}"
+             mc:Ignorable="d" d:DesignWidth="906" d:DesignHeight="132.5">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Border Background="#FAFCFD" Height="25" BorderThickness="0 0 0 1" BorderBrush="#FFF0F0">
+            <TextBlock Text="分析管理 ▶ 分析方法管理" Margin="10 0 0 0" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+        </Border>
+        <StackPanel Margin="10,0,0,0" Grid.Row="1" Orientation="Horizontal" Height="40" VerticalAlignment="Top">
+            <StackPanel.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Margin" Value="5 0"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Width" Value="80"/>
+                    <Setter Property="Height" Value="25"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Style>
+            </StackPanel.Resources>
+            <Label Content="分析程序:" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Content="添 加" Command="{Binding CommandPgmAdd}" />
+            <Button Content="修 改" Command="{Binding CommandPgmEdit}" CommandParameter="{Binding SelectedItem,ElementName=_dGridAnaPgmList}"/>
+            <Button Content="拓展元素" Command="{Binding CommandExtendElemManage}" CommandParameter="{Binding SelectedItem,ElementName=_dGridAnaPgmList}"/>
+            <Button Content="偏差管理" Command="{Binding CommandDeviationManage}" CommandParameter="{Binding SelectedItem,ElementName=_dGridAnaPgmList}"/>
+            <Button Content="导 入" Command="{Binding CommandPgmImport}" Visibility="Collapsed"/>
+            <Button Content="导 出" Command="{Binding CommandPgmExport}" Visibility="Collapsed"/>
+            <Button Content="删 除" Command="{Binding CommandPgmDelete}" CommandParameter="{Binding SelectedItems,ElementName=_dGridAnaPgmList}" 
+                        BorderBrush="Red" BorderThickness="1"/>
+            <Button Content="刷 新" Command="{Binding CommandUpdateAnaPgmView}" />
+        </StackPanel>
+
+        <h:DataGridEx x:Name="_dGridAnaPgmList" ItemsSource="{Binding AnaPgmListView}"
+                               SelectedItem="{Binding SelectedAnaPgm}" Grid.Row="2"
+                               Margin="2 0 2 2 " FontSize="15">
+            <h:DataGridEx.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}" Visibility="Collapsed" Width="130"/>
+                <DataGridTextColumn Header="Token" Binding="{Binding Token}" Visibility="Collapsed" Width="130"/>
+                <DataGridTextColumn Header="仪器名称" Binding="{Binding InsName}" Width="130"/>
+                <DataGridTextColumn Header="基体" Binding="{Binding Matrix}" Width="130"/>
+                <DataGridTextColumn Header="分析程序" Binding="{Binding PgmName}" Width="130"/>
+                <DataGridTextColumn Header="描述" Binding="{Binding PgmNameLang}" Width="300"/>
+            </h:DataGridEx.Columns>
+        </h:DataGridEx>
+    </Grid>
+</UserControl>

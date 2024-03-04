@@ -1,0 +1,30 @@
+﻿
+//查找@???@ 格式的子串
+regexText = "@(.*?)@"
+
+//@@格式中间不能含<>
+regexText = "@([^<>]*?)@"
+
+//@@格式中间不能含< > 等字符列表  -- 实测有问题
+regexText = "@((?!<|>|其他字符).*?)@"
+
+//{?} 花括号中间包含1位数字的
+regexText = @"\{\d{1}\}"
+
+//文件路径
+regexText = @"^(?<fpath>([a-zA-Z]:\\)([\s\.\-\w]+\\)*)(?<fname>[\w]+.[\w]+)"
+
+//函数表达式
+//input = "myFunction(param1, param2)";
+pattern = @"^\w+\((\w+(,\s*\w+)*)?\)$";
+regexText = @"^\w+\([^()]*\)$";  //这个不严谨，不能验证参数
+
+//判定身份证号
+string input = "51012219880101001X";
+string pattern = @"^\d{17}[\dXx]$";
+
+//手机号
+string input = "13812345678";
+string pattern = @"^1[3456789]\d{9}$";
+bool isPhoneNumber = Regex.IsMatch(input, pattern);
+

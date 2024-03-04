@@ -1,0 +1,35 @@
+﻿<Window x:Class="Engine.Automation.Sparker.winCreatePgm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engine.Automation.Sparker"
+        mc:Ignorable="d" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        Title="{Binding editMode,Converter={StaticResource StringFormat},ConverterParameter=' {0}仪器分析程序',FallbackValue='仪器分析程序'}"
+        Height="269.694" Width="329.74">
+    <Grid>
+        <Label Content="仪器名称" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,18,0,0"/>
+        <ComboBox IsEditable="True" IsReadOnly="True" Text="{Binding AnaPgm.InsName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  Height="23" VerticalAlignment="Top" Margin="74,20,20,0"/>
+        
+        <Label Content="基体" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,51,0,0"/>
+        <ComboBox ItemsSource="{Binding MatrixList}" IsEditable="True" Text="{Binding AnaPgm.Matrix,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="23" VerticalAlignment="Top" Margin="74,53,20,0"/>
+
+        <Label Content="分析程序" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,86,0,0"/>
+        <ComboBox ItemsSource="{Binding PgmNameList}" IsEditable="True" Text="{Binding AnaPgm.PgmName,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" Height="24" VerticalAlignment="Top" Margin="74,87,20,0"/>
+
+        <Label Content="描述" HorizontalContentAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,120,0,0"/>
+        <ComboBox IsEditable="True" Text="{Binding AnaPgm.PgmNameLang,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True}" VerticalContentAlignment="Top" Height="48" VerticalAlignment="Top" Margin="74,125,20,0"/>
+
+        <Label Content="" Margin="5,0,5,41" BorderThickness="0,0,0,1" BorderBrush="#FFF0F0F0" Height="12" VerticalAlignment="Bottom"/>
+        <CheckBox x:Name="_ContAddMode" IsChecked="{Binding ContAddMode,Converter={StaticResource CheckEnabled}, FallbackValue=False}"
+                  Visibility="{Binding editMode,Converter={StaticResource VisibleConvert}}"
+                  Content="连续添加" HorizontalAlignment="Left" Margin="32,0,0,13" Height="15" VerticalAlignment="Bottom"/>
+        <Button Content="确认" IsDefault="True" Command="{Binding CommandSure}" 
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" 
+                Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="60" Margin="0,0,105,10" Height="23"/>
+        <Button Content="取消" IsCancel="True" Command="{Binding CommandCloseWindow}" 
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=Window}}" 
+                Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="60" Margin="0,0,20,10" Height="23"/>
+    </Grid>
+</Window>

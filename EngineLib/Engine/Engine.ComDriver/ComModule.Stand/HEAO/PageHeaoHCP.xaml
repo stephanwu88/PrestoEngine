@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Engine.ComDriver.HEAO.PageHeaoHCP"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Engine.ComDriver.HEAO"
+             xmlns:controls="clr-namespace:Engine.WpfControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="402" d:DesignWidth="992" >
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ContextMenu x:Key="Menu_VarList">
+                <MenuItem Tag="CmdAdd" Header="新增变量"  Click="Cmd_Click"/>
+                <MenuItem Tag="CmdEdit" Header="修改变量" Click="Cmd_Click"/>
+                <MenuItem Tag="CmdMoveUp" Header="上移" Click="Cmd_Click"/>
+                <MenuItem Tag="CmdMoveDown" Header="下移" Click="Cmd_Click"/>
+                <Separator></Separator>
+                <MenuItem Tag="CmdImport" Header="导入" Click="Cmd_Click"/>
+                <MenuItem Tag="CmdExport" Header="导出" Click="Cmd_Click"/>
+                <Separator></Separator>
+                <MenuItem Tag="CmdCut" Header="剪切" Click="Cmd_Click"/>
+                <MenuItem Tag="CmdCopy" Header="复制" Click="Cmd_Click"/>
+                <MenuItem Tag="CmdPaste" Header="粘贴" Click="Cmd_Click"/>
+                <MenuItem Tag="CmdDel" Header="删除" Click="Cmd_Click"/>
+            </ContextMenu>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Grid>
+        <controls:DataGridEx x:Name="_dGridComHeao" 
+                             ColumnSource="ExcelFile" FileName="$\Locales\DataSheet.xls" SheetName="TB_HeaoInter"
+                             ContextMenu="{StaticResource Menu_VarList}" 
+                  Background="{x:Null}" IsReadOnly="True" FontSize="15" RowHeight="25" 
+                  VerticalGridLinesBrush="#FFF0F0F0" HorizontalGridLinesBrush="#FFF0F0F0"  
+                  AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,62,0,0"
+                  MouseDoubleClick="_dGridComHeao_MouseDoubleClick"/>
+
+
+        <StackPanel Height="32" Background="#FFF0F0F0" VerticalAlignment="Top" Orientation="Horizontal" Margin="0,30,0,0">
+            <controls:MediaButton x:Name="CmdAdd" Tag="CmdAdd" ButtonType="Icon" Icon="/Engine;component/Assets/Image/New.ico" Content="新增变量" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="Cmd_Click"/>
+            <controls:MediaButton x:Name="CmdEdit" Tag="CmdEdit" ButtonType="Icon" Icon="/Engine;component/Assets/Image/EditDoc.png" Content="修改变量" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="Cmd_Click"/>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Margin="4" BorderBrush="LightGray" BorderThickness="1" />
+            <controls:MediaButton x:Name="CmdCopy" Tag="CmdCopy" ButtonType="Icon" Icon="/Engine;component/Assets/Image/Copy.ico" Content="复制变量" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="Cmd_Click"/>
+            <controls:MediaButton x:Name="CmdPaste" Tag="CmdPaste" ButtonType="Icon" Icon="/Engine;component/Assets/Image/Paste.png" Content="粘贴变量" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="Cmd_Click"/>
+            <controls:MediaButton x:Name="CmdDel" Tag="CmdDel" ButtonType="Icon" Icon="/Engine;component/Assets/Image/Del_Doc.ico" Content="删除变量" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="Cmd_Click"/>
+            <Separator Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}" Margin="4" BorderBrush="LightGray" BorderThickness="1" />
+            <ComboBox x:Name="_FCType" HorizontalAlignment="Left" Margin="0,3.5,0,0" Width="139" Height="25" VerticalAlignment="Top" SelectionChanged="_FCType_SelectionChanged" />
+            <controls:MediaButton x:Name="CmdExport" Tag="CmdExport" ButtonType="Icon" Icon="/Engine;component/Assets/Image/CycMon.ico" Content="导出" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="30" Click="Cmd_Click"/>
+        </StackPanel>
+        <Border BorderBrush="Black" Background="Orange" BorderThickness="0" Height="30" VerticalAlignment="Top">
+            <Border.Tag>
+                Backgroud:BrushTitleBack
+            </Border.Tag>
+            <TextBlock Text="HeaoHCP ▶ Net" Foreground="White" Padding="10,0,0,0" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" FontSize="15">
+                <TextBlock.Tag>
+                    Foreground="{Binding BrushTitleFore}"
+                    Text="{Binding TitleString}
+                </TextBlock.Tag>
+            </TextBlock>
+        </Border>
+    </Grid>
+</UserControl>

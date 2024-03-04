@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Engine.WpfControl.SparkPoints"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="140" d:DesignWidth="95">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <CheckBox FontSize="15" Content="" VerticalAlignment="Center" Height="17" Margin="2 1 0 0" Background="{x:Null}" />
+            <TextBlock Text="{Binding MarkKey,FallbackValue=P8-05}" FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Image Visibility="{Binding PosKey,FallbackValue= Visible}" Opacity="0.6" Stretch="Fill" Source="/Engine;component/Assets/Image/WarnOrExclame.png" HorizontalAlignment="Right" Width="23" Height="22" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid>
+                <Ellipse x:Name="_Panel" Fill="#FFBBBBBB" Margin="0,0,0,0" Stroke="#FF838282" StrokeThickness="4" />
+                <TextBlock Text="NA" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Grid>
+            <Border Visibility="Visible">
+                <Grid Margin="6">
+                    <Ellipse Fill="#FF898989" Stroke="#FF858585"/>
+                    <TextBlock Text="{Binding SampleType,FallbackValue=检查样}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#FFFDFDFD"/>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="4"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="4"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Ellipse Grid.Row="0" Grid.Column="1" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="1" Grid.Column="4" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="4" Grid.Column="3" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="3" Grid.Column="0" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="1" Grid.Column="0" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="0" Grid.Column="3" Margin="1" Fill="#FFFF380C" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="3" Grid.Column="4" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                        <Ellipse Grid.Row="4" Grid.Column="1" Margin="1" Fill="#FFF4F4F5" Stroke="#FF858585"/>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="2">
+            <TextBlock Text="{Binding SampleID,FallbackValue=RA10/47AB}" ToolTip="{Binding Text,ElementName=_SampleID}" 
+                       TextWrapping="NoWrap" TextTrimming="CharacterEllipsis" FontSize="15"  Height="19" 
+                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+    </Grid>
+</UserControl>

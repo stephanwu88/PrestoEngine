@@ -1,0 +1,18 @@
+﻿<Window x:Class="Engine.Mod.winAddFieldGroup"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Title="添加字段管理组" Height="212.554" Width="413.519" 
+        ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Label Content="名称：" FontSize="15" HorizontalAlignment="Left" Margin="82,33,0,0" VerticalAlignment="Top"/>
+        <Label Content="备注：" FontSize="15" HorizontalAlignment="Left" Margin="81,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="_SymbolGroup" Text="{Binding Name, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="15" Height="28" Margin="148,33,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="188"/>
+        <TextBox x:Name="_SymbolComment" Text="{Binding Comment, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"  HorizontalAlignment="Left" VerticalContentAlignment="Center" FontSize="15" Height="28" Margin="148,78,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="188"/>
+        <Button x:Name="CmdSure" Content="确认" Background="#00000000" FontSize="15" HorizontalAlignment="Left" Margin="148,133,0,0" VerticalAlignment="Top" Width="86" Height="30" IsDefault="True" Click="Cmd_Click"/>
+        <Button x:Name="CmdCancel" Content="取消" Background="#00000000" FontSize="15" HorizontalAlignment="Left" Margin="250,133,0,0" VerticalAlignment="Top" Width="86" Height="30" IsCancel="True" Click="Cmd_Click"/>
+        <CheckBox x:Name="_ContAddMode" Content="连续添加" FontSize="15" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="28,141,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Engine.WpfControl"
+                    xmlns:h="QQ:178876839"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/HeBianGu.Control.MaterialControl;component/Themes/Themes/MaterialDesignTheme.Button.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/HeBianGu.Control.MaterialControl;component/Themes/Themes/MaterialDesignTheme.TextBlock.xaml" />
+    </ResourceDictionary.MergedDictionaries>-->
+
+    <!--<h:NullableToVisibilityConverter x:Key="NullableToVisibilityConverter" />
+    <h:MathMultipleConverter x:Key="MathMultipleConverter" Operation="Multiply" />-->
+
+    
+
+
+
+</ResourceDictionary>

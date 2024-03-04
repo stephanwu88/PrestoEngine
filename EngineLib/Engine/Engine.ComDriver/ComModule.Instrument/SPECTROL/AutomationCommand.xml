@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AutomationCommandList>
+  <!--自定义拓展指令  主控模板方法 IPS->SparkWin-->
+  <AutomationCommand Name="InvokeTemplate" Direction="Server">
+    <Para Text="@InvokeParam@"/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  请求仪器状态 IPS->SparkWin-->
+  <AutomationCommand Name="RequestInstrumentStatus" Direction="Server">
+    <Para/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  通知正在激发 SparkWin->IPS -->
+  <AutomationCommand Name="NotifySparking" Direction="Client">
+    <Para/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  通知激发结束 SparkWin->IPS -->
+  <AutomationCommand Name="NotifySparked" Direction="Client">
+    <Para/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  通知SparkWin自主复位 SparkWin->IPS -->
+  <AutomationCommand Name="NotifyReset" Direction="Client">
+    <Para/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  通知激发移点 SparkWin->IPS -->
+  <AutomationCommand Name="NotifyMovePot" Direction="Client">
+    <Para/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  通知激发结束 SparkWin->IPS-->
+  <AutomationCommand Name="NotifySparkFinish" Direction="Client">
+    <Para/>
+  </AutomationCommand>
+
+  <!--自定义拓展指令  通知仪器状态 SparkWin->IPS-->
+  <AutomationCommand Name="NotifyInstrumentState" Direction="Client">
+    <Para>
+      <InstrumentStateDescriptor>
+        <!--自定义状态 仪器状态 1 0 -->
+        <InstrumentReady>@InstrumentReady@</InstrumentReady>
+        <!--自定义状态 仪器状态 1 0 -->
+        <SparkHeaderReady>@SparkHeaderReady@</SparkHeaderReady>
+        <!--自定义状态 仪器状态 1 0 -->
+        <Sparking>@Sparking@</Sparking>
+        <!--自定义状态 仪器状态 1 0 -->
+        <AllReady>@AllReady@</AllReady>
+        <!--自定义状态 仪器状态 1 0 -->
+        <AlarmList>@AlarmList@</AlarmList>
+        <!--系统原生 仪器温度状态 Ok -->
+        <InstrumentTemperatureState>@InstrumentTemperatureState@</InstrumentTemperatureState>
+        <!--系统原生 仪器温度 30.00-->
+        <InstrumentTemperature>@InstrumentTemperature@</InstrumentTemperature>
+        <!--系统原生 氩气状态 Ok -->
+        <ArgonState>@ArgonState@</ArgonState>
+        <!--系统原生 冲洗状态 Constant -->
+        <FlushState>@FlushState@</FlushState>
+        <!--系统原生 仪器是否正常 True False -->
+        <InstrumentOk>@InstrumentOk@</InstrumentOk>
+        <!--系统原生 激发台状态 Ok -->
+        <SparkStandState>@SparkStandState@</SparkStandState>
+        <!--系统原生 SAFT设备状态 Ok -->
+        <SAFTDeviceState>@SAFTDeviceState@</SAFTDeviceState>
+      </InstrumentStateDescriptor>
+    </Para>
+  </AutomationCommand>
+
+
+  <!--GetAnalysisResults 获取分析结果-->
+  <AutomationCommand Name="GetAnalysisResults" Direction="Server">
+    <Para>
+      <SampleResultsDescriptor>
+        <!--Complete AllSingle LastSingle Average-->
+        <SampleResultsType>@SampleResultsType@</SampleResultsType>
+        <!--All Elements Lines-->
+        <SampleResultsValuesType>@SampleResultsValuesType@</SampleResultsValuesType>
+      </SampleResultsDescriptor>
+    </Para>
+  </AutomationCommand>
+
+  <!--获取仪器状态-->
+  <AutomationCommand Name="GetInstrumentState" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--获取类标名称-->
+  <AutomationCommand Name="GetTypeStandardNames" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--获取标样名称-->
+  <AutomationCommand Name="GetStdzStandardNames" Direction="Server">
+    <Para>
+      <AnalysisDescriptor>
+        <!--GlobalStdz-->
+        <AnalyticalMode>@AnalyticalMode@</AnalyticalMode>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationCommand>
+  
+  <!--GetMethodNames 获取分析方法列表-->
+  <AutomationCommand Name="GetMethodNames" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--GetControlStandardNames-->
+  <AutomationCommand Name="GetControlStandardNames" Direction="Server">
+    <Para>
+      <AnalysisDescriptor>
+        <!--Control-->
+        <AnalyticalMode>@AnalyticalMode@</AnalyticalMode>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationCommand>
+
+  <!--GetICalStandardNames 获取标样列表-->
+  <AutomationCommand Name="GetICalStandardNames" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--GetRemoteControlState 查询远程控制权-->
+  <AutomationCommand Name="GetRemoteControlState" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--LogIn 远程登录-->
+  <AutomationCommand Name="LogIn" Direction="Server">
+    <Para>
+      <LogInDescriptor>
+        <LoginName></LoginName>
+        <Password></Password>
+      </LogInDescriptor>
+    </Para>
+  </AutomationCommand>
+  
+  <!--SelectMethod 选定分析方法-->
+  <AutomationCommand Name="SelectMethod" Direction="Server">
+    <Para>
+      <MethodDescriptor>
+        <!--火花 or 电弧 Spark Arc-->
+        <ExcitationType>@ExcitationType@</ExcitationType>
+        <!--方法库名称 基体-->
+        <BaseElement>@BaseElement@</BaseElement>
+        <!--方法名称-->
+        <MethodName>@MethodName@</MethodName>
+      </MethodDescriptor>
+      <StandardizationDescriptor>
+        <!--True False 是否自动接收标准化的有效结果-->
+        <AutoAcceptValid>@AutoAcceptValid@</AutoAcceptValid>
+        <!--True False 是否自动拒绝无效的标准化结果-->
+        <AutoRejectInvalid>@AutoRejectInvalid@</AutoRejectInvalid>
+      </StandardizationDescriptor>
+    </Para>
+  </AutomationCommand>
+
+  <!--PrepareAnalysis 准备样品-->
+  <AutomationCommand Name="PrepareAnalysis" Direction="Server">
+    <Para>
+      <AnalysisDescriptor>
+        <!--UnknownMeas,GobalStdz,LocalStdz,GobalPartialStdz,LocalPartialStdz, -->
+        <!--Control,PartialControl,TypeStd,ICal,DetectorCalib -->
+        <AnalyticalMode>@AnalyticalMode@</AnalyticalMode>
+        <StandardName>@StandardName@</StandardName>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationCommand>
+
+  <!--PrepareAnalysis 注册未知样品-->
+  <AutomationCommand Name="PrepareAnalysis@PS" Direction="Server">
+    <Para>
+      <AnalysisDescriptor>
+        <!--UnknownMeas-->
+        <AnalyticalMode>@AnalyticalMode@</AnalyticalMode>
+        <AnalysisID>
+          <SampleID Type="Text">
+            <IDName>炉机号</IDName>
+            <IDValue>@炉机号@</IDValue>
+          </SampleID>
+          <SampleID Type="Text">
+            <IDName>炉次</IDName>
+            <IDValue>@炉次@</IDValue>
+          </SampleID>
+          <SampleID Type="Text">
+            <IDName>操作员</IDName>
+            <IDValue>@操作员@</IDValue>
+          </SampleID>
+          <SampleID Type="Number">
+            <IDName>序号</IDName>
+            <IDValue>@序号@</IDValue>
+          </SampleID>
+        </AnalysisID>
+        <StandardName>@StandardName@</StandardName>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationCommand>
+
+  <!--Measure 启动测量分析-->
+  <AutomationCommand Name="Measure" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--IsTypeStandardValid 检查类标有效性-->
+  <AutomationCommand Name="IsTypeStandardValid" Direction="Server">
+    <Para>
+      <TypeStandardDescriptor>
+        <TypeStandardName>@TypeStandardName@</TypeStandardName>
+      </TypeStandardDescriptor>
+    </Para>
+  </AutomationCommand>
+
+  <!--SelectTypeStandard 带类标-->
+  <AutomationCommand Name="SelectTypeStandard" Direction="Server">
+    <Para>
+      <TypeStandardDescriptor>
+        <TypeStandardName>@TypeStandardName@</TypeStandardName>
+      </TypeStandardDescriptor>
+    </Para>
+  </AutomationCommand>
+
+
+  <!--放弃本次分析-->
+  <AutomationCommand Name="DiscardAnalysis" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+  <!--FinishAnalysis 结束测量分析-->
+  <AutomationCommand Name="FinishAnalysis" Direction="Server">
+    <Para />
+  </AutomationCommand>
+
+</AutomationCommandList>

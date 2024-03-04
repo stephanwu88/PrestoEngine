@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Engine.WpfControl.ParamEditor"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Engine.WpfControl"
+             mc:Ignorable="d" 
+             d:DesignHeight="52.742" d:DesignWidth="272.883">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.5*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="_ParView" Grid.Column="0" FontSize="16" Foreground="White" 
+               Background="#FF98D5D8"
+               HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+               BorderBrush="#FFDADADA" BorderThickness="1">
+        </Label>
+        <TextBox x:Name="_ParVal" Grid.Column="1" Text="{Binding ParamValTemp,Mode=TwoWay}" 
+                 FontSize="20" TextWrapping="Wrap" VerticalAlignment="Stretch"
+                 HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  
+                 KeyDown="_ParVal_KeyDown" LostFocus="_ParVal_LostFocus" GotFocus="_ParVal_GotFocus"/>
+    </Grid>
+</UserControl>

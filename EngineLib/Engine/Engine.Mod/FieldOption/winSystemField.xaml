@@ -1,0 +1,12 @@
+﻿<Window x:Class="Engine.Mod.winSystemField"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engine.Mod"
+        mc:Ignorable="d" WindowStartupLocation="CenterScreen"
+        Title="系统字段管理器" Height="630" Width="1456">
+    <Grid>
+        <local:PageSystemField/>
+    </Grid>
+</Window>

@@ -1,0 +1,180 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:WpfControl="clr-namespace:Engine.WpfControl"
+                    xmlns:h ="QQ:178876839">
+
+
+    <!--<Style TargetType="DataGridRowHeader">
+        <Setter Property="Background" Value="Transparent"/>
+        --><!-- 设置背景为透明，使其不显示颜色 --><!--
+        <Setter Property="IsHitTestVisible" Value="False"/>
+        --><!-- 禁用RowHeader的点击事件 --><!--
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="DataGridRowHeader">
+                    --><!-- 将行标记置于RowHeader上方，使得整行都可以响应鼠标事件 --><!--
+                    <Grid>
+                        <Rectangle x:Name="RowSelectionMark" Fill="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}" Visibility="Collapsed" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="RowSelectionMark" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+
+    <!--#region S.DataGridCell.AutoFoucs 单元格样式 自动聚焦 -->
+    <Style x:Key="S.DataGridCell.AutoFoucs" TargetType="DataGridCell">
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="WpfControl:DataGridHelper.AutoFocus" Value="True"/>
+        <Setter Property="WpfControl:DataGridHelper.CellMoveFocus" Value="True"/>
+        <Style.Triggers>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="{Binding Path=(h:DataGridHelper.RowSelectedForeColor),RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                <Setter Property="Background" Value="{Binding Path=(h:DataGridHelper.RowSelectedBackColor),RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+
+    <!--#region S.DataGrid.RowAlternation 行样式-隔行变色 -->
+    <Style x:Key="S.DataGrid.RowAlternation" TargetType="DataGridRow">
+        <Style.Triggers>
+            <Trigger Property="AlternationIndex" Value="0" >
+                <Setter Property="Background" Value="{Binding Path=(h:DataGridHelper.RowAlterColor0),RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+            </Trigger>
+            <Trigger Property="AlternationIndex" Value="1" >
+                <Setter Property="Background" Value="{Binding Path=(h:DataGridHelper.RowAlterColor1),RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+            </Trigger>
+
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="LightGray"/>
+            </Trigger>
+
+            <Trigger Property="IsSelected" Value="True">
+                <Setter Property="Foreground" Value="Black"/>
+                <Setter Property="Background" Value="LightGray"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+
+    <Style x:Key="S.DataGridColumnHeader.Center" TargetType="DataGridColumnHeader">
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+    </Style>
+
+    <!--S.TextColumn.EditingElementStyle-->
+    <!--S.TextColumn.EditingElementStyle-->
+    <!--S.TemplateColumn.Text-->
+    <!--#region 单元格显示样式和编辑样式-->
+    <Style x:Key="S.TextColumn.CellCenter" TargetType="TextBlock">
+        <Setter Property="TextAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="S.TextColumn.EditCellCenter" TargetType="TextBox">
+        <Setter Property="Background" Value="Yellow"/>
+        <Setter Property="SelectionBrush" Value="LightGray"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="Green"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="S.TextColumn.CellLeft" TargetType="TextBlock">
+        <Setter Property="TextAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="S.TextColumn.EditCellLeft" TargetType="TextBox">
+        <Setter Property="Background" Value="Yellow"/>
+        <Setter Property="SelectionBrush" Value="LightGray"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="TextAlignment" Value="Left"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Foreground" Value="Green"/>
+        <Setter Property="BorderThickness" Value="0"/>
+    </Style>
+
+    <Style x:Key="S.TemplateColumn.Text" TargetType="DataGridTemplateColumn">
+        <Setter Property="CellTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Text="{Binding (h:Cattach.ContentText),RelativeSource={RelativeSource AncestorType=DataGridTemplateColumn}}" Style="{StaticResource CustomTextBlockStyle}" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="CellEditingTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBox Text="{Binding (h:Cattach.ContentText),RelativeSource={RelativeSource AncestorType=DataGridTemplateColumn}}" Style="{StaticResource CustomTextBoxStyle}" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--#endregion-->
+
+    <!--TipRowErrorTemplate-->
+    <!--PopupRowErrorTemplate-->
+    <!--#region  模板，Row验证错误模板-->
+    <ControlTemplate x:Key="TipRowErrorTemplate">
+        <Grid Margin="0,-2,0,-2" ToolTip="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}},
+            Path=(Validation.Errors)[0].ErrorContent}">
+            <Ellipse StrokeThickness="0" Fill="Red" Width="{TemplateBinding FontSize}" Height="{TemplateBinding FontSize}" />
+            <TextBlock Text="!" FontSize="{TemplateBinding FontSize}" FontWeight="Bold" Foreground="White" HorizontalAlignment="Center"  />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="PopupRowErrorTemplate">
+        <StackPanel Orientation="Vertical">
+            <Border>
+                <Grid>
+                    <AdornedElementPlaceholder x:Name="adorner"/>
+                </Grid>
+            </Border>
+            <Popup Name="popup" HorizontalOffset="10" IsOpen="True" VerticalOffset="-10" Placement="Top" AllowsTransparency="True" PlacementTarget="{Binding ElementName=adorner}">
+                <Border x:Name="errorBorder" Background="Red" MinHeight="30">
+                    <TextBlock Margin="5,0" Text="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGridRow}},
+                                                Path=(Validation.Errors)[0].ErrorContent}"
+                                                Foreground="White" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                </Border>
+            </Popup>
+        </StackPanel>
+    </ControlTemplate>
+    <!--#endregion-->
+
+    <!--S.DataGrid.Editable-->
+    <!--#region DataGrid样式 - 可编辑DataGrid，Row错误验证 隔行变色-->
+    <Style x:Key="S.DataGrid.Editable" TargetType="DataGrid">
+        <Setter Property="CanUserAddRows" Value="False"/>
+        <Setter Property="AutoGenerateColumns" Value="False"/>
+        <Setter Property="SelectionUnit" Value="Cell"/>
+        <Setter Property="SelectionMode" Value="Extended"/>
+        <Setter Property="Background" Value="LightGray"/>
+        <Setter Property="VerticalGridLinesBrush" Value="Gray"/>
+        <Setter Property="HorizontalGridLinesBrush" Value="Gray"/>
+        <Setter Property="h:DataGridHelper.RowAlterColor0" Value="White" />
+        <Setter Property="h:DataGridHelper.RowAlterColor1" Value="LightGray"/>
+        <Setter Property="h:DataGridHelper.RowSelectedBackColor" Value="Transparent"/>
+        <Setter Property="h:DataGridHelper.RowSelectedForeColor" Value="Green"/>
+        <Setter Property="RowValidationErrorTemplate" Value="{StaticResource TipRowErrorTemplate}"/>
+        <Setter Property="ColumnHeaderStyle" Value="{StaticResource S.DataGridColumnHeader.Center}"/>
+        <!--<Setter Property="RowValidationErrorTemplate" Value="{StaticResource PopupRowErrorTemplate}">-->
+        <Style.Triggers>
+            <Trigger Property="AlternationCount" Value="2">
+                <Setter Property="RowStyle" Value="{StaticResource S.DataGrid.RowAlternation}"/>
+            </Trigger>
+            <Trigger Property="SelectionUnit" Value="Cell">
+                <Setter Property="CellStyle" Value="{StaticResource S.DataGridCell.AutoFoucs}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--#endregion-->
+    
+</ResourceDictionary>

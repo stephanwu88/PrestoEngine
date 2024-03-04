@@ -1,0 +1,60 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Engine.WpfBase">
+    
+    <!--阴影渲染-->
+    <DropShadowEffect x:Key="S.Effect.Gray" ShadowDepth="0" Color="Gray" BlurRadius="10" Opacity="0.4"/>
+    <DropShadowEffect x:Key="S.Effect.Pink" ShadowDepth="0" Color="Pink" BlurRadius="10" Opacity="0.4"/>
+    
+    <!--线性渐变渲染-->
+    <LinearGradientBrush x:Key="S.Linear.PinkBlue">
+        <GradientStop Color="#E4C6D4" Offset="0"/>
+        <GradientStop Color="SkyBlue" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="S.Linear.LightBlue">
+        <GradientStop Color="#DAF1FF" Offset="0"/>
+        <GradientStop Color="#F7EBEB" Offset="0.3"/>
+        <GradientStop Color="#D5DAFF" Offset="1"/>
+    </LinearGradientBrush>
+    
+    <!--边框点划线渲染 给BorderBrush-->
+    <DrawingBrush x:Key="S.DrawBrush.DashBoard">
+        <DrawingBrush.Drawing>
+            <GeometryDrawing>
+                <GeometryDrawing.Pen>
+                    <Pen Brush="#4C81F7" Thickness="2">
+                        <Pen.DashStyle>
+                            <DashStyle Dashes="3 3"/>
+                        </Pen.DashStyle>
+                    </Pen>
+                </GeometryDrawing.Pen>
+                <GeometryDrawing.Geometry>
+                    <RectangleGeometry Rect="0, 0, 200, 100"/>
+                </GeometryDrawing.Geometry>
+            </GeometryDrawing>
+        </DrawingBrush.Drawing>
+    </DrawingBrush>
+
+    <Style x:Key="S.Border.Normal" TargetType="Border">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="CornerRadius" Value="5"/>
+        <Setter Property="Effect" Value="{StaticResource S.Effect.Gray}"/>
+        <Setter Property="Background" Value="White"/>
+    </Style>
+
+    <Style x:Key="S.Border.Glass" TargetType="Border">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Effect" Value="{StaticResource S.Effect.Gray}"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Opacity" Value="0.95"/>
+    </Style>
+
+    <Style x:Key="S.Border.LinearLightBlue" TargetType="Border">
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="CornerRadius" Value="10"/>
+        <Setter Property="Effect" Value="{StaticResource S.Effect.Gray}"/>
+        <Setter Property="Background" Value="{StaticResource S.Linear.LightBlue}"/>
+    </Style>
+</ResourceDictionary>

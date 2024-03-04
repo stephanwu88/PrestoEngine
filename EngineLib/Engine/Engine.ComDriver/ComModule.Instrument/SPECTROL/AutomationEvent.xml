@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AutomationEventList>
+  <!--分析结束-->
+  <AutomationEvent Name="AnalysisFinished" Direction="Client">
+    <Para>
+    </Para>
+  </AutomationEvent>
+
+  <!--注册信息变更-->
+  <AutomationEvent Name="AnalysisIDChanged" Direction="Client">
+    <Para>
+      <AnalysisDescriptor>
+        <AnalyticalMode>UnknownMeas</AnalyticalMode>
+        <AnalysisID>
+          <SampleID Type="Text" IsSampleName="False" IsReadOnly="False" MustExist="False"
+                    KeepLastValue="False">
+            <IDName>Sample Name</IDName>
+            <IDValue>TEST0017</IDValue>
+          </SampleID>
+        </AnalysisID>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--分析开始-->
+  <AutomationEvent Name="AnalysisStarted" Direction="Client">
+    <Para>
+      <AnalysisDescriptor>
+        <AnalyticalMode>UnknownMeas</AnalyticalMode>
+        <AnalysisID>
+          <SampleID Type="Text" IsSampleName="True" IsReadOnly="False" MustExist="False"
+                    KeepLastValue="False">
+            <IDName>Sample Name</IDName>
+            <IDValue>Test A118</IDValue>
+          </SampleID>
+        </AnalysisID>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--分析模式变化-->
+  <AutomationEvent Name="AnalyticalModeChanged" Direction="Client">
+    <Para>
+      <AnalysisDescriptor>
+        <AnalyticalMode>UnknownMeas</AnalyticalMode>
+      </AnalysisDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--基础数据变化-->
+  <AutomationEvent Name="BaseDataChanged" Direction="Client">
+    <Para>
+      <BaseDataChangedDescriptor>
+        <BaseDataType>GradeNames</BaseDataType>
+      </BaseDataChangedDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--仪器状态变化-->
+  <AutomationEvent Name="InstrumentStateChanged" Direction="Client">
+    <Para>
+      <InstrumentStateDescriptor>
+        <InstrumentTemperatureState>Ok</InstrumentTemperatureState>
+        <InstrumentTemperature>30.00</InstrumentTemperature>
+        <!--系统原生 氩气状态 Ok -->
+        <ArgonState>@ArgonState@</ArgonState>
+        <!--系统原生 冲洗状态 Constant -->
+        <FlushState>@FlushState@</FlushState>
+        <!--系统原生 仪器是否正常 True False -->
+        <InstrumentOk>@InstrumentOk@</InstrumentOk>
+        <!--系统原生 激发台状态 Ok -->
+        <SparkStandState>@SparkStandState@</SparkStandState>
+        <CoolingSystemState>Ok</CoolingSystemState>
+        <GeneratorError>IDE_NO_ERROR</GeneratorError>
+        <GeneratorProcessError>IDE_NO_ERROR</GeneratorProcessError>
+        <GeneratorState>Ok</GeneratorState>
+        <OpticsScannerState> NotInstalled </OpticsScannerState>
+        <!--系统原生 SAFT设备状态 Ok -->
+        <SAFTDeviceState>@SAFTDeviceState@</SAFTDeviceState>
+        <SAFTDeviceError>IDE_NO_ERROR</SAFTDeviceError>
+        <ReadoutSystemError>IDE_NO_ERROR</ReadoutSystemError>
+        <ReadoutSystemProcessError>IDE_NO_ERROR</ReadoutSystemProcessError>
+        <ReadoutSystemState>Ok</ReadoutSystemState>
+        <UVOpticsState>TemperatureNotOk, PressureNotOk</UVOpticsState>
+        <UVOpticsTemperature>35.00</UVOpticsTemperature>
+        <UVOpticsPressure>2200.00</UVOpticsPressure>
+        <AirOpticsState>Ok</AirOpticsState>
+        <AirOpticsTemperature>21.00</AirOpticsTemperature>
+        <AirOpticsPressure>1800.00</AirOpticsPressure>
+        <NonResettableMeasurementsCounter>78</NonResettableMeasurementsCounter>
+        <ResettableMeasurementsCounter>78</ResettableMeasurementsCounter>
+        <SparkStandPollutionCounter>21</SparkStandPollutionCounter>
+      </InstrumentStateDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--登录状态变化-->
+  <AutomationEvent Name="LogInChanged" Direction="Client">
+    <Para>
+      <LogInDescriptor>
+        <LoginName>User</LoginName>
+        <RealName>A test user</RealName>
+      </LogInDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--MaintenanceReminder-->
+  <AutomationEvent Name="MaintenanceReminder" Direction="Client">
+    <Para>
+      <MaintenanceReminderDescriptor>
+        <MaintenanceName>General</MaintenanceName>
+        <MaturityTime>2014-11-04T16:54:03</MaturityTime>
+        <MaturityCounter>79</MaturityCounter>
+        <CanSetMaintenanceDone>False</CanSetMaintenanceDone>
+      </MaintenanceReminderDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--MaintenanceReminderResetted-->
+  <AutomationEvent Name="MaintenanceReminderResetted" Direction="Client">
+    <Para>
+      <MaintenanceReminderDescriptor>
+        <MaintenanceName>AirFilter</MaintenanceName>
+        <MaturityTime>2014-11-05T17:47:38</MaturityTime>
+        <MaturityCounter>87</MaturityCounter>
+        <CanSetMaintenanceDone>True</CanSetMaintenanceDone>
+      </MaintenanceReminderDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--测量中断-->
+  <AutomationEvent Name="MeasurementBroken" Direction="Client">
+    <Para />
+  </AutomationEvent>
+
+  <!--测量完成-->
+  <AutomationEvent Name="MeasurementCompleted" Direction="Client">
+    <Para>
+      <MeasurementCompletionDescriptor>
+        <MeasurementCompletionState>MeasOk</MeasurementCompletionState>
+        <MeasurementIndex>0</MeasurementIndex>
+      </MeasurementCompletionDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--测量结束-->
+  <AutomationEvent Name="MeasurementFinished" Direction="Client">
+    <Para />
+  </AutomationEvent>
+
+  <!--MeasurementReplicateChanged-->
+  <AutomationEvent Name="MeasurementReplicateChanged" Direction="Client">
+    <Para>
+      <MeasurementReplicateDescriptor>
+        <MeasurementReplicateIndex>0</MeasurementReplicateIndex>
+      </MeasurementReplicateDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--测量已开始-->
+  <AutomationEvent Name="MeasurementStarted" Direction="Client">
+    <Para />
+  </AutomationEvent>
+
+  <!--方法加载-->
+  <AutomationEvent Name="MethodLoaded" Direction="Client">
+    <Para>
+      <MethodDescriptor>
+        <ExcitationType>Spark</ExcitationType>
+        <BaseElement>Fe</BaseElement>
+        <MethodName>C</MethodName>
+      </MethodDescriptor>
+      <ICalStandardDescriptor>
+        <ICalStandardName>RTI14</ICalStandardName>
+        <MinMeasurementsCount>2</MinMeasurementsCount>
+      </ICalStandardDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--OperatorInteractionFinished-->
+  <AutomationEvent Name="OperatorInteractionFinished" Direction="Client">
+    <Para>
+      <OperatorInteractionDescriptor>
+        <InteractionName>ConfirmElectrodeClean</InteractionName>
+        <SelectedInteractionOption>Yes</SelectedInteractionOption>
+      </OperatorInteractionDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--OperatorInteractionNeeded-->
+  <AutomationEvent Name="OperatorInteractionNeeded" Direction="Client">
+    <Para>
+      <OperatorInteractionDescriptor>
+        <InteractionName>GradeVerificationWarning</InteractionName>
+        <InteractionOptions>
+          <InteractionOption>Close</InteractionOption>
+        </InteractionOptions>
+      </OperatorInteractionDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--OpticsDriftCorrectionDataCalculated-->
+  <AutomationEvent Name=" OpticsDriftCorrectionDataCalculated" Direction="Client">
+    <Para>
+      <OpticsDriftCorrectionDataDescriptor>
+        <OpticsName>1+</OpticsName>
+        <BaseElementName>Fe</BaseElementName>
+        <MeasurementDateTime>2020-08-05T11:03:36</MeasurementDateTime>
+        <MinimumPixelShift>-0.205709966334244</MinimumPixelShift>
+        <MaximumPixelShift>-0.0386500310090077</MaximumPixelShift>
+        <WavelengthForMinimumPixelShift>470.453237264611</WavelengthForMinimumPixelShift>
+        <WavelengthForMaximumPixelShift>291.028</WavelengthForMaximumPixelShift>
+        <OpticsMinimumWavelength>291.028</OpticsMinimumWavelength>
+        <OpticsMaximumWavelength>520.936</OpticsMaximumWavelength>
+        <PixelShiftForOpticsMinimumWavelength>-0.0386500310090077</PixelShiftForOpticsMinimumWavelength>
+        <PixelShiftForOpticsMaximumWavelength>-0.192485094283125</PixelShiftForOpticsMaximumWavelength>
+      </OpticsDriftCorrectionDataDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--流程错误-->
+  <AutomationEvent Name="ProcessError" Direction="Client">
+    <Para>
+      <ProcessErrorDescriptor>
+        <ErrorType>ProcessMessageType</ErrorType>
+        <ErrorName>FlushingErrorNoArgonPressure</ErrorName>
+      </ProcessErrorDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--流程信息-->
+  <AutomationEvent Name="ProcessInformation" Direction="Client">
+    <Para>
+      <ProcessInformationDescriptor>
+        <InformationType>ProcessInformationType</InformationType>
+        <InformationName>NoMatchingBaseFound</InformationName>
+      </ProcessInformationDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--ProfileLoaded-->
+  <AutomationEvent Name="ProfileLoaded" Direction="Client">
+    <Para>
+      <ProfileDescriptor>
+        <ProfileName>Quantitative</ProfileName>
+        <ProfileType>QuantitativeAnalysis</ProfileType>
+        <ProfileDescription />
+        <DefaultExcitationType>Spark</DefaultExcitationType>
+        <DefaultBaseElementName>Fe</DefaultBaseElementName>
+      </ProfileDescriptor>
+    </Para>
+  </AutomationEvent>
+
+  <!--远程控制状态变化-->
+  <AutomationEvent Name="RemoteControlChanged" Direction="Client">
+    <Para>
+      <RemoteControlDescriptor>
+        <!--自动化控制模式 Full- 全自动模式-->
+        <RemoteControlMode>@RemoteControlMode@</RemoteControlMode>
+        <AnalyticalMode></AnalyticalMode>
+      </RemoteControlDescriptor>
+    </Para>
+  </AutomationEvent>
+
+</AutomationEventList>

@@ -1,0 +1,255 @@
+﻿<UserControl x:Class="Engine.Automation.Sparker.PageProben"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Engine.Automation.Sparker"
+             xmlns:WpfControl="clr-namespace:Engine.WpfControl;assembly=Engine" 
+             xmlns:h="QQ:178876839"
+             mc:Ignorable="d" 
+             d:DesignHeight="645" d:DesignWidth="1404.5">
+    <UserControl.Resources>
+        <DataTemplate x:Key="AnaPgmTemplate">
+            <RadioButton BorderThickness="0" GroupName="PageSlicer2" Margin="5"
+                                    Command="{Binding RelativeSource={RelativeSource AncestorType= ItemsControl},Path=DataContext.AnaPgmSelectionChanged}"
+                                    CommandParameter="{Binding RelativeSource={RelativeSource Self},Path=DataContext}">
+                <RadioButton.Style>
+                    <Style TargetType="RadioButton">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="RadioButton">
+                                    <Border x:Name="border" Background="#FFD5D5D5" BorderBrush="Transparent" BorderThickness="1" 
+                                            CornerRadius="5" Height="90"  Width="220"
+                                            VerticalAlignment="Top" HorizontalAlignment="Left">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="1.4*"/>
+                                            </Grid.RowDefinitions>
+                                            <StackPanel Margin="7" Orientation="Vertical" Grid.RowSpan="2" >
+                                                <TextBlock TextTrimming="CharacterEllipsis" FontSize="20">
+                                                    <Run Text="{Binding InsName}"/>
+                                                </TextBlock>
+                                                <TextBlock Margin="0 5 0 0" TextTrimming="CharacterEllipsis" FontSize="14">
+                                                    <Run Text="&#xe633;" Foreground="Gray" FontFamily="{DynamicResource IconFont}"/>
+                                                    <Run Text="{Binding Matrix,FallbackValue = FE}"/>
+                                                </TextBlock>
+                                                <TextBlock Margin="0 5 0 0" TextTrimming="CharacterEllipsis" FontSize="14">
+                                                    <Run Text="&#xe633;" Foreground="Gray" FontFamily="{DynamicResource IconFont}"/>
+                                                    <Run Text="{Binding PgmName,FallbackValue = FE 1}"/>
+                                                    <Run Text=":" />
+                                                    <Run Text="{Binding PgmNameLang,FallbackValue = 'Steel,low / mid alloy'}"/>
+                                                </TextBlock>
+                                            </StackPanel>
+                                        </Grid>
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Foreground" Value="Blue"/>
+                                        </Trigger>
+                                        <Trigger Property="IsChecked" Value="True">
+                                            <Setter Property="Foreground" Value="Blue"/>
+                                            <Setter TargetName="border" Property="Background" Value="White"/>
+                                            <Setter TargetName="border" Property="BorderBrush" Value="Blue"/>
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </RadioButton.Style>
+            </RadioButton>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <!--顶部标题栏-->
+        <Border Background="#FAFCFD" Height="25" BorderThickness="0 0 0 1" BorderBrush="#FFF0F0" Grid.ColumnSpan="4">
+            <TextBlock Text="分析管理 ▶ 控样管理" Margin="10 0 0 0" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+        </Border>
+
+        <!--主体摘要栏-->
+        <Border BorderBrush="#FFF0F0" BorderThickness="0 0 0 1" Grid.Row="1" Grid.ColumnSpan="4">
+            <Grid Height="50">
+
+                <Label Content="标样分析周期:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="21,15,0,0"/>
+                <TextBox Text="{Binding CalibrateCycleTime, FallbackValue=24, UpdateSourceTrigger=PropertyChanged}" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" HorizontalAlignment="Left" Height="23" TextWrapping="NoWrap" VerticalAlignment="Top" Width="73" Margin="116,16,0,0"/>
+                <Label Content="小时" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="198,14,0,0"/>
+                
+                <Label Content="分析时间:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="243,15,0,0"/>
+                <Label Content="{Binding LastRSAnaTime, FallbackValue=2023/4/16 17:53}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="309,15,0,0" Width="140"/>
+                <Button Content="保存" Command="{Binding CommandSaveRsCalibrateTime}" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="437,15,0,0" Height="24"/>
+
+                <Label Content="分析程序:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="600,14,0,0" />
+                <ComboBox ItemsSource="{Binding LstAnaPgm}" SelectedItem="{Binding AnaPgm}"
+                  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="680,16,0,0" Width="165">
+                    <!--<ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock>
+                                <Run Text="{Binding PgmName}"/>
+                                <Run Text="{Binding PgmName,Converter={StaticResource StringIFS},ConverterParameter='SelByLen[:,]'}"/>
+                                <Run Text="{Binding PgmNameLang}"/>
+                                </TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>-->
+                    <h:Interaction.Triggers>
+                        <h:EventTrigger EventName="SelectionChanged">
+                            <h:InvokeCommandAction Command="{Binding AnaPgmSelectionChanged}"
+                                           CommandParameter="{Binding SelectedItem,RelativeSource={RelativeSource AncestorType=ComboBox}}"/>
+                        </h:EventTrigger>
+                    </h:Interaction.Triggers>
+                </ComboBox>
+            </Grid>
+        </Border>
+
+        <!--左侧控样列表-->
+        <Grid Width="328" Grid.Row="2" Grid.Column="0">
+            <DockPanel HorizontalAlignment="Left" Width="328" Height="35" VerticalAlignment="Top">
+                <DockPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="Width" Value="65"/>
+                        <Setter Property="Height" Value="25"/>
+                        <Setter Property="Margin" Value="7 0 0 0"/>
+                    </Style>
+                </DockPanel.Resources>
+                <Label Content="控样:" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Button Content="添加" Command="{Binding CommandAddProbenMain}" CommandParameter="{Binding ElementName=_dGridProbenMain}"/>
+                <Button Content="修改" Command="{Binding CommandEditProbenMain}"/>
+                <Button Content="导入" Command="{Binding CommandImportProben}" Visibility="Collapsed"/>
+                <Button Content="删除" BorderBrush="Red" BorderThickness="1" HorizontalAlignment="Right"
+                                Command="{Binding CommandDeleteProben}" CommandParameter="{Binding SelectedItems,ElementName=_dGridProbenMain}"/>
+            </DockPanel>
+            <WpfControl:DataGridEx x:Name="_dGridProbenMain" FontSize="16"
+                                   ItemsSource="{Binding LstProbenMain}" 
+                                   SelectedItem="{Binding SelectedProbenMain}" 
+                                   Margin="0,35,0,10">
+                <WpfControl:DataGridEx.Columns>
+                    <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="130"/>
+                    <DataGridTextColumn Header="位置" Binding="{Binding ShelfPos}" Visibility="Collapsed" Width="100"/>
+                    <DataGridTextColumn Header="分析周期" Binding="{Binding AnaCycleTime}" Width="100"/>
+                    <DataGridTextColumn Visibility="Collapsed" Header="描述" Binding="{Binding Comment}" Width="100"/>
+                </WpfControl:DataGridEx.Columns>
+                <h:Interaction.Triggers>
+                    <h:EventTrigger EventName="SelectionChanged">
+                        <h:InvokeCommandAction Command="{Binding LstProbenMainSelectionChanged}" 
+                                       CommandParameter="{Binding Path=SelectedItem,RelativeSource={ RelativeSource AncestorType=WpfControl:DataGridEx}}" />
+                    </h:EventTrigger>
+                </h:Interaction.Triggers>
+            </WpfControl:DataGridEx>
+        </Grid>
+
+        <!--中间元素列表-->
+        <Grid Grid.Row="2" Grid.Column="1">
+            <DockPanel Height="37" VerticalAlignment="Top" MinWidth="420">
+                <DockPanel.Resources>
+                    <Style TargetType="Button">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="HorizontalAlignment" Value="Left"/>
+                        <Setter Property="VerticalAlignment" Value="Center"/>
+                        <Setter Property="Width" Value="65"/>
+                        <Setter Property="Height" Value="25"/>
+                        <Setter Property="Margin" Value="5 0 0 0"/>
+                    </Style>
+                </DockPanel.Resources>
+                <Label Content="元素:" HorizontalAlignment="Left" Margin="5,4,0,0" VerticalAlignment="Center" BorderBrush="#FFF0F0F0" BorderThickness="0" Width="57"/>
+                <Button Content="添加" Command="{Binding CommandAddProbenElement}" />
+                <Button Content="删除" BorderBrush="Red" Command="{Binding CommandDeleteProbenElement}" 
+                        CommandParameter="{Binding DataContext.LstSelectedProbenElem, RelativeSource={RelativeSource AncestorType=UserControl}}"/>
+
+                <Label Content="元素值:" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Center" BorderBrush="#FFF0F0F0" BorderThickness="0" Width="56"/>
+                <Button Content="保存" Command="{Binding CommandSaveElementUserEdit}"/>
+                <Button Content="清除首次值" Command="{Binding CommandClearStartValue}"/>
+            </DockPanel>
+            <DataGrid Style="{DynamicResource S.DataGrid.Editable}" CellStyle="{StaticResource S.DataGridCell.AutoFoucs}"
+                      ItemsSource="{Binding LstProbenElem}" FontSize="16"
+                      CanUserResizeColumns="True" CanUserReorderColumns="True"
+                      AutoGenerateColumns="False" CanUserAddRows="False"
+                      HorizontalGridLinesBrush="#FFF0F0F0" VerticalGridLinesBrush="#FFF0F0F0"
+                      Background="Transparent"
+                      Margin="5,35,0,10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="元素" Width="60" IsReadOnly="True" 
+                                        Binding="{Binding Element}" 
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="标准值" Width="100"
+                                        Binding="{Binding SetPoint,ValidatesOnDataErrors=True,ValidatesOnExceptions=True, NotifyOnValidationError=True}" 
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="首次分析值" IsReadOnly="True" Binding="{Binding StartValue}" Width="90"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="首次偏差" IsReadOnly="True" Binding="{Binding TolStart}" Width="80"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="校正分析值" Binding="{Binding ActualValue}" Width="100"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+                    
+                    <DataGridTextColumn Header="加法参数" IsReadOnly="True" Binding="{Binding AdditiveValue}" Width="80"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="乘法参数" IsReadOnly="True" Binding="{Binding MultiplitiveValue}" Width="80"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="校正偏差" IsReadOnly="True" Binding="{Binding TolActual}" Width="80"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <!--<DataGridTextColumn Header="检查分析值" IsReadOnly="True" Binding="{Binding CheckValue}" Width="100"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>
+
+                    <DataGridTextColumn Header="检查偏差" IsReadOnly="True" Binding="{Binding TolCheck}" Width="80"
+                                        h:DataGridHelper.TextColumnCellStyle ="S.TextColumn.CellCenter" 
+                                        h:DataGridHelper.TextColumnCellEditStyle="S.TextColumn.EditCellCenter"/>-->
+                </DataGrid.Columns>
+                <h:Interaction.Triggers>
+                    <h:EventTrigger EventName="CellEditEnding">
+                        <h:InvokeCommandAction Command="{Binding DataContext.EnterCommand, RelativeSource={RelativeSource AncestorType=UserControl}}" 
+                                CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                    </h:EventTrigger>
+                    <h:EventTrigger EventName="SelectedCellsChanged">
+                        <h:InvokeCommandAction Command="{Binding CommandElemSelectCellsChanged}"
+                                     CommandParameter="{Binding Path=SelectedCells,RelativeSource={RelativeSource AncestorType=DataGrid}}"/>
+                    </h:EventTrigger>
+                </h:Interaction.Triggers>
+            </DataGrid>
+        </Grid>
+
+        <!--关联牌号-->
+        <Grid Grid.Row="2" Grid.Column="2">
+            <Label Content="关联牌号:" HorizontalAlignment="Right" Margin="0,6,259,0" VerticalAlignment="Top" BorderBrush="#FFF0F0F0" BorderThickness="0" Width="63"/>
+            <WpfControl:DataGridEx ItemsSource="{Binding LstRelatedMaterial}" 
+                                   FontSize="16"
+                                   Margin="0,35,10,10" HorizontalAlignment="Right" Width="305">
+                <WpfControl:DataGridEx.Columns>
+                    <DataGridTextColumn Header="牌号" Binding="{Binding Material}" Width="120"/>
+                    <DataGridTextColumn Header="备注" Binding="{Binding Comment}" Width="120"/>
+                </WpfControl:DataGridEx.Columns>
+            </WpfControl:DataGridEx>
+        </Grid>
+    </Grid>
+</UserControl>

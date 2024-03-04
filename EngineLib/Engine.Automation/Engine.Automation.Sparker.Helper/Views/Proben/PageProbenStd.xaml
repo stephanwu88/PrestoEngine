@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="Engine.Automation.Sparker.PageProbenStd"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:h="QQ:178876839" 
+             xmlns:local="clr-namespace:Engine.Automation.Sparker"
+             xmlns:WpfControl="clr-namespace:Engine.WpfControl;assembly=Engine" 
+             mc:Ignorable="d" 
+             d:DesignHeight="460" d:DesignWidth="762">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!--顶部标题栏-->
+        <Border Background="#FAFCFD" Height="25" BorderThickness="0 0 0 1" BorderBrush="#FFF0F0" Grid.ColumnSpan="4">
+            <TextBlock Text="分析管理 ▶ 标准值管理" Margin="10 0 0 0" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <WpfControl:DataGridEx ItemsSource="{Binding LstProbenMain}" FontSize="16"
+                                   Margin="4,41,0,10" HorizontalAlignment="Left" Width="328">
+                <WpfControl:DataGridEx.Columns>
+                    <DataGridTextColumn Header="名称" Binding="{Binding Name}" Width="160"/>
+                    <DataGridTextColumn Header="备注" Binding="{Binding AnaCycleTime}" Width="140"/>
+                </WpfControl:DataGridEx.Columns>
+                <h:Interaction.Triggers>
+                    <h:EventTrigger EventName="SelectionChanged">
+                        <h:InvokeCommandAction Command="{Binding LstProbenMainSelectionChanged}" 
+                            CommandParameter="{Binding SelectedItem, RelativeSource={RelativeSource AncestorType={x:Type WpfControl:DataGridEx}}}" />
+                    </h:EventTrigger>
+                </h:Interaction.Triggers>
+            </WpfControl:DataGridEx>
+            <Button Content="添加" Command="{Binding CommandAddProbenMain}" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="54,9,0,0" Height="24"/>
+            <Button Content="修改" Command="{Binding CommandEditProbenMain}" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="124,9,0,0" Height="24"/>
+            <Button Content="删除" Command="{Binding CommandDeleteProben}" Background="Transparent" BorderBrush="Red" BorderThickness="1" VerticalAlignment="Top" Margin="267,9,0,0" HorizontalAlignment="Left" Width="65" Height="24"/>
+            <Button Content="导入" Command="{Binding CommandImportProben}" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="65" Margin="194,9,0,0" Height="24"/>
+
+            <WpfControl:DataGridEx ItemsSource="{Binding LstProbenElem}" FontSize="16"
+                                   Width="400" HorizontalAlignment="Left" Margin="339,41,10,10">
+                <WpfControl:DataGridEx.Columns>
+                    <DataGridTextColumn Header="元素" Binding="{Binding Element}" Width="60"/>
+                    <DataGridTextColumn Header="标准值" Binding="{Binding SetPoint}" Width="120"/>
+                    <!--<DataGridTextColumn Header="首次分析值" Binding="{Binding StartValue}" Width="80"/>
+                    <DataGridTextColumn Header="分析值" Binding="{Binding ActualValue}" Width="60"/>
+                    <DataGridTextColumn Header="加法参数" Binding="{Binding AdditiveValue}" Width="80"/>
+                    <DataGridTextColumn Header="乘法参数" Binding="{Binding MultiplitiveValue}" Width="80"/>
+                    <DataGridTextColumn Header="首次偏差" Binding="{Binding TolStart}" Width="60"/>
+                    <DataGridTextColumn Header="偏差" Binding="{Binding TolActual}" Width="120"/>-->
+                </WpfControl:DataGridEx.Columns>
+
+
+
+            </WpfControl:DataGridEx>
+            <Label Content="元素:" HorizontalAlignment="Left" Margin="339,8,0,0" VerticalAlignment="Top" BorderBrush="#FFF0F0F0" BorderThickness="0" Width="57"/>
+            <Button Content="添加" Background="Transparent" HorizontalAlignment="Left" Margin="428,9,0,0" VerticalAlignment="Top" Width="60" Height="24"/>
+            <Button Content="删除" Background="Transparent" BorderBrush="Red" HorizontalAlignment="Left" Margin="492,9,0,0" VerticalAlignment="Top" Width="54" Height="24"/>
+            <Label Content="控样:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,9,0,0"/>
+            <Label Content="元素值:" HorizontalAlignment="Left" Margin="590,9,0,0" VerticalAlignment="Top" BorderBrush="#FFF0F0F0" BorderThickness="0" Width="57"/>
+            <Button Content="保存" Background="Transparent" HorizontalAlignment="Left" Margin="679,10,0,0" VerticalAlignment="Top" Width="60" Height="24"/>
+        </Grid>
+    </Grid>
+</UserControl>

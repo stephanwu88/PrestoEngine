@@ -1,0 +1,46 @@
+﻿    <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Engine.WpfBase">
+
+    <local:BoolToColorConverter x:Key="BoolToColorConverter"/>
+    <local:NetComputerConvert x:Key="S.Convert.NetComputer"/>
+    <local:StateVisibleConverter x:Key="S.Convert.StateVisible"/>
+    <local:StateVisibleConverterInv x:Key="S.Convert.StateVisibleInv"/>
+    <local:StateImageConvert x:Key="StateImageConvert"></local:StateImageConvert>
+    <local:MultiStateImageConvert x:Key="MultiStateImageConvert"></local:MultiStateImageConvert>
+    <local:CheckEnabled x:Key="CheckEnabled"></local:CheckEnabled>
+    <local:NetColorConvert x:Key="NetColorConvert"></local:NetColorConvert>
+    <local:StateColorConvert x:Key="StateColorConvert"></local:StateColorConvert>
+    <local:StateColorConvertInv x:Key="StateColorConvertInv"></local:StateColorConvertInv>
+    <local:StateTextColorConvert x:Key="StateTextColorConvert"></local:StateTextColorConvert>
+    <local:StateBackColorConvert x:Key="StateBackColorConvert"></local:StateBackColorConvert>
+    <local:AlarmColorConvert x:Key="AlarmColorConvert"></local:AlarmColorConvert>
+    <local:AlarmColorConvertInv x:Key="AlarmColorConvertInv"></local:AlarmColorConvertInv>
+    <local:OpModeConverter x:Key="OpModeConverter"></local:OpModeConverter>
+    <local:VisibleConvert x:Key="VisibleConvert"/>
+    <local:VisibleConvertInv x:Key="VisibleConvertInv"/>
+    <local:ContentVisibleConverter x:Key="ContentVisibleConverter"></local:ContentVisibleConverter>
+    <local:IntToBoolArrayConverter x:Key="IntToBoolArrayConverter"/>
+    <local:IntToIndexConverter x:Key="IntToIndexConverter"/>
+    <local:IntToGridLengthStar x:Key="IntToGridLengthStar"/>
+    <local:StringToVisible x:Key="StringToVisible"/>
+    <local:IntToVisible x:Key="IntToVisible"/>
+    <local:StringToBrush x:Key="StringToBrush"/>
+    <local:StringToChecked x:Key="StringToChecked"/>
+    <local:StringToUnChecked x:Key="StringToUnChecked"/>
+    <local:StringToResource x:Key="StringToResource"/>
+    <local:StringIFS x:Key="StringIFS"/>
+    <local:StringFormat x:Key="StringFormat"/>
+    <local:MultiStringFormat x:Key="MultiStringFormat"/>
+    <local:PageSlicerSelectedConverter x:Key="PageSlicerSelectedConverter"/>
+    <local:ViewSIConverter x:Key="ViewSIConverter"/>
+    <local:DataTemplateConverter x:Key="DataTemplateConverter"/>
+    <local:NullableToVisibilityConverter x:Key="NullableToVisibilityConverter" />
+
+    <local:RobotPPConverter x:Key="RobotPPConverter"></local:RobotPPConverter>
+    <local:SamplerPPConverter x:Key="SamplerPPConverter"/>
+    <local:StepConverter x:Key="StepConverter"></local:StepConverter>
+    <local:DoubleF1 x:Key="DoubleF1"></local:DoubleF1>
+    <local:DoubleF2 x:Key="DoubleF2"></local:DoubleF2>
+    <local:DoubleF3 x:Key="DoubleF3"></local:DoubleF3>
+</ResourceDictionary>

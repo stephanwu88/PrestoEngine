@@ -1,0 +1,14 @@
+﻿<UserControl x:Class="Engine.Core.TaskSchedule.PageScheduleContentOfSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Engine.Core.TaskSchedule"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <Grid>
+        <CheckBox x:Name="_IsEnable"  IsEnabled="False" Content="若任务运行时间滞后超过以下限制，终止任务" HorizontalAlignment="Left" Margin="19,60,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="_TimeOut_Set" IsReadOnly="True" IsEnabled="False" HorizontalAlignment="Left" Height="23" Margin="313,55,0,0" VerticalAlignment="Top" Width="148"/>
+
+    </Grid>
+</UserControl>

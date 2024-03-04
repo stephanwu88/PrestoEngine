@@ -1,0 +1,20 @@
+﻿Engine.Automation
+
+
+library
+C#
+.cs
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode_持续修改版\EngineLib\Engine.Automation\obj\Debug\
+Engine.Automation
+none
+false
+DEBUG;TRACE
+
+291105747868
+
+61832477529
+161779731768
+Assets\Resource\DataConverter.xaml;Assets\Resource\MenuGeneric.xaml;Assets\Theme\DefaultTheme.xaml;Engine.Automation.Sparker.Helper\Views\AnaPgm\PageInsElemBaseLib.xaml;Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaElemBase.xaml;Engine.Automation.Sparker.Helper\Views\AnaPgm\PageAnaPgm.xaml;Engine.Automation.Sparker.Helper\Views\AnaPgm\PagePgmConfigDetail.xaml;Engine.Automation.Sparker.Helper\Views\AnaPgm\winCreatePgm.xaml;Engine.Automation.Sparker.Helper\Views\Material\PageRelatedSteel.xaml;Engine.Automation.Sparker.Helper\Views\Material\PageMaterial.xaml;Engine.Automation.Sparker.Helper\Views\Material\winDeviationModeSet.xaml;Engine.Automation.Sparker.Helper\Views\Material\winCorrectMethod.xaml;Engine.Automation.Sparker.Helper\Views\Material\winCreateMaterial.xaml;Engine.Automation.Sparker.Helper\Views\Material\winDeviationSet.xaml;Engine.Automation.Sparker.Helper\Views\Material\winRelatedMaterialProben.xaml;Engine.Automation.Sparker.Helper\Views\Material\winRelatedSteel.xaml;Engine.Automation.Sparker.Helper\Views\Material\winStartMaterialAnalysis.xaml;Engine.Automation.Sparker.Helper\Views\PageAnaData.xaml;Engine.Automation.Sparker.Helper\Views\PageAnaDataCurrent.xaml;Engine.Automation.Sparker.Helper\Views\PageAnaDataHistory.xaml;Engine.Automation.Sparker.Helper\Views\PageOblfMain.xaml;Engine.Automation.Sparker.Helper\Views\Proben\PageProben.xaml;Engine.Automation.Sparker.Helper\Views\Proben\PageProbenStd.xaml;Engine.Automation.Sparker.Helper\Views\AnaPgm\winAttachElement.xaml;Engine.Automation.Sparker.Helper\Views\Proben\winConfigProbenMain.xaml;Engine.Automation.SparkerOblf\Views\PageOblfSynchronize.xaml;Engine.Automation.SparkerOblf\Views\winImportProben.xaml;Engine.Automation.SparkerOblf\Views\winImportMaterial.xaml;Properties\DesignTimeResources.xaml;
+
+False
+

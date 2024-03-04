@@ -1,0 +1,10 @@
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\bin\Debug\Engine.DotNetZippper.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\bin\Debug\Engine.DotNetZippper.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\bin\Debug\DotNetZip.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\bin\Debug\DotNetZip.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\bin\Debug\DotNetZip.xml
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\obj\Debug\Engine.DotNetZippper.csprojAssemblyReference.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\obj\Debug\Engine.DotNetZippper.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\obj\Debug\Engine.DotNetZippper.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\obj\Debug\Engine.DotNetZippper.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.DotNetZippper\obj\Debug\Engine.DotNetZippper.pdb

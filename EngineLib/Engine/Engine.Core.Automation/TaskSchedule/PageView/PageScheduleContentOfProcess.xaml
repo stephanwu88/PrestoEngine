@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Engine.Core.TaskSchedule.PageScheduleContentOfProcess"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Engine.Core.TaskSchedule"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Loaded="UserControl_Loaded">
+    <Grid>
+        <Label Content="任务计划排程时，计划任务列表，系统按表顺序执行流程控制，若要更改，使用'属性'命令打开计划属性页" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="_dgContentOfProcess" FontSize="15" IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" Margin="10,56,53,45" HorizontalGridLinesBrush="#FFF0F0F0" VerticalGridLinesBrush="#FFF0F0F0" Background="White">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="50" Header="索引号" Binding="{Binding id}"/>
+                <DataGridTextColumn Width="150" Header="启用" Binding="{Binding task_enable}"/>
+                <DataGridTextColumn Width="150" Header="任务类型" Binding="{Binding task_type}"/>
+                <DataGridTextColumn Width="600" Header="任务详情" Binding="{Binding task_detail}"/>
+                <DataGridTextColumn Width="200" Header="任务状态" Binding="{Binding task_state}"/>
+                <DataGridTextColumn Width="120" Header="task_pos"  Binding="{Binding task_pos}"/>
+                <DataGridTextColumn Width="120" Header="task_id"  Binding="{Binding task_id}"/>
+                <DataGridTextColumn Width="120" Header="task_in"  Binding="{Binding task_in}"/>
+                <DataGridTextColumn Width="120" Header="task_out"  Binding="{Binding task_out}"/>
+                <DataGridTextColumn Width="120" Header="task_item"  Binding="{Binding task_item}"/>
+                <DataGridTextColumn Width="120" Header="task_set_val"  Binding="{Binding task_set_val}"/>
+                <DataGridTextColumn Width="120" Header="task_des"  Binding="{Binding task_des}"/>
+                <DataGridTextColumn Width="120" Header="task_order"  Binding="{Binding task_order}"/>
+                <DataGridTextColumn Width="120" Header="task_tag"  Binding="{Binding tag}"/>
+                <DataGridTextColumn Width="120" Header="msg_from"  Binding="{Binding msg_from}"/>
+                <DataGridTextColumn Width="120" Header="msg_to"  Binding="{Binding msg_to}"/>
+                <DataGridTextColumn Width="120" Header="msg_mode"  Binding="{Binding msg_mode}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="_CmdNewProcess" Content="新建" Margin="10,0,0,10" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Click="_CmdNewProcess_Click"/>
+        <Button x:Name="_CmdEditProcess" Content="编辑" Margin="95,0,0,10" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Click="_CmdEditProcess_Click"/>
+        <Button x:Name="_CmdDelProcess" Content="删除" Margin="180,0,0,10" Height="25" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80" Click="_CmdDelProcess_Click"/>
+        <Button x:Name="_CmdMoveUp" Content="▲" Margin="0,161,10,0" HorizontalAlignment="Right" Width="38" Height="31" VerticalAlignment="Top" Click="_CmdMoveUp_Click"/>
+        <Button x:Name="_CmdMoveDown" Content="▼" Margin="0,234,10,0" HorizontalAlignment="Right" Width="38" Height="31" VerticalAlignment="Top" Click="_CmdMoveDown_Click"/>
+    </Grid>
+</UserControl>

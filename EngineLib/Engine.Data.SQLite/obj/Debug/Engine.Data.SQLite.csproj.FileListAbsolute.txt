@@ -1,0 +1,59 @@
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.pdb
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.pdb
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\bin\Debug\System.Data.SQLite.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\bin\Debug\Newtonsoft.Json.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\bin\Debug\Engine.pdb
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\bin\Debug\Engine.dll
+E:\知识储备库\03.C#上位机开发\03.C#商业模块\03. Engine集成类库\EngineLibEVL\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\System.Data.SQLite.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\System.Windows.Interactivity.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\System.Windows.Interactivity.xml
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动原料制样系统\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\System.Data.SQLite.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\Newtonsoft.Json.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\System.Windows.Interactivity.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.pdb
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\bin\Debug\System.Windows.Interactivity.xml
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csprojAssemblyReference.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CoreCompileInputs.cache
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CopyComplete
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.dll
+E:\知识储备库\03.C#上位机开发\03.WPF自研产品\EngineLibEVL\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\System.Data.SQLite.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Newtonsoft.Json.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.pdb
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csprojAssemblyReference.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CoreCompileInputs.cache
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CopyComplete
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.dll
+E:\2023年和澳出货设备\【2023-6 长治】全自动快分系统_斯派克光谱\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.Data.SQLite.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\System.Data.SQLite.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Newtonsoft.Json.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\bin\Debug\Engine.pdb
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csprojAssemblyReference.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CoreCompileInputs.cache
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.csproj.CopyComplete
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.dll
+E:\Heao2023\长治\快分\SourceCode\SourceCode\EngineLib\Engine.Data.SQLite\obj\Debug\Engine.Data.SQLite.pdb

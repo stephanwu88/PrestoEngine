@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FieldMappings>
+  <FieldMapping Name="CmdStatus" Comment ="指令状态" Type ="COMMAND">
+    <!--指令OK时，Return节点中包含了数据-->
+    <Field Code="OK" Text="指令正常" Type="STATUS"/>
+    <!--指令Error时，Return节点中无数据 ErrorText节点中包含了诊断信息文本-->
+    <Field Code="Error" Text="指令发生错误" Type="ERROR"/>
+    <!--指令Warning时，Return节点中包含数据  ErrorText中包含诊断信息文本-->
+    <Field Code="Warning" Text="本地样品激活，可取消" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="TranslationStatus" Comment ="指令解析状态" Type ="COMMAND">
+    <!--命令解析并执行-->
+    <Field Code="OK" Text="命令解析并执行" Type="STATUS"/>
+    <!--命令解析失败-->
+    <Field Code="Error" Text="命令解析失败" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="CommandList" Comment ="指令列表">
+    <Field Code="AcceptStandardization" Text="接收标准化" />
+    <Field Code="CalculateStandardization" Text="计算标准化" />
+    <Field Code="CheckStandardization" Text="检查标准化" />
+    <Field Code="DeleteMeasurementReplicate" Text="删除测量复制" />
+    <Field Code="DiscardAnalysis" Text="丢弃分析" />
+    <Field Code="FinishAnalysis" Text="结束分析" />
+    <Field Code="FinishOperatorInteraction" Text="结束操作员交互" />
+    <Field Code="GetAnalysisDescription" Text="获取分析描述" />
+    <Field Code="GetAnalysisElements" Text="获取分析元素" />
+    <Field Code="GetAnalysisIDFormat" Text="获取分析ID格式" />
+    <Field Code="GetAnalysisResults" Text="获取分析结果" />
+    <Field Code="GetAnalysisState" Text="获取分析状态" />
+    <Field Code="GetControlStandardNames" Text="获取控样名称" />
+    <Field Code="GetCurrentLogInName" Text="获取当前日志名称" />
+    <Field Code="GetCurrentMethodName" Text="获取当前方法名称" />
+    <Field Code="GetProfileName" Text="获取当前配置名称" />
+    <Field Code="GetGradeNames" Text="获取牌号名称" />
+    <Field Code="GetGradeSearchResults" Text="获取牌号搜索结果" />
+    <Field Code="GetCalCalibrationProtocol" Text="获取标准化计算协议" />
+    <Field Code="GetInstrumentState" Text="获取仪器状态" />
+    <Field Code="GetMaintenanceReminders" Text="获取维护提醒" />
+    <Field Code="GetMaintenanceState" Text="获取维护状态" />
+    <Field Code="GetMeasurementsCounter" Text="获取测量计数" />
+    <Field Code="GetMethodNames" Text="获取方法名称列表" />
+    <Field Code="GetProfileNames" Text="获取配置名称列表" />
+    <Field Code="GetRemoteControlState" Text="获取远端控制状态" />
+    <Field Code="GetSoftwareVersion" Text="获取软件版本" />
+    <Field Code="GetStdzStandardNames" Text="获取标样名称列表" />
+    <Field Code="GetTypeStandardNames" Text="获取类标样名称列表" />
+    <Field Code="IsTypeStandardValid" Text="类标有效性验证" />
+    <Field Code="LogIn" Text="日志？？" />
+    <Field Code="Measure" Text="启动测量" />
+    <Field Code="PrepareAnalysis" Text="准备分析" />
+    <Field Code="RejectStandardiztion" Text="撤回标准化" />
+    <Field Code="ResetMaintenanceReminder" Text="重置维护提醒" />
+    <Field Code="SelectMethod" Text="选择方法" />
+    <Field Code="SelectProfile" Text="选择曲线" />
+    <Field Code="SelectTypeStandard" Text="选择类标" />
+    <Field Code="StartFlush" Text="启动冲洗" />
+    <Field Code="StopFlush" Text="停止冲洗" />
+    <Field Code="StopMeasure" Text="停止测量" />
+    <Field Code="UndeleteMeasurementReplicate" Text="未删除测量重复" />
+  </FieldMapping>
+  <FieldMapping Name="EventList" Comment ="事件列表">
+    <Field Code="AnalysisFinished" Text="分析结束" />
+    <Field Code="AnalysisIDChanged" Text="分析ID切换" />
+    <Field Code="AnalysisStarted" Text="分析开始" />
+    <Field Code="AnalyticalModeChanged" Text="分析模式切换" />
+    <Field Code="BaseDataChanged" Text="基体数据变化" />
+    <Field Code="InstrumentStateChanged" Text="仪器状态变化" />
+    <Field Code="LogInChanged" Text="登录变化" />
+    <Field Code="MaintenanceReminder" Text="维护提醒" />
+    <Field Code="MaintenanceReminderResetted" Text="维护提醒重置" />
+    <Field Code="MeasurementBroken" Text="测量中断" />
+    <Field Code="MeasurementCompleted" Text="测量完成" />
+    <Field Code="MeasurementReplicateChanged" Text="测量重复更改" />
+    <Field Code="MeasureStarted" Text="测量启动" />
+    <Field Code="MethodLoaded" Text="方法加载" />
+    <Field Code="OperatorInteractionFinished" Text="操作员交互完成" />
+    <Field Code="OperatorInteractionNeeded" Text="操作员交互需求" />
+    <Field Code="ProcessError" Text="流程错误" />
+    <Field Code="ProcessInformation" Text="流程信息" />
+    <Field Code="ProfileLoaded" Text="曲线文件加载" />
+    <Field Code="RemoteControlChanged" Text="远程控制切换" />
+  </FieldMapping>
+
+  <FieldMapping Name="SelectMethod.Return.StandardizationCompletionState" Comment ="SelectMothod.Return" Type ="COMMAND">
+    <Field Code="TimeOut" Text="方法标准化计算超时" Type="STATUS"/>
+    <Field Code="CalculationError" Text="计算错误无法重新计算方法标准化" Type="ERROR"/>
+    <Field Code="Valid_NeedsCompletion" Text="方标标准化重新计算，需要接受标准化命令生效" Type="ERROR"/>
+    <Field Code="Invalid_NeedsCompletion" Text="方标标准化已经重新计算，需要接受或拒绝" Type="ERROR"/>
+    <Field Code="Valid_Accepted" Text="方法有效,正常接收" Type="STATUS"/>
+    <Field Code="Invalid_Accepted" Text="方法无效，正常接收" Type="ERROR"/>
+    <Field Code="Rejected" Text="方法标准化重新计算，新的标准化数据无效，并已自动拒绝" Type="ERROR"/>
+  </FieldMapping>
+  <FieldMapping Name="PapreAnalysis.Para.AnalyticalMode" Comment ="PapreAnalysis.AnalyticalMode" Type ="COMMAND">
+    <Field Code="UnknownMeas" Text="未知样品" Type=""/>
+    <Field Code="GobalStdz" Text="全局标准化样" Type=""/>
+    <Field Code="LocalStdz" Text="本地标准化样" Type=""/>
+    <Field Code="GobalPartialStdz" Text="全局局部标准化样" Type=""/>
+    <Field Code="LocalPartialStdz" Text="本地局部标准化样" Type=""/>
+    <Field Code="Control" Text="检查样" Type=""/>
+    <Field Code="PartialControl" Text="局部检查样" Type=""/>
+    <Field Code="TypeStd" Text="类型标准化样" Type=""/>
+    <Field Code="ICal" Text="方法计算样" Type=""/>
+    <Field Code="DetectorCalib" Text="检查方法计算样" Type=""/>
+  </FieldMapping>
+  <FieldMapping Name="Measure.MeasurementCompletionState" Comment ="Measure.MeasurementCompletionState" Type ="COMMAND">
+    <Field Code="StartTimeout" Text="无法启动测量(内部错误)" Type=""/>
+    <Field Code="RunTimeout" Text="无法继续执行测量(内部错误)" Type=""/>
+    <Field Code="StartError_ArgonFlushing" Text="无法开始测量-火花台正在氩气冲洗" Type=""/>
+    <Field Code="StartError_Measuring" Text="无法开始测量-正在进行另一个测量" Type=""/>
+    <Field Code="StartError_NotStandbyForMeasurement" Text="无法开始测量-分析视图未处于活动状态" Type=""/>
+    <Field Code="StartError_NoMeasSysOwnership" Text="无法开始测量-当前分析视图未获取测量系统" Type=""/>
+    <Field Code="StartError_ClampUp" Text="无法开始测量-火花架夹具向上" Type=""/>
+    <Field Code="StartError_SafetyCheckRequired" Text="无法开始测量-必须进行火花台安全检查,上下移动火花台夹具" Type=""/>
+    <Field Code="StartError_CoverOpen" Text="无法开始测量-仪器盖打开" Type=""/>
+    <Field Code="StartError_DoorOpen" Text="无法开始测量-仪器门打开" Type=""/>
+    <Field Code="StartError_CoverOpen" Text="无法开始测量-仪器盖打开" Type=""/>
+    <Field Code="StartError_SparkStandFailure" Text="无法开始测量-火花台出错" Type=""/>
+    <Field Code="StartError_GeneratorFailure" Text="无法开始测量-等离子发生器出错" Type=""/>
+    <Field Code="StartError_OpticsScannerFailure" Text="无法开始测量-光学扫描仪出错" Type=""/>
+    <Field Code="StartError_SAFTDeviceFailure" Text="无法开始测量-SAFT装置出错" Type=""/>
+    <Field Code="StartError_SAFTDeviceCalibrating" Text="无法开始测量-SAFT装置正在校准" Type=""/>
+    <Field Code="StartError_SAFTDeviceTesting" Text="无法开始测量-SAFT装置正在测试" Type=""/>
+    <Field Code="StartError_ReadoutSystemFailure" Text="无法开始测量-读数系统出错" Type=""/>
+    <Field Code="StartError_UVOpticsFailure" Text="无法开始测量-UV Optics出错" Type=""/>
+    <Field Code="StartError_AirOpticsFailure" Text="无法开始测量-空气光学系统出错" Type=""/>
+    <Field Code="StartError_CoolingSystemFailure" Text="无法开始测量-冷却系统出错" Type=""/>
+    <Field Code="StartError_NoArgonSupply" Text="无法开始测量-氩气供应不足" Type=""/>
+    <Field Code="Aborted" Text="测量因用户或设备故障而中断" Type=""/>
+    <Field Code="ReferenceError" Text="参考强度超出范围" Type=""/>
+    <Field Code="MeasOk" Text="测量正常,等待分析结束" Type=""/>
+    <Field Code="AnalysisOk" Text="测量正常,分析结果正常" Type=""/>
+    <Field Code="AnalysisError" Text="测量正常,分析结果不确定" Type=""/>
+    <Field Code="APFError" Text="没有找到目标分析方法情况下完成了APF定向测量" Type=""/>
+    <Field Code="APFPlusError" Text="APF+方向测量完成没有找到分析基础" Type=""/>
+    <Field Code="AnalysisOkMatch" Text="AnalysisOkMatch" Type=""/>
+    <Field Code="AnalysisOkNotMatch" Text="AnalysisOkNotMatch" Type=""/>
+    <Field Code="MeasError" Text="iCal测量完成，结果不满意" Type=""/>
+    <Field Code="ICalOk" Text="iCal测量正确完成，结果满意" Type=""/>
+    <Field Code="ICalError" Text="iCal测量失败，必须重复校准" Type=""/>
+  </FieldMapping>
+
+  <FieldMapping Name="AutomationCommand_PrepareAnalysis" Comment ="样品注册指令参数">
+    <Field Code="@炉机号" Map="BurnerID" Text="炉机号" />
+    <Field Code="@炉次"   Map="" Text="炉次" />
+    <Field Code="@操作员" Map="Heao" Text="Heao" />
+  </FieldMapping>
+  
+</FieldMappings>
